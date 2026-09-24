@@ -6,7 +6,7 @@
 <title>Di Pierro Creative — Virginia Di Pierro</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,900;1,9..144,900&display=swap" rel="stylesheet">
 <style>
   :root{--paper:#F4EFE3;--navy:#12314B;--ink:#12314B;--ink-soft:#5A6572;--yellow:#F5E000;--line:#D8D2C4;--disp:'Archivo',sans-serif;--sans:'Inter',sans-serif}
   *{margin:0;padding:0;box-sizing:border-box}
@@ -41,6 +41,7 @@
   .card-client{font-size:11px;letter-spacing:.1em;text-transform:uppercase;opacity:.6}
   .card-media{aspect-ratio:16/10;overflow:hidden;background:#000}
   .card-media video{width:100%;height:100%;object-fit:cover;display:block}
+  .card-media svg{width:100%;height:100%;display:block}
   .card-foot{padding:24px 26px 28px}
   .card-stat{font-family:var(--disp);font-weight:900;font-size:2.6rem;line-height:1;margin-bottom:12px}
   .card-desc{font-size:.92rem;line-height:1.5}
@@ -73,7 +74,14 @@
   .cs-bar .wrap{display:flex;align-items:center;gap:16px}
   .cs-back{font-family:var(--disp);font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow);display:inline-flex;align-items:center;gap:8px}
   .cs-frame{width:100%;border:0;display:block}
-  @media(max-width:900px){.wrap{padding:0 22px}.navlinks{gap:20px}.work{grid-template-columns:1fr}.samples{grid-template-columns:repeat(3,1fr)}.systems{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr;gap:28px}.about img{max-width:280px}.contact .wrap{flex-direction:column;align-items:flex-start}.contact-right{text-align:left}}
+    .work--products{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  a.card{color:inherit}
+  .card--product .card-stat{font-size:2rem}
+  .card--elas .card-head,.card--elas .card-foot{background:#1a1625;color:#faf7f2}
+  .card--elas .card-stat,.card--elas .card-tag{color:#c0166e}.card--elas .card-tag{opacity:1}
+  .card--lilac .card-head,.card--lilac .card-foot{background:#24507a;color:#f4f4f9}
+  .card--lilac .card-stat,.card--lilac .card-tag{color:#9e8bd1}.card--lilac .card-tag{opacity:1}
+  @media(max-width:900px){.wrap{padding:0 22px}.navlinks{gap:20px}.work{grid-template-columns:1fr}.work--products{grid-template-columns:1fr}.samples{grid-template-columns:repeat(3,1fr)}.systems{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr;gap:28px}.about img{max-width:280px}.contact .wrap{flex-direction:column;align-items:flex-start}.contact-right{text-align:left}}
   @media(max-width:560px){.samples{grid-template-columns:1fr 1fr}.stats{gap:22px}.hero-row{flex-direction:column;align-items:flex-start}}
 </style>
 </head>
@@ -86,8 +94,9 @@
       <div class="logo" onclick="showHome()">DI PIERRO <span>CREATIVE</span></div>
       <div class="navlinks">
         <a onclick="showHome();scrollTo(0,0)">Work</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#products" onclick="event.preventDefault();showHome();document.getElementById('products').scrollIntoView({behavior:'smooth'})">Products</a>
+        <a href="#about" onclick="event.preventDefault();showHome();document.getElementById('about').scrollIntoView({behavior:'smooth'})">About</a>
+        <a href="#contact" onclick="event.preventDefault();showHome();document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact</a>
       </div>
     </div>
   </nav>
@@ -156,6 +165,54 @@
 
   <div class="wrap"><div class="rule"></div></div>
 
+  <section id="products" class="wrap">
+    <div class="sec-label">Founder Work — Built &amp; Shipped In-House</div>
+    <div class="work work--products">
+      <a class="card card--elas card--product" href="https://www.elasnaurna.com.br" target="_blank" rel="noopener">
+        <div class="card-head"><div class="card-tag">Civic Tech · Brazil</div><div class="card-name">Elas na Urna</div><div class="card-client">Di Pierro Creative Original</div></div>
+        <div class="card-media"><svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Elas na Urna">
+          <rect width="640" height="400" fill="#1a1625"/>
+          <circle cx="590" cy="30" r="230" fill="#c0166e" opacity="0.28"/>
+          <circle cx="40" cy="390" r="210" fill="#5b3a8c" opacity="0.30"/>
+          <text x="320" y="128" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="700" font-size="15" letter-spacing="4" fill="#c0166e">SOMOS METADE DO PAÍS</text>
+          <g transform="translate(112,158) scale(0.96)">
+            <path d="M12 44 L31 63" fill="none" stroke="#5b3a8c" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M31 63 L73 12" fill="none" stroke="#c0166e" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="94" y="59" font-family="Fraunces,serif" font-weight="900" font-style="italic" font-size="52" fill="#c0166e">Elas</text>
+            <text x="218" y="59" font-family="Fraunces,serif" font-weight="900" font-size="52" fill="#faf7f2">na Urna</text>
+          </g>
+          <text x="320" y="292" text-anchor="middle" font-family="Fraunces,serif" font-weight="900" font-size="26" fill="#faf7f2">Metade do país. Menos de <tspan font-style="italic" fill="#c0166e">um quinto</tspan> do poder.</text>
+          <text x="320" y="330" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="500" font-size="14" fill="#a59eb0">Eleições 2026 · dados oficiais do TSE</text>
+        </svg></div>
+        <div class="card-foot"><div class="card-stat">2026</div><div class="card-desc">A nonpartisan civic platform mapping women candidates in Brazil's 2026 elections — half the country, less than a fifth of the power. Brand, narrative, UX, product design, and go-to-market built from scratch, launch sequenced to the electoral calendar.</div><span class="card-link">elasnaurna.com.br →</span></div>
+      </a>
+      <a class="card card--lilac card--product" href="https://alimentaprova.com.br" target="_blank" rel="noopener">
+        <div class="card-head"><div class="card-tag">Lawtech · AI Product</div><div class="card-name">AlimentaProva</div><div class="card-client">Di Pierro Creative Original</div></div>
+        <div class="card-media"><svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AlimentaProva">
+          <rect width="640" height="400" fill="#f4f4f9"/>
+          <circle cx="320" cy="160" r="190" fill="#9e8bd1" opacity="0.14"/>
+          <circle cx="588" cy="374" r="130" fill="#2c63b3" opacity="0.08"/>
+          <g transform="translate(263,64) scale(1.8)">
+            <path d="M21 30v-13a11 11 0 0 1 22 0v13" fill="none" stroke="#24507a" stroke-width="5.5"/>
+            <path d="M32 58L15 42C9.5 36.5 9.5 27.5 15.5 23.5C21 20 28 21.5 32 27.5C36 21.5 43 20 48.5 23.5C54.5 27.5 54.5 36.5 49 42Z" fill="#9e8bd1" stroke="#f4f4f9" stroke-width="4" stroke-linejoin="round" style="paint-order:stroke"/>
+            <circle cx="32" cy="35.5" r="3.3" fill="#ffffff"/>
+            <path d="M30.3 38.2h3.4l1.4 7.3h-6.2z" fill="#ffffff"/>
+          </g>
+          <text x="320" y="240" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="800" font-size="42" letter-spacing="-0.5" fill="#1b2431">Alimenta<tspan fill="#2c63b3">Prova</tspan></text>
+          <text x="320" y="282" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="500" font-size="16" fill="#6e7787">Despesas e pensão sob controle. O app lê, organiza e guarda.</text>
+          <g font-family="Archivo,sans-serif" font-weight="600" font-size="12" fill="#24507a">
+            <rect x="146" y="312" rx="14" width="94" height="28" fill="#ffffff" stroke="#e0e0ec"/><text x="193" y="330" text-anchor="middle">1 foto</text>
+            <rect x="252" y="312" rx="14" width="120" height="28" fill="#ffffff" stroke="#e0e0ec"/><text x="312" y="330" text-anchor="middle">leitura com IA</text>
+            <rect x="384" y="312" rx="14" width="110" height="28" fill="#ffffff" stroke="#e0e0ec"/><text x="439" y="330" text-anchor="middle">selo SHA-256</text>
+          </g>
+        </svg></div>
+        <div class="card-foot"><div class="card-desc">A lawtech that turns child-support expenses into court-ready evidence: AI reads each receipt, seals it digitally, and delivers the lawyer a ready-made case file. Product, brand, UX, and code — designed, built, and shipped end to end.</div><span class="card-link">alimentaprova.com.br →</span></div>
+      </a>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="rule"></div></div>
+
   <section id="about" class="wrap">
     <div class="sec-label">About</div>
     <div class="about">
@@ -163,6 +220,7 @@
       <div>
         <h2>Creative is a growth lever, not a deliverable.</h2>
         <p>Di Pierro Creative is a performance creative studio led by Virginia Di Pierro. The work sits where creative meets data: concepts built from what the numbers say, produced at the volume paid social demands, and read back against results every cycle.</p>
+        <p style="margin-top:14px">Creativity here takes many shapes — ad concepts, civic platforms, AI products — because exploring ideas is the job, not a side effect. And none of it happens alone: the studio runs on a strong network of creative partners — designers, editors, creators, and specialists — brought in per project, so every brief gets the right minds around it.</p>
         <div class="lang">English (fluent) · Portuguese (native) · Spanish (professional)</div>
       </div>
     </div>
