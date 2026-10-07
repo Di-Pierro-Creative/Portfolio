@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Portal do Cliente — Di Pierro Creative</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4EFE3; --navy:#12314B; --yellow:#F5E000; --line:#D8D2C4;
+    --ink:#1A1A18; --ink-soft:#5A564C; --card:#FFFFFF;
+    --navy-2:#4A6B8A; --navy-3:#8AA3B8;
+    --disp:'Archivo',sans-serif; --body:'Inter',sans-serif;
+    --good:#1E7A4D; --bad:#B3362B;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.5}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+  /* top bar */
+  .top{background:var(--navy);color:#fff;padding:14px 0}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .brand{font-family:var(--disp);font-weight:900;letter-spacing:.06em;font-size:.95rem}
+  .brand .dot{color:var(--yellow)}
+  .brand small{display:block;font-family:var(--body);font-weight:400;font-size:.68rem;letter-spacing:.14em;opacity:.75;text-transform:uppercase}
+  .client{display:flex;align-items:center;gap:12px}
+  .client .logo-slot{width:120px;height:34px;border:1.5px dashed rgba(255,255,255,.45);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;opacity:.8}
+  .period{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#fff;font-family:var(--body);font-size:.8rem;padding:7px 12px;border-radius:6px}
+
+  .demo-band{background:var(--yellow);color:var(--ink);font-family:var(--disp);font-weight:700;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;text-align:center;padding:7px 12px}
+
+  main{padding:34px 0 50px}
+  h1{font-family:var(--disp);font-weight:800;font-size:1.5rem;letter-spacing:-.01em}
+  .sub{color:var(--ink-soft);font-size:.9rem;margin-top:4px}
+
+  /* kpis */
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 18px 16px}
+  .kpi .l{font-family:var(--disp);font-weight:700;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+  .kpi .n{font-family:var(--disp);font-weight:900;font-size:1.9rem;letter-spacing:-.02em;margin-top:6px;color:var(--navy)}
+  .kpi .d{font-size:.78rem;font-weight:600;margin-top:4px}
+  .kpi .d.up{color:var(--good)} .kpi .d.down{color:var(--bad)}
+  .kpi .d span{color:var(--ink-soft);font-weight:400}
+  .kpis-b .kpi .n{font-size:1.45rem}
+
+  .chan{width:100%;border-collapse:collapse;font-size:.85rem}
+  .chan th{font-family:var(--disp);font-weight:700;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);text-align:right;padding:6px 8px;border-bottom:2px solid var(--line)}
+  .chan th:first-child,.chan td:first-child{text-align:left}
+  .chan td{padding:9px 8px;text-align:right;border-bottom:1px solid #ECE7DA;font-variant-numeric:tabular-nums}
+  .chan td:first-child{font-weight:600}
+  .chan tr.best td{background:#FDFAE6}
+  .chan tr.best td:first-child::after{content:" ★";color:#B29D00;font-size:.75rem}
+  .chan tfoot td{border-bottom:none;border-top:2px solid var(--navy);font-weight:700}
+
+  /* cards & charts */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px}
+  .card h2{font-family:var(--disp);font-weight:800;font-size:.95rem;letter-spacing:-.01em}
+  .card .hint{font-size:.76rem;color:var(--ink-soft);margin-top:2px;margin-bottom:14px}
+  svg{display:block;width:100%;height:auto}
+  .gridline{stroke:#ECE7DA;stroke-width:1}
+  .axis-lbl{font-family:var(--body);font-size:11px;fill:var(--ink-soft)}
+  .val-lbl{font-family:var(--disp);font-weight:700;font-size:11.5px;fill:var(--ink)}
+
+  .tip{position:fixed;pointer-events:none;background:var(--navy);color:#fff;font-size:.75rem;padding:6px 10px;border-radius:6px;opacity:0;transform:translate(-50%,-130%);transition:opacity .12s;white-space:nowrap;z-index:50}
+  .tip b{color:var(--yellow)}
+
+  /* funnel + support */
+  .funnel-row{display:grid;grid-template-columns:2fr 1fr;gap:14px;margin-top:14px}
+  .mini{display:grid;grid-template-columns:1fr;gap:10px}
+  .mini .kpi .n{font-size:1.4rem}
+
+  .loop-note{margin-top:26px;background:var(--navy);color:#fff;border-radius:10px;padding:20px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+  .loop-note p{font-size:.88rem;max-width:62ch}
+  .loop-note p b{color:var(--yellow)}
+  .loop-note .tag{font-family:var(--disp);font-weight:800;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;border:1.5px solid var(--yellow);color:var(--yellow);padding:7px 12px;border-radius:999px;white-space:nowrap}
+
+  footer{border-top:1px solid var(--line);padding:16px 0 30px;color:var(--ink-soft);font-size:.76rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+  @media(max-width:880px){.kpis{grid-template-columns:repeat(2,1fr)}.grid2,.funnel-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <div class="brand">DI PIERRO <span class="dot">CREATIVE</span><small>Portal do Cliente</small></div>
+  <div class="client">
+    <div class="logo-slot">Logo do cliente</div>
+    <select class="period" aria-label="Período">
+      <option>Últimos 30 dias</option><option>Últimos 90 dias</option><option>Este ano</option>
+    </select>
+  </div>
+</div></div>
+
+<div class="demo-band">Protótipo · dados de demonstração — aqui entra o seu dashboard ao vivo</div>
+
+<main><div class="wrap">
+  <h1>Growth Overview</h1>
+  <p class="sub">Visão do sistema inteiro — mídia, site, funil e suporte em uma tela. Atualização diária.</p>
+
+  <!-- KPI row -->
+  <div class="kpis">
+    <div class="kpi"><div class="l">Investimento</div><div class="n">R$ 24.500</div><div class="d up">▲ 12% <span>vs. período anterior</span></div></div>
+    <div class="kpi"><div class="l">Conversões</div><div class="n">644</div><div class="d up">▲ 22% <span>vs. período anterior</span></div></div>
+    <div class="kpi"><div class="l">CPA</div><div class="n">R$ 38</div><div class="d up">▼ 18% <span>melhor que o anterior</span></div></div>
+    <div class="kpi"><div class="l">ROAS</div><div class="n">4,2×</div><div class="d up">▲ 0,6 <span>vs. período anterior</span></div></div>
+  </div>
+  <div class="kpis kpis-b">
+    <div class="kpi"><div class="l">Receita atribuída</div><div class="n">R$ 102.900</div><div class="d up">▲ 28% <span>vs. período anterior</span></div></div>
+    <div class="kpi"><div class="l">Ticket médio</div><div class="n">R$ 160</div><div class="d up">▲ 5% <span>vs. período anterior</span></div></div>
+    <div class="kpi"><div class="l">Conversão do site</div><div class="n">1,34%</div><div class="d up">▲ 0,21 p.p. <span>vs. período anterior</span></div></div>
+    <div class="kpi"><div class="l">Tráfego orgânico</div><div class="n">38%</div><div class="d up">▲ 6 p.p. <span>das visitas · SEO</span></div></div>
+  </div>
+
+  <!-- charts -->
+  <div class="grid2">
+    <div class="card">
+      <h2>Conversões por semana</h2>
+      <div class="hint">Total do período: 644 · todas as origens</div>
+      <svg id="lineChart" viewBox="0 0 520 240" role="img" aria-label="Conversões por semana: crescimento de 58 para 116 em oito semanas"></svg>
+    </div>
+    <div class="card">
+      <h2>Performance por canal</h2>
+      <div class="hint">Investimento, conversões, CPA e ROAS — onde cada real trabalha melhor</div>
+      <table class="chan">
+        <thead><tr><th>Canal</th><th>Invest.</th><th>Conv.</th><th>CPA</th><th>ROAS</th></tr></thead>
+        <tbody>
+          <tr><td>Google Ads</td><td>R$ 9.800</td><td>240</td><td>R$ 40,80</td><td>4,1×</td></tr>
+          <tr><td>Meta Ads</td><td>R$ 8.200</td><td>198</td><td>R$ 41,40</td><td>4,3×</td></tr>
+          <tr><td>TikTok Ads</td><td>R$ 3.900</td><td>74</td><td>R$ 52,70</td><td>3,1×</td></tr>
+          <tr class="best"><td>Remarketing</td><td>R$ 2.600</td><td>72</td><td>R$ 36,10</td><td>6,8×</td></tr>
+          <tr><td>Orgânico + direto</td><td>—</td><td>60</td><td>—</td><td>—</td></tr>
+        </tbody>
+        <tfoot><tr><td>Total</td><td>R$ 24.500</td><td>644</td><td>R$ 38*</td><td>4,2×</td></tr></tfoot>
+      </table>
+      <div class="hint" style="margin:10px 0 0">*CPA blended (investimento ÷ todas as conversões, incluindo orgânico)</div>
+    </div>
+  </div>
+
+  <div class="funnel-row">
+    <div class="card">
+      <h2>Funil — do clique à venda</h2>
+      <div class="hint">Onde o sistema ganha e onde vaza</div>
+      <svg id="funnelChart" viewBox="0 0 760 210" role="img" aria-label="Funil: 48.200 visitas, 2.410 leads, 980 oportunidades, 644 vendas"></svg>
+    </div>
+    <div class="mini">
+      <div class="kpi"><div class="l">Suporte — tickets</div><div class="n">212</div><div class="d up">93% <span>dentro do SLA</span></div></div>
+      <div class="kpi"><div class="l">Tempo médio de resposta</div><div class="n">1h42</div><div class="d up">▼ 24min <span>vs. período anterior</span></div></div>
+      <div class="kpi"><div class="l">Satisfação (CSAT)</div><div class="n">4,7 / 5</div><div class="d up">▲ 0,2 <span>vs. período anterior</span></div></div>
+    </div>
+  </div>
+
+  <div class="loop-note">
+    <p><b>O loop fecha aqui:</b> o que estes números ensinam — canal que compõe, etapa que vaza, pergunta que se repete no suporte — vira a hipótese do próximo ciclo. Analyze → Create → Test → Prove → Scale.</p>
+    <div class="tag">The Di Pierro Loop</div>
+  </div>
+
+  <!--
+    PRODUÇÃO: substituir a área de gráficos acima pelo embed do Looker Studio do cliente:
+    <iframe width="100%" height="1200" src="https://lookerstudio.google.com/embed/reporting/REPORT_ID/page/PAGE_ID" frameborder="0" style="border:0" allowfullscreen></iframe>
+    (Looker Studio: Arquivo > Incorporar relatório > ativar incorporação)
+  -->
+</div></main>
+
+<footer><div class="wrap">
+  <div>© Di Pierro Creative — dipierrocreative.io</div>
+  <div>Dúvidas sobre este painel: dipierrocreative@gmail.com</div>
+</div></footer>
+
+<div class="tip" id="tip"></div>
+
+<script>
+(function(){
+  const tip=document.getElementById('tip');
+  function showTip(evt,html){tip.innerHTML=html;tip.style.opacity=1;tip.style.left=evt.clientX+'px';tip.style.top=evt.clientY+'px';}
+  function hideTip(){tip.style.opacity=0;}
+  const NS='http://www.w3.org/2000/svg';
+  function el(n,attrs,parent){const e=document.createElementNS(NS,n);for(const k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e;}
+
+  /* ---- line chart: conversions / week ---- */
+  (function(){
+    const svg=document.getElementById('lineChart');
+    const weeks=['S1','S2','S3','S4','S5','S6','S7','S8'];
+    const vals=[58,63,71,69,82,88,97,116];
+    const L=46,R=14,T=16,B=34,W=520,H=240,max=120;
+    const x=i=>L+i*(W-L-R)/(weeks.length-1);
+    const y=v=>T+(H-T-B)*(1-v/max);
+    [0,40,80,120].forEach(g=>{
+      el('line',{x1:L,x2:W-R,y1:y(g),y2:y(g),class:'gridline'},svg);
+      el('text',{x:L-8,y:y(g)+4,'text-anchor':'end',class:'axis-lbl'},svg).textContent=g;
+    });
+    weeks.forEach((w,i)=>{el('text',{x:x(i),y:H-12,'text-anchor':'middle',class:'axis-lbl'},svg).textContent=w;});
+    const pts=vals.map((v,i)=>[x(i),y(v)]);
+    el('path',{d:'M'+pts.map(p=>p.join(' ')).join(' L ')+` L ${x(7)} ${y(0)} L ${x(0)} ${y(0)} Z`,fill:'#12314B',opacity:'0.07'},svg);
+    el('path',{d:'M'+pts.map(p=>p.join(' ')).join(' L '),fill:'none',stroke:'#12314B','stroke-width':'2.5','stroke-linecap':'round','stroke-linejoin':'round'},svg);
+    pts.forEach((p,i)=>{
+      const last=i===vals.length-1;
+      const c=el('circle',{cx:p[0],cy:p[1],r:last?6:4.5,fill:last?'#F5E000':'#FFFFFF',stroke:'#12314B','stroke-width':'2'},svg);
+      const hit=el('circle',{cx:p[0],cy:p[1],r:14,fill:'transparent'},svg);
+      [c,hit].forEach(t=>{t.addEventListener('mousemove',e=>showTip(e,`Semana ${i+1}: <b>${vals[i]}</b> conversões`));t.addEventListener('mouseleave',hideTip);});
+    });
+    el('text',{x:pts[7][0]-4,y:pts[7][1]-12,'text-anchor':'end',class:'val-lbl'},svg).textContent='116';
+    el('text',{x:pts[0][0],y:pts[0][1]-12,'text-anchor':'start',class:'val-lbl'},svg).textContent='58';
+  })();
+
+  /* ---- funnel: sequential navy light→dark ---- */
+  (function(){
+    const svg=document.getElementById('funnelChart');
+    const steps=[['Visitas',48200,'#8AA3B8'],['Leads',2410,'#4A6B8A'],['Oportunidades',980,'#27496B'],['Vendas',644,'#12314B']];
+    const L=130,R=96,T=10,W=760,rowH=48,barH=24;
+    const maxW=W-L-R;
+    const scale=v=>Math.max(maxW*Math.sqrt(v/48200),56); /* sqrt so small stages stay visible */
+    steps.forEach((s,i)=>{
+      const yy=T+i*rowH+(rowH-barH)/2;
+      const w=scale(s[1]);
+      el('text',{x:L-12,y:yy+barH/2+4,'text-anchor':'end',class:'axis-lbl','font-weight':'600'},svg).textContent=s[0];
+      const r=el('rect',{x:L,y:yy,width:w,height:barH,rx:4,fill:s[2]},svg);
+      el('text',{x:L+w+10,y:yy+barH/2+4,class:'val-lbl'},svg).textContent=s[1].toLocaleString('pt-BR');
+      if(i>0){
+        const conv=(steps[i][1]/steps[i-1][1]*100).toFixed(1).replace('.',',');
+        el('text',{x:W-6,y:yy+barH/2+4,'text-anchor':'end',class:'axis-lbl'},svg).textContent='↳ '+conv+'%';
+      }
+      r.addEventListener('mousemove',e=>showTip(e,`${s[0]}: <b>${s[1].toLocaleString('pt-BR')}</b>`));
+      r.addEventListener('mouseleave',hideTip);
+    });
+  })();
+})();
+</script>
+</body>
+</html>
