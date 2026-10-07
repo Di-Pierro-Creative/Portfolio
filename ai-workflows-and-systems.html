@@ -113,8 +113,21 @@ h1{font-family:var(--disp);font-weight:900;font-size:clamp(2.2rem,5.5vw,4.2rem);
 .sec-label{font-family:var(--disp);font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:24px}
 .inc{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 34px;max-width:900px}
 .inc div{padding:14px 0 0;border-top:2px solid var(--yellow);font-size:.98rem}
-.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
-.step .n{font-family:var(--disp);font-weight:900;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.steps{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:20px;padding-top:6px}
+.steps::before{content:'';position:absolute;top:24px;left:4%;right:4%;height:2px;background:var(--line)}
+.steps::after{content:'';position:absolute;top:24px;left:4%;width:0%;height:2px;background:var(--yellow);transition:width 1.8s cubic-bezier(.4,0,.2,1) .25s}
+.steps.go::after{width:92%}
+.step{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s cubic-bezier(.22,1,.36,1)}
+.steps.go .step{opacity:1;transform:none}
+.steps.go .step:nth-child(1){transition-delay:.15s}.steps.go .step:nth-child(2){transition-delay:.5s}.steps.go .step:nth-child(3){transition-delay:.85s}.steps.go .step:nth-child(4){transition-delay:1.2s}.steps.go .step:nth-child(5){transition-delay:1.55s}
+.step .n{position:relative;z-index:1;width:38px;height:38px;border-radius:50%;background:var(--navy);color:var(--yellow);font-family:var(--disp);font-weight:900;font-size:.78rem;display:flex;align-items:center;justify-content:center;transition:transform .2s,background .2s,color .2s;box-shadow:0 0 0 5px var(--paper)}
+.step:hover .n{background:var(--yellow);color:var(--navy);transform:scale(1.15)}
+.steps-loopback{display:flex;align-items:center;gap:10px;margin-top:18px;font-family:var(--disp);font-weight:700;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.steps-loopback svg{width:30px;height:30px}
+.steps-loopback .arr-path{stroke:var(--yellow);stroke-width:2.5;fill:none}
+.steps-loopback svg{animation:loopspin 6s linear infinite}
+@keyframes loopspin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion: reduce){.step{opacity:1!important;transform:none!important}.steps::after{width:92%!important;transition:none}.steps-loopback svg{animation:none}}
 .step h3{font-family:var(--disp);font-weight:800;font-size:1.05rem;margin:6px 0 8px}
 .step p{font-size:.92rem;color:var(--ink-soft);line-height:1.55}
 .method{margin-top:30px;font-size:1rem;color:var(--ink-soft);max-width:62ch}
@@ -242,6 +255,8 @@ h1 .hl{background:linear-gradient(var(--yellow),var(--yellow)) left center/100% 
       <div class="step"><div class="n">04</div><h3>Prove</h3><p>We prove it with cycle time, response time, and conversion through the funnel</p></div>
       <div class="step"><div class="n">05</div><h3>Scale</h3><p>We roll it out across teams — documented in playbooks people actually use</p></div>
   </div>
+  <div class="steps-loopback"><svg viewBox="0 0 30 30"><path class="arr-path" d="M 15 4 A 11 11 0 1 1 5.5 9.5" /><path class="arr-path" d="M 4 3.5 L 5.5 9.5 L 11.5 8"/></svg><span>Scale feeds the next Analyze — the cycle restarts</span></div>
+
   <p class="method">Every engagement runs on one loop — <strong>Analyze → Create → Test → Prove → Scale</strong> — and every cycle feeds the next: better ads, faster flows, a sharper system.</p>
 
   <div class="rule"></div>
@@ -286,5 +301,12 @@ h1 .hl{background:linear-gradient(var(--yellow),var(--yellow)) left center/100% 
 
   <footer><div>© 2026 Di Pierro Creative</div><div>Growth studio · São Paulo, remote worldwide</div></footer>
 </div>
+<script>
+(function(){
+  var s=document.querySelector('.steps');if(!s)return;
+  if(!('IntersectionObserver' in window)){s.classList.add('go');return;}
+  new IntersectionObserver(function(e,o){e.forEach(function(x){if(x.isIntersecting){s.classList.add('go');o.disconnect();}});},{threshold:.35}).observe(s);
+})();
+</script>
 </body>
 </html>
