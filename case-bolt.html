@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bolt — Creative at Continental Scale · Virginia Di Pierro</title>
+<link rel="canonical" href="https://dipierrocreative.io/case-bolt.html">
+<link rel="alternate" hreflang="en" href="https://dipierrocreative.io/case-bolt.html">
+<link rel="alternate" hreflang="pt-BR" href="https://dipierrocreative.io/caso-bolt.html">
+<link rel="alternate" hreflang="x-default" href="https://dipierrocreative.io/case-bolt.html">
+<meta name="description" content="Bolt case study: creative systems at continental scale — 29 markets, all 7 continents, 5 verticals, 2 brands, 160+ productions. Led by Di Pierro Creative's founder at Shook Digital.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F2F4F8;
+    --ink:#0B1020;
+    --ink-soft:#3B4256;
+    --bolt:#34D186;
+    --bolt-deep:#0E7C4E;
+    --line:#D6DBE4;
+    --card:#FFFFFF;
+    --alt:#5B6BFF;
+    --mono:'Space Mono',monospace;
+    --sans:'Instrument Sans',sans-serif;
+    --disp:'Archivo',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+
+  /* header */
+  header{padding:72px 0 56px;border-bottom:2px solid var(--ink)}
+  .eyebrow{
+    font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--bolt-deep);display:flex;align-items:center;gap:10px;margin-bottom:26px;
+  }
+  .eyebrow::before{content:"";width:34px;height:2px;background:var(--bolt)}
+  h1{
+    font-family:var(--disp);font-variation-settings:"wdth" 112;font-weight:850;
+    font-size:clamp(2.4rem,5.4vw,4.1rem);line-height:1.02;letter-spacing:-.015em;max-width:18ch;
+  }
+  h1 em{font-style:normal;color:var(--bolt-deep)}
+  .lede{margin-top:24px;max-width:60ch;font-size:1.12rem;color:var(--ink-soft)}
+  .meta{
+    margin-top:40px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+    background:var(--line);border:1px solid var(--line);
+  }
+  .meta div{background:var(--paper);padding:14px 16px}
+  .meta dt{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+  .meta dd{margin-top:5px;font-weight:600;font-size:.95rem}
+
+  /* results band */
+  .band{background:var(--ink);color:var(--paper);padding:52px 0}
+  .band .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+  .stat .n{
+    font-family:var(--disp);font-variation-settings:"wdth" 120;font-weight:900;
+    font-size:clamp(2rem,4.2vw,3.1rem);line-height:1;color:var(--bolt);
+  }
+  .stat .l{margin-top:10px;font-size:.9rem;color:#AEB6C8;max-width:24ch}
+
+  /* route */
+  .route{position:relative;padding:64px 0 8px}
+  .stop{position:relative;padding:0 0 72px 64px;max-width:840px}
+  .stop::before{
+    content:"";position:absolute;left:3px;top:8px;width:18px;height:18px;border-radius:50%;
+    background:var(--paper);border:3px solid var(--bolt-deep);
+  }
+  .stop.terminus::before{background:var(--bolt);border-color:var(--bolt-deep)}
+  .route::before{
+    content:"";position:absolute;left:calc(50% - 530px + 24px + 11px);top:0;bottom:0;width:2px;
+    background:repeating-linear-gradient(to bottom,var(--bolt-deep) 0 8px,transparent 8px 16px);opacity:.45;
+  }
+  .stop-tag{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--bolt-deep)}
+  h2{
+    font-family:var(--disp);font-variation-settings:"wdth" 108;font-weight:800;
+    font-size:clamp(1.5rem,3vw,2.05rem);line-height:1.12;margin:8px 0 18px;letter-spacing:-.01em;
+  }
+  .stop p{color:var(--ink-soft);max-width:64ch}
+  .stop p + p{margin-top:14px}
+  .stop strong{color:var(--ink)}
+
+  /* vertical cards */
+  .cards{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:26px}
+  .card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--bolt);padding:18px 16px}
+  .card h3{font-family:var(--disp);font-variation-settings:"wdth" 104;font-weight:750;font-size:1rem;margin-bottom:4px}
+  .card .c{font-family:var(--mono);font-size:1.5rem;font-weight:700;color:var(--bolt-deep);line-height:1}
+  .card p{font-size:.82rem;color:var(--ink-soft);margin-top:6px}
+
+  /* continent grid */
+  .continents{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:26px}
+  .cont{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--alt);padding:16px 20px}
+  .cont h4{font-family:var(--disp);font-weight:750;font-size:.95rem;display:flex;justify-content:space-between;align-items:baseline}
+  .cont h4 span{font-family:var(--mono);font-size:.8rem;color:var(--alt)}
+  .cont p{font-size:.86rem;color:var(--ink-soft);margin-top:6px}
+
+  /* beats */
+  .beats{counter-reset:beat;display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:26px}
+  .beat{background:var(--card);border:1px solid var(--line);padding:18px 20px 20px;position:relative}
+  .beat::before{counter-increment:beat;content:counter(beat,decimal-leading-zero);font-family:var(--mono);font-weight:700;font-size:12px;color:var(--bolt-deep)}
+  .beat h3{font-family:var(--disp);font-variation-settings:"wdth" 106;font-weight:780;font-size:.96rem;margin:6px 0;text-transform:uppercase;letter-spacing:.03em}
+  .beat p{font-size:.85rem;color:var(--ink-soft)}
+
+  /* insight */
+  .insight{
+    margin-top:28px;border-left:4px solid var(--bolt);background:var(--card);
+    border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:20px 24px;font-size:1.02rem;font-weight:500;
+  }
+  .insight .src{display:block;margin-top:8px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);font-weight:400}
+
+  footer{border-top:2px solid var(--ink);padding:40px 0 64px}
+  footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:baseline}
+  .foot-note{font-size:.85rem;color:var(--ink-soft);max-width:66ch}
+  .sig{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+
+  @media (prefers-reduced-motion:no-preference){
+    .stop,.band .stat{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+    .stop.in,.band .stat.in{opacity:1;transform:none}
+  }
+  @media(max-width:900px){
+    .meta{grid-template-columns:1fr 1fr}
+    .band .wrap{grid-template-columns:1fr 1fr}
+    .cards{grid-template-columns:1fr 1fr}
+    .beats{grid-template-columns:1fr 1fr}
+    .route::before{left:35px}
+  }
+  @media(max-width:600px){
+    body{font-size:16px}
+    .cards,.beats,.continents{grid-template-columns:1fr}
+    .band .wrap{grid-template-columns:1fr}
+    .meta{grid-template-columns:1fr}
+    .stop{padding-left:44px}
+    .route::before{left:31px}
+    .stop::before{left:23px;width:14px;height:14px}
+  }
+</style>
+</head>
+<body>
+<a href="work.html" style="position:fixed;bottom:22px;left:22px;z-index:9999;background:#F5E000;color:#12314B;font-family:Arial,Helvetica,sans-serif;font-weight:800;font-size:13px;letter-spacing:.04em;padding:12px 18px;border-radius:999px;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)">&larr; Back to work &middot; DI PIERRO CREATIVE</a>
+
+
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Case study · Paid social creative at scale</div>
+    <h1>Bolt: one creative engine, <em>29 markets, seven continents</em></h1>
+    <p class="lede">Bolt runs on local trust in every city it operates. The creative challenge wasn't making one good ad — it was building a system that could carry a consistent brand across five business lines, two brand names, and every populated continent, without the quality collapsing into a translation exercise.</p>
+    <dl class="meta">
+      <div><dt>Role</dt><dd>Creative Strategy &amp; Localisation Lead</dd></div>
+      <div><dt>Agency / Client</dt><dd>Shook Digital · Bolt</dd></div>
+      <div><dt>Platform</dt><dd>TikTok / paid social</dd></div>
+      <div><dt>Scope</dt><dd>Rider · Eater · Driver · Business · Bolt Plus</dd></div>
+    </dl>
+  </div>
+</header>
+
+<section class="band">
+  <div class="wrap">
+    <div class="stat"><div class="n">29</div><div class="l">markets, from the UK and Germany to Nigeria, Paraguay, and New Zealand</div></div>
+    <div class="stat"><div class="n">7</div><div class="l">continents — every populated one</div></div>
+    <div class="stat"><div class="n">5</div><div class="l">verticals across two brand identities: Bolt and Hopp</div></div>
+    <div class="stat"><div class="n">160+</div><div class="l">productions directed across the account</div></div>
+  </div>
+</section>
+
+<main class="route">
+  <div class="wrap">
+
+    <article class="stop">
+      <div class="stop-tag">Departure · The challenge</div>
+      <h2>Global consistency without global sameness</h2>
+      <p>A ride in Bangkok, a food delivery in Sofia, a driver sign-up in Nairobi, a business account in Prague — Bolt is a different promise in each, and its trust is intensely local. The brief was never "make an ad." It was to run a <strong>continuous creative operation</strong> that could hold one recognisable Bolt voice across five verticals and dozens of cultures at once, while still feeling native in every feed.</p>
+      <p>Two constraints shaped everything: the work had to <strong>scale</strong> — new markets and launches landed constantly — and it had to stay <strong>locally credible</strong>, because a tone-deaf ad in a launch market costs more than money.</p>
+    </article>
+
+    <article class="stop">
+      <div class="stop-tag">Stop 1 · Verticals</div>
+      <h2>Five business lines, one creative system</h2>
+      <p>Each vertical speaks to a different person with a different job-to-be-done. I set the creative strategy across all five, keeping a shared brand language while tuning the message per audience — riders, eaters, drivers, business travellers, and Bolt Plus subscribers.</p>
+      <div class="cards">
+        <div class="card"><h3>Rider</h3><div class="c">74</div><p>Safety, scheduled rides, "Riding is the New Driving," night-out and date-night moments.</p></div>
+        <div class="card"><h3>Driver</h3><div class="c">36</div><p>Flexibility and earnings — "A Day in the Life," professional-driver POVs.</p></div>
+        <div class="card"><h3>Eater</h3><div class="c">36</div><p>Affordability and launches — "My Bolt Food Era," city-launch group-chat concepts.</p></div>
+        <div class="card"><h3>Business</h3><div class="c">20</div><p>Hassle-free work travel — expenses in one place, "Talk to Future Me."</p></div>
+        <div class="card"><h3>Bolt Plus</h3><div class="c">✦</div><p>Subscription value — "Worth the hype," premium-tier positioning.</p></div>
+      </div>
+    </article>
+
+    <article class="stop">
+      <div class="stop-tag">Stop 2 · The system</div>
+      <h2>Regional masters, localised without reshooting</h2>
+      <p>Volume at this scale only works if you're not reinventing every asset. The model: build a strong <strong>regional master concept</strong> — often produced via TikTok Creative Exchange — then localise it out to individual markets with local creators, local idiom, and the same underlying structure. One Driver concept could spin out into <strong>eight market localisations</strong>; a single Rider idea like "Riding is the New Driving" ran natively across Europe, Africa, and Asia.</p>
+      <div class="beats">
+        <div class="beat"><h3>Concept</h3><p>One regional master built to travel — structure and hook designed for adaptation from the start.</p></div>
+        <div class="beat"><h3>Localise</h3><p>Local creator, local language, cultural reference swapped — the architecture stays, the skin changes.</p></div>
+        <div class="beat"><h3>Voice / no voice</h3><p>Concepts built with and without VO so markets could deploy fast, with or without a voice actor.</p></div>
+        <div class="beat"><h3>QA</h3><p>Script, translation, and creative reviewed per market so nothing shipped that read as foreign.</p></div>
+        <div class="beat"><h3>Two brands</h3><p>Same system carried both Bolt and Hopp — the brand name Bolt uses in Canada and select markets.</p></div>
+        <div class="beat"><h3>Repeat</h3><p>~14 productions a month, sequenced across verticals and markets on a rolling calendar.</p></div>
+      </div>
+    </article>
+
+    <article class="stop">
+      <div class="stop-tag">Stop 3 · Reach</div>
+      <h2>Every populated continent</h2>
+      <p>The account spanned 29 markets across all seven inhabited continents — a genuine test of whether one creative system could hold up everywhere from established European markets to new-launch cities in Asia, Africa, and the Americas.</p>
+      <div class="continents">
+        <div class="cont"><h4>Europe <span>18 markets</span></h4><p>UK, Germany, France, Spain, Portugal, Netherlands, Belgium, Sweden, Norway, Poland, Czech Republic, Slovakia, Romania, Croatia, Greece, Estonia, Latvia, Lithuania, Ukraine.</p></div>
+        <div class="cont"><h4>Asia <span>4 markets</span></h4><p>Thailand, Malaysia, Taiwan, Vietnam.</p></div>
+        <div class="cont"><h4>Africa <span>2 markets</span></h4><p>Nigeria, Kenya.</p></div>
+        <div class="cont"><h4>Middle East <span>2 markets</span></h4><p>Azerbaijan, Dubai.</p></div>
+        <div class="cont"><h4>Americas <span>2 markets</span></h4><p>Canada (as Hopp) and Paraguay — North and South.</p></div>
+        <div class="cont"><h4>Oceania <span>1 market</span></h4><p>New Zealand.</p></div>
+      </div>
+      <div class="insight">A "Riding is the New Driving" or "Getting home safely after a night out" concept had to land in Lagos, Lisbon, and Kuala Lumpur alike — proof that a well-built master travels further than a locally-made one-off, at a fraction of the production cost.<span class="src">Rider &amp; Eater concepts, live production log</span></div>
+    </article>
+
+    <article class="stop terminus">
+      <div class="stop-tag">Terminus · Outcome</div>
+      <h2>A repeatable engine, not a campaign</h2>
+      <p>The result wasn't a hero film — it was an <strong>operating system for creative</strong>: a rolling pipeline of ~14 productions a month, a library of reusable concepts, and a localisation model that let Bolt enter or refresh a market without commissioning fresh production each time. Concept, script, creator, translation, and delivery ran as one sequenced flow across every vertical and region.</p>
+      <p>It's the part of the job most creative reels never show — the ability to run a sprawling, multi-brand, multi-continent account and keep it shipping, on brand, and locally credible, week after week.</p>
+    </article>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-note">Scope and figures drawn from the live Bolt production log (2025–2026), TikTok / paid social. Market count reflects distinct markets with delivered creative; production counts are approximate across the tracked period.</div>
+    <div class="sig">Virginia Di Pierro · Creative Strategy</div>
+  </div>
+</footer>
+
+<script>
+  if(matchMedia('(prefers-reduced-motion: no-preference)').matches){
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+    document.querySelectorAll('.stop,.band .stat').forEach(el=>io.observe(el));
+  }
+</script>
+
+</body>
+</html>

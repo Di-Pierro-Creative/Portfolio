@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FlixBus — Reset de Conceito e Localização em Escala · Virginia Di Pierro</title>
+<link rel="canonical" href="https://dipierrocreative.io/caso-flixbus.html">
+<link rel="alternate" hreflang="en" href="https://dipierrocreative.io/case-flixbus.html">
+<link rel="alternate" hreflang="pt-BR" href="https://dipierrocreative.io/caso-flixbus.html">
+<link rel="alternate" hreflang="x-default" href="https://dipierrocreative.io/case-flixbus.html">
+<meta name="description" content="Case FlixBus: corte de 67% no CPA em 90 dias (€24,76 → €8,14) em quatro mercados, com um nono da verba do incumbente. Liderado pela fundadora da Di Pierro Creative na Shook Digital.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F6F1;
+    --ink:#0C1A10;
+    --ink-soft:#3D4A41;
+    --flix:#73D700;
+    --flix-deep:#3E7A00;
+    --line:#D7DDD3;
+    --card:#FFFFFF;
+    --mono:'Space Mono',monospace;
+    --sans:'Instrument Sans',sans-serif;
+    --disp:'Archivo',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+
+  /* ---------- header ---------- */
+  header{padding:72px 0 56px;border-bottom:2px solid var(--ink)}
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--flix-deep);
+    display:flex;align-items:center;gap:10px;
+    margin-bottom:26px;
+  }
+  .eyebrow::before{content:"";width:34px;height:2px;background:var(--flix)}
+  h1{
+    font-family:var(--disp);
+    font-variation-settings:"wdth" 112;
+    font-weight:850;
+    font-size:clamp(2.4rem,5.4vw,4.1rem);
+    line-height:1.02;
+    letter-spacing:-.015em;
+    max-width:17ch;
+  }
+  h1 em{font-style:normal;color:var(--flix-deep)}
+  .lede{
+    margin-top:24px;
+    max-width:58ch;
+    font-size:1.12rem;
+    color:var(--ink-soft);
+  }
+  .meta{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .meta div{background:var(--paper);padding:14px 16px}
+  .meta dt{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+  .meta dd{margin-top:5px;font-weight:600;font-size:.95rem}
+
+  /* ---------- headline results band ---------- */
+  .band{
+    background:var(--ink);
+    color:var(--paper);
+    padding:52px 0;
+  }
+  .band .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
+  .stat .n{
+    font-family:var(--disp);
+    font-variation-settings:"wdth" 120;
+    font-weight:900;
+    font-size:clamp(2.2rem,4.6vw,3.4rem);
+    line-height:1;
+    color:var(--flix);
+  }
+  .stat .l{
+    margin-top:10px;
+    font-size:.92rem;
+    color:#BFCBC0;
+    max-width:26ch;
+  }
+
+  /* ---------- route layout ---------- */
+  .route{position:relative;padding:64px 0 8px}
+  .route::before{
+    content:"";
+    position:absolute;
+    left:calc(50% - 530px + 24px + 11px);
+    top:0;bottom:0;
+    width:2px;
+    background:repeating-linear-gradient(to bottom,var(--flix-deep) 0 8px,transparent 8px 16px);
+    opacity:.5;
+  }
+  .stop{
+    position:relative;
+    padding:0 0 72px 64px;
+    max-width:820px;
+  }
+  .stop::before{
+    content:"";
+    position:absolute;
+    left:3px;top:8px;
+    width:18px;height:18px;
+    border-radius:50%;
+    background:var(--paper);
+    border:3px solid var(--flix-deep);
+  }
+  .stop.terminus::before{background:var(--flix);border-color:var(--flix-deep)}
+  .stop-tag{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--flix-deep);
+  }
+  h2{
+    font-family:var(--disp);
+    font-variation-settings:"wdth" 108;
+    font-weight:800;
+    font-size:clamp(1.5rem,3vw,2.05rem);
+    line-height:1.12;
+    margin:8px 0 18px;
+    letter-spacing:-.01em;
+  }
+  .stop p{color:var(--ink-soft);max-width:62ch}
+  .stop p + p{margin-top:14px}
+  .stop strong{color:var(--ink)}
+
+  /* ---------- cards ---------- */
+  .cards{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    margin-top:26px;
+  }
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-top:3px solid var(--flix);
+    padding:20px 22px;
+  }
+  .card.down{border-top-color:#C93B3B}
+  .card h3{
+    font-family:var(--disp);
+    font-variation-settings:"wdth" 104;
+    font-weight:750;
+    font-size:1.02rem;
+    margin-bottom:8px;
+  }
+  .card p{font-size:.92rem;color:var(--ink-soft);max-width:none}
+
+  /* ---------- beats (shotlist) ---------- */
+  .beats{
+    counter-reset:beat;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:14px;
+    margin-top:26px;
+  }
+  .beat{
+    background:var(--card);
+    border:1px solid var(--line);
+    padding:18px 20px 20px;
+    position:relative;
+  }
+  .beat::before{
+    counter-increment:beat;
+    content:counter(beat,decimal-leading-zero);
+    font-family:var(--mono);
+    font-weight:700;
+    font-size:12px;
+    color:var(--flix-deep);
+  }
+  .beat h3{
+    font-family:var(--disp);
+    font-variation-settings:"wdth" 106;
+    font-weight:780;
+    font-size:.98rem;
+    margin:6px 0 6px;
+    text-transform:uppercase;
+    letter-spacing:.03em;
+  }
+  .beat p{font-size:.87rem;color:var(--ink-soft)}
+
+  /* ---------- market tickets ---------- */
+  .tickets{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+    margin-top:26px;
+  }
+  .ticket{
+    background:var(--card);
+    border:1px solid var(--line);
+    padding:18px;
+    border-radius:2px;
+  }
+  .ticket .mk{
+    display:inline-block;
+    font-family:var(--mono);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.1em;
+    padding:3px 10px;
+    border-radius:99px;
+    background:var(--ink);
+    color:var(--flix);
+  }
+  .ticket .cpa{
+    font-family:var(--disp);
+    font-variation-settings:"wdth" 118;
+    font-weight:880;
+    font-size:1.9rem;
+    margin-top:12px;
+    line-height:1;
+  }
+  .ticket .path{
+    font-family:var(--mono);
+    font-size:11.5px;
+    color:var(--ink-soft);
+    margin-top:8px;
+  }
+  .ticket .verdict{
+    margin-top:10px;
+    font-size:.83rem;
+    font-weight:600;
+    color:var(--flix-deep);
+  }
+  .ticket .verdict.par{color:var(--ink-soft)}
+
+  /* ---------- pull quote / insight ---------- */
+  .insight{
+    margin-top:28px;
+    border-left:4px solid var(--flix);
+    background:var(--card);
+    border-top:1px solid var(--line);
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:20px 24px;
+    font-size:1.02rem;
+    font-weight:500;
+  }
+  .insight .src{
+    display:block;
+    margin-top:8px;
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    font-weight:400;
+  }
+
+  /* ---------- footer ---------- */
+  footer{
+    border-top:2px solid var(--ink);
+    padding:40px 0 64px;
+  }
+  footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:baseline}
+  .foot-note{font-size:.85rem;color:var(--ink-soft);max-width:66ch}
+  .sig{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+
+  /* ---------- reveal ---------- */
+  @media (prefers-reduced-motion:no-preference){
+    .stop,.band .stat{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+    .stop.in,.band .stat.in{opacity:1;transform:none}
+  }
+
+  /* ---------- responsive ---------- */
+  @media(max-width:900px){
+    .meta{grid-template-columns:1fr 1fr}
+    .beats{grid-template-columns:1fr 1fr}
+    .tickets{grid-template-columns:1fr 1fr}
+    .band .wrap{grid-template-columns:1fr;gap:26px}
+    .route::before{left:35px}
+  }
+  @media(max-width:600px){
+    body{font-size:16px}
+    .cards,.beats,.tickets{grid-template-columns:1fr}
+    .stop{padding-left:44px}
+    .route::before{left:31px}
+    .stop::before{left:23px;width:14px;height:14px}
+    .meta{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<a href="trabalhos.html" style="position:fixed;bottom:22px;left:22px;z-index:9999;background:#F5E000;color:#12314B;font-family:Arial,Helvetica,sans-serif;font-weight:800;font-size:13px;letter-spacing:.04em;padding:12px 18px;border-radius:999px;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)">&larr; Voltar aos trabalhos &middot; DI PIERRO CREATIVE</a>
+
+
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Estudo de caso · Estratégia criativa de paid social</div>
+    <h1>FlixBus: um reset de conceito que reduziu o CPA em <em>67% em 90 dias</em></h1>
+    <p class="lede">O pipeline de testes da conta havia estagnado — novos formatos eram lançados rápido, mas nada superava os vencedores já estabelecidos. Reconstruí a estratégia criativa em torno de uma única fórmula de depoimento, testei-a como uma matriz hook × mercado em quatro países e localizei um roteiro em vez de reinventar quatro.</p>
+    <dl class="meta">
+      <div><dt>Função</dt><dd>Lead de Estratégia Criativa &amp; Localização</dd></div>
+      <div><dt>Agência / Cliente</dt><dd>Shook Digital · FlixBus</dd></div>
+      <div><dt>Plataforma</dt><dd>TikTok — campanhas de compra via web</dd></div>
+      <div><dt>Mercados</dt><dd>FR · UK · US · IT</dd></div>
+    </dl>
+  </div>
+</header>
+
+<section class="band">
+  <div class="wrap">
+    <div class="stat"><div class="n">−67%</div><div class="l">de CPA em 3 meses — €24.76 → €8.14, de maio a julho</div></div>
+    <div class="stat"><div class="n">1/9</div><div class="l">do investimento dos criativos estabelecidos, convergindo a até 13% do benchmark da conta</div></div>
+    <div class="stat"><div class="n">2 de 4</div><div class="l">mercados superados no confronto direto, paridade nos demais — CPA de €7.6–8.7 em todos até julho</div></div>
+  </div>
+</section>
+
+<main class="route">
+  <div class="wrap">
+
+    <article class="stop">
+      <div class="stop-tag">Partida · O problema</div>
+      <h2>Todo vencedor da conta era o mesmo anúncio de seis segundos</h2>
+      <p>A conta de TikTok da FlixBus era sustentada por um pequeno conjunto de cortes antigos focados em preço. Eles eram baratos — mas eram um teto. Novos criativos eram lançados o tempo todo e nenhum competia de verdade: uma auditoria criativa dos 20 melhores e 20 piores arquivos por CPA deixou os padrões perdedores evidentes.</p>
+      <div class="cards">
+        <div class="card down"><h3>Aberturas com preço + marcas d'água</h3><p>"€2,99" sobre produção vistosa e padronizada respondia por 13 dos 20 piores desempenhos. Parecia anúncio, não recomendação.</p></div>
+        <div class="card down"><h3>Formatos sem rosto</h3><p>Conceitos de balões de chat e montagens não produziram nenhum vencedor em iteração alguma. Sem pessoa, sem produto em uso, sem chance.</p></div>
+        <div class="card down"><h3>Proliferação de lançar-e-duplicar</h3><p>Até 86 anúncios lançados em uma única semana privavam cada arquivo de dados de aprendizado, com arquivos individuais duplicados em 5+ anúncios competindo contra si mesmos.</p></div>
+        <div class="card down"><h3>Nenhum aprendizado transferível</h3><p>Cada mercado produzia criativos de forma independente — uma vitória em um país não ensinava nada aos outros.</p></div>
+      </div>
+    </article>
+
+    <article class="stop">
+      <div class="stop-tag">Parada 1 · A estratégia</div>
+      <h2>Uma fórmula de depoimento, construída a partir do DNA dos vencedores</h2>
+      <p>A mesma auditoria mostrou o que os melhores arquivos tinham em comum: <strong>um único creator real diante da câmera aparecia em 10 dos 10 melhores depoimentos</strong>, enquanto todos os formatos sem rosto ficavam no grupo de baixo desempenho. Codifiquei esses traços compartilhados em um shotlist replicável de seis beats — 20 segundos, UGC cru, luz natural, um só creator conduzindo os seis beats.</p>
+      <div class="beats">
+        <div class="beat"><h3>Hook</h3><p>Rosto do creator, de cara — confessando que pagou caro demais, ou estressado diante de uma tela de busca de voos. Nunca um valor de preço.</p></div>
+        <div class="beat"><h3>Virada</h3><p>"Oficialmente, eu mudei." Corte rápido para o embarque, ticket com QR mostrado ao motorista.</p></div>
+        <div class="beat"><h3>Demo</h3><p>Já no assento: espaço para as pernas, carregador, Wi-Fi — mostrados fisicamente, narrados em primeira pessoa.</p></div>
+        <div class="beat"><h3>Prova do app</h3><p>Gravação de tela do fluxo de reserva: destinos, mudanças de plano sem complicação.</p></div>
+        <div class="beat"><h3>Fechamento</h3><p>CTA falado enquanto o creator sai de cena com a mala — "se você tem uma viagem chegando…"</p></div>
+        <div class="beat"><h3>Frame final</h3><p>Plano fixo no creator. Sem selo de preço, sem cartela de logo. Legendas queimadas no vídeo do início ao fim.</p></div>
+      </div>
+    </article>
+
+    <article class="stop">
+      <div class="stop-tag">Parada 2 · O desenho do teste</div>
+      <h2>Uma matriz hook × mercado em vez de uma loteria criativa</h2>
+      <p>Em vez de mais volume, o teste foi estruturado: <strong>36 criativos a partir de cinco hooks, lançados em quatro mercados em grupos de anúncios dedicados</strong>, para que cada hook tivesse uma leitura limpa em cada país. Todos os arquivos foram lançados simultaneamente em meados de maio, partindo do zero — uma fase de aprendizado intencional, com a inflação de CPA já prevista na conta.</p>
+      <p>O retorno veio rápido. Assim que os orçamentos se estabilizaram nos arquivos sobreviventes, o CPA combinado caiu de €24.76 para €8.48 em 30 dias — e se manteve em €8.14 até julho. Os vencedores continuaram vencendo: o melhor arquivo sustentou <strong>6.5% de CTR, recorde da conta</strong>, com hook rate de 15.6%.</p>
+    </article>
+
+    <article class="stop">
+      <div class="stop-tag">Parada 3 · Localização</div>
+      <h2>Uma fórmula, quatro mercados — sem reinvenção local</h2>
+      <p>A localização foi o multiplicador. A mesma arquitetura de roteiro foi produzida nativamente para França, Reino Unido, Estados Unidos e Itália — creators locais, linguagem local, estrutura de beats idêntica. Em vez de quatro estratégias criativas, a conta rodou uma estratégia quatro vezes, e todos os mercados chegaram à mesma faixa de CPA de €7.6–8.7 até julho.</p>
+      <div class="tickets">
+        <div class="ticket"><span class="mk">FR</span><div class="cpa">€6.71</div><div class="path">€25.27 → €6.16 → €7.62</div><div class="verdict">Supera o pool do mercado (€7.54) — casa do melhor arquivo, de €4.25</div></div>
+        <div class="ticket"><span class="mk">UK</span><div class="cpa">€7.91</div><div class="path">€27.46 → €11.39 → €7.91</div><div class="verdict">Supera o pool equivalente em 35% (€12.14)</div></div>
+        <div class="ticket"><span class="mk">IT</span><div class="cpa">€8.60</div><div class="path">€21.87 → €9.05 → €7.97</div><div class="verdict par">Paridade com dois arquivos veteranos de longa data; supera a safra nova de testes</div></div>
+        <div class="ticket"><span class="mk">US</span><div class="cpa">€8.87</div><div class="path">€25.12 → €9.03 → €8.71</div><div class="verdict">O programa de vídeo de fato — detém o recorde da conta, de 6.5% de CTR</div></div>
+      </div>
+      <div class="insight">O mesmo roteiro converteu em francês, inglês e italiano apenas com reinterpretação nativa — prova de que era a fórmula, não o idioma, que fazia o trabalho.<span class="src">Comparação in-market, junho–julho, campanhas de compra via web</span></div>
+    </article>
+
+    <article class="stop terminus">
+      <div class="stop-tag">Ponto final · O resultado</div>
+      <h2>De experimento a programa criativo da conta</h2>
+      <p>Em julho, o conjunto de depoimentos operava a até 13% de um benchmark construído ao longo de anos — com cerca de um nono do investimento, antes mesmo de os arquivos maduros terem uma rodada completa em escala. Em dois dos quatro mercados, superou o pool existente de forma direta; nos EUA, efetivamente <strong>se tornou</strong> o programa de vídeo.</p>
+      <p>A próxima fase acordada: levar os assets vencedores para novos mercados, relançar nos existentes e iterar sobre a fórmula de seis beats como sistema de produção permanente da conta — transformando um teste pontual em um motor criativo replicável.</p>
+    </article>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-note">Números de performance extraídos de uma análise criativa de anúncios ativos (1 de maio – 28 de julho), apenas campanhas de compra via web, com limites mínimos de investimento e de conversão aplicados por criativo. Janela pós-aprendizado usada nas comparações em nível de criativo.</div>
+    <div class="sig">Virginia Di Pierro · Estratégia Criativa</div>
+  </div>
+</footer>
+
+<script>
+  if(matchMedia('(prefers-reduced-motion: no-preference)').matches){
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+    document.querySelectorAll('.stop,.band .stat').forEach(el=>io.observe(el));
+  }
+</script>
+
+</body>
+</html>

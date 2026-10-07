@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ocean Finance × Shook — TikTok Test & Learn Case Study</title>
+<link rel="canonical" href="https://dipierrocreative.io/case-ocean.html">
+<link rel="alternate" hreflang="en" href="https://dipierrocreative.io/case-ocean.html">
+<link rel="alternate" hreflang="pt-BR" href="https://dipierrocreative.io/caso-ocean.html">
+<link rel="alternate" hreflang="x-default" href="https://dipierrocreative.io/case-ocean.html">
+<meta name="description" content="Ocean Finance case study: 87% CPA reduction on TikTok ($53 to $6.82) across a three-cycle test-and-learn program. 11,423 conversions. Led by Di Pierro Creative's founder at Shook Digital.">
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:      #0D1B3E;
+    --teal:      #00B0AC;
+    --teal-dim:  #007A77;
+    --teal-glow: rgba(0,176,172,0.15);
+    --white:     #FFFFFF;
+    --off:       #F4F8F8;
+    --muted:     #64748B;
+    --light-border: #E2F0EF;
+    --green:     #10B981;
+    --gold:      #F59E0B;
+    --red:       #EF4444;
+    --text:      #1E293B;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--white);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(13,27,62,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,176,172,0.2);
+    padding: 0 2rem;
+    height: 56px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo {
+    font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em;
+    color: var(--teal); text-transform: uppercase;
+  }
+  .nav-label {
+    font-size: 0.7rem; color: rgba(255,255,255,0.4); letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--navy);
+    padding: 120px 2rem 80px;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; top: -40%; right: -15%;
+    width: 600px; height: 600px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,176,172,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-inner {
+    max-width: 860px; margin: 0 auto; position: relative;
+  }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--teal);
+    border: 1px solid rgba(0,176,172,0.35);
+    padding: 0.3rem 0.75rem; border-radius: 2px;
+    margin-bottom: 1.75rem;
+  }
+  .eyebrow span { width: 4px; height: 4px; background: var(--teal); border-radius: 50%; }
+
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    max-width: 680px;
+  }
+  .hero h1 em {
+    font-style: italic; color: var(--teal);
+  }
+
+  .hero-sub {
+    font-size: 1.05rem; color: rgba(255,255,255,0.55);
+    max-width: 540px; line-height: 1.7;
+    margin-bottom: 3rem;
+  }
+
+  /* ── ANIMATED CPA TICKER ── */
+  .cpa-ticker {
+    display: flex; align-items: flex-end; gap: 0;
+    margin-bottom: 3.5rem;
+  }
+  .ticker-item {
+    display: flex; flex-direction: column; align-items: flex-start;
+    position: relative;
+  }
+  .ticker-val {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900; letter-spacing: -0.03em;
+    line-height: 1;
+    transition: color 0.4s;
+  }
+  .ticker-val.strike {
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    color: rgba(255,255,255,0.2);
+    text-decoration: line-through;
+    text-decoration-color: rgba(239,68,68,0.5);
+  }
+  .ticker-val.mid {
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    color: rgba(255,255,255,0.45);
+  }
+  .ticker-val.win {
+    font-size: clamp(3rem, 6vw, 4.4rem);
+    color: var(--teal);
+  }
+  .ticker-label {
+    font-size: 0.65rem; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; margin-top: 0.4rem;
+  }
+  .ticker-label.s { color: rgba(255,255,255,0.25); }
+  .ticker-label.m { color: rgba(255,255,255,0.4); }
+  .ticker-label.w { color: var(--teal); }
+
+  .ticker-arrow {
+    font-size: 1.2rem; color: rgba(255,255,255,0.15);
+    padding: 0 0.75rem; align-self: center; padding-bottom: 0.6rem;
+  }
+
+  /* ── STAT BADGES ── */
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .stat-badge {
+    background: rgba(255,255,255,0.03);
+    padding: 1.25rem 1.5rem;
+    display: flex; flex-direction: column; gap: 0.25rem;
+  }
+  .stat-badge:hover { background: rgba(0,176,172,0.06); }
+  .stat-num {
+    font-size: 1.9rem; font-weight: 800; letter-spacing: -0.03em;
+    line-height: 1;
+  }
+  .stat-num.teal { color: var(--teal); }
+  .stat-num.green { color: var(--green); }
+  .stat-num.gold { color: var(--gold); }
+  .stat-lbl {
+    font-size: 0.7rem; font-weight: 500; letter-spacing: 0.06em;
+    text-transform: uppercase; color: rgba(255,255,255,0.35);
+  }
+
+  /* ── CONTENT SECTIONS ── */
+  .content { max-width: 860px; margin: 0 auto; padding: 0 2rem; }
+
+  section.block {
+    padding: 5rem 0;
+    border-bottom: 1px solid var(--light-border);
+  }
+  section.block:last-of-type { border-bottom: none; }
+
+  .section-label {
+    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--teal);
+    margin-bottom: 1.25rem;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .section-label::after {
+    content: ''; flex: 1; height: 1px;
+    background: linear-gradient(to right, var(--teal-glow), transparent);
+  }
+
+  .block h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    line-height: 1.2; color: var(--navy);
+    margin-bottom: 1.5rem; max-width: 600px;
+  }
+
+  .block p {
+    font-size: 1.02rem; line-height: 1.8;
+    color: #3D5166; margin-bottom: 1.25rem;
+    max-width: 680px;
+  }
+  .block p:last-child { margin-bottom: 0; }
+
+  strong { color: var(--navy); font-weight: 600; }
+
+  /* ── SOLUTION STEPS ── */
+  .steps {
+    display: flex; flex-direction: column; gap: 0;
+    margin: 2.5rem 0;
+    border-left: 2px solid var(--light-border);
+    padding-left: 2rem;
+  }
+  .step {
+    position: relative; padding-bottom: 2rem;
+  }
+  .step:last-child { padding-bottom: 0; }
+  .step::before {
+    content: '';
+    position: absolute; left: -2.4rem; top: 0.3rem;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--teal);
+    box-shadow: 0 0 0 3px rgba(0,176,172,0.15);
+  }
+  .step-num {
+    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--teal);
+    margin-bottom: 0.35rem;
+  }
+  .step h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem; font-weight: 700;
+    color: var(--navy); margin-bottom: 0.5rem;
+  }
+  .step p {
+    font-size: 0.92rem; color: var(--muted);
+    line-height: 1.7; margin-bottom: 0;
+    max-width: 580px;
+  }
+
+  /* ── HOOK PERFORMANCE TABLE ── */
+  .hook-table {
+    width: 100%; border-collapse: collapse;
+    margin: 2.5rem 0; font-size: 0.875rem;
+  }
+  .hook-table thead tr {
+    border-bottom: 2px solid var(--navy);
+  }
+  .hook-table thead th {
+    padding: 0.75rem 1rem; text-align: left;
+    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--muted);
+  }
+  .hook-table thead th:not(:first-child) { text-align: right; }
+  .hook-table tbody tr {
+    border-bottom: 1px solid var(--light-border);
+    transition: background 0.15s;
+  }
+  .hook-table tbody tr:hover { background: var(--off); }
+  .hook-table tbody tr.winner { background: rgba(0,176,172,0.04); }
+  .hook-table td {
+    padding: 0.85rem 1rem; color: var(--text);
+  }
+  .hook-table td:not(:first-child):not(:nth-child(2)) { text-align: right; }
+  .td-hook { font-weight: 600; color: var(--navy); }
+  .td-cpa-good { font-weight: 700; color: var(--green); }
+  .td-cpa-bad  { font-weight: 600; color: var(--muted); }
+  .badge {
+    display: inline-block; padding: 0.2rem 0.5rem;
+    border-radius: 2px; font-size: 0.62rem; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase;
+  }
+  .badge.win  { background: rgba(16,185,129,0.12); color: var(--green); }
+  .badge.scale { background: rgba(0,176,172,0.12); color: var(--teal-dim); }
+  .badge.pause { background: rgba(100,116,139,0.1); color: var(--muted); }
+  .badge.kill  { background: rgba(239,68,68,0.1); color: var(--red); }
+
+  /* ── RESULTS SPLIT ── */
+  .results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+  }
+  .result-card {
+    border: 1px solid var(--light-border);
+    border-radius: 4px; padding: 1.75rem;
+    position: relative; overflow: hidden;
+  }
+  .result-card::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0; height: 3px;
+  }
+  .result-card.teal::before { background: var(--teal); }
+  .result-card.green::before { background: var(--green); }
+  .result-card.gold::before { background: var(--gold); }
+  .result-card.navy::before { background: var(--navy); }
+
+  .result-figure {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.8rem; font-weight: 800;
+    letter-spacing: -0.04em; line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+  .result-figure.teal { color: var(--teal); }
+  .result-figure.green { color: var(--green); }
+  .result-figure.gold { color: var(--gold); }
+  .result-figure.navy { color: var(--navy); }
+
+  .result-card h4 {
+    font-size: 0.8rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--navy); margin-bottom: 0.5rem;
+  }
+  .result-card p {
+    font-size: 0.85rem; color: var(--muted);
+    line-height: 1.65; margin: 0;
+  }
+
+  /* ── PULL QUOTE ── */
+  .pull-quote {
+    background: var(--navy);
+    border-radius: 4px;
+    padding: 3rem 3rem 2.5rem;
+    margin: 3rem 0;
+    position: relative; overflow: hidden;
+  }
+  .pull-quote::before {
+    content: '\201C';
+    position: absolute; top: -0.5rem; left: 2rem;
+    font-family: 'DM Serif Display', serif;
+    font-size: 8rem; line-height: 1;
+    color: rgba(0,176,172,0.15);
+    pointer-events: none;
+  }
+  .pull-quote blockquote {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    line-height: 1.5; color: var(--white);
+    position: relative; z-index: 1;
+    margin-bottom: 1.5rem;
+    max-width: 620px;
+  }
+  .quote-attr {
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--teal);
+  }
+
+  /* ── LEARNING LOOP ── */
+  .loop-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1rem; margin: 2.5rem 0;
+  }
+  .loop-track {
+    border: 1px solid var(--light-border);
+    border-radius: 4px; padding: 1.5rem;
+    background: var(--off);
+  }
+  .loop-track-label {
+    font-size: 0.6rem; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--teal);
+    margin-bottom: 1rem;
+  }
+  .loop-row {
+    display: grid; grid-template-columns: 1fr auto 1fr;
+    align-items: start; gap: 0.75rem;
+  }
+  .loop-box {
+    background: var(--white);
+    border: 1px solid var(--light-border);
+    border-radius: 3px; padding: 0.9rem 1rem;
+  }
+  .loop-box-title {
+    font-size: 0.75rem; font-weight: 700;
+    color: var(--navy); margin-bottom: 0.4rem;
+  }
+  .loop-box p {
+    font-size: 0.72rem; color: var(--muted);
+    line-height: 1.55; margin: 0;
+  }
+  .loop-arrow {
+    align-self: center; color: var(--teal);
+    font-size: 1.1rem; padding-top: 0.25rem;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy);
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  .footer-logo {
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em;
+    color: var(--teal); text-transform: uppercase; margin-bottom: 0.75rem;
+  }
+  footer p {
+    font-size: 0.75rem; color: rgba(255,255,255,0.25);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .stat-row { grid-template-columns: 1fr 1fr; }
+    .results-grid { grid-template-columns: 1fr; }
+    .loop-grid { grid-template-columns: 1fr; }
+    .cpa-ticker { flex-wrap: wrap; }
+    .hero { padding: 100px 1.25rem 60px; }
+    .content { padding: 0 1.25rem; }
+    .pull-quote { padding: 2rem 1.5rem; }
+  }
+
+  /* ── SCROLL REVEAL ── */
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+<a href="work.html" style="position:fixed;bottom:22px;left:22px;z-index:9999;background:#F5E000;color:#12314B;font-family:Arial,Helvetica,sans-serif;font-weight:800;font-size:13px;letter-spacing:.04em;padding:12px 18px;border-radius:999px;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.35)">&larr; Back to work &middot; DI PIERRO CREATIVE</a>
+
+
+
+<nav>
+  <div class="nav-logo">Shook × Ocean Finance</div>
+  <div class="nav-label">Success Story</div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow"><span></span>TikTok Test &amp; Learn Case Study</div>
+
+    <h1>How Ocean Finance drove its CPA from <em>$53 to $6.82</em> in three test cycles</h1>
+
+    <p class="hero-sub">
+      A structured, data-led creative testing programme on TikTok — built around a single question: which message, which creator, which hook converts best?
+    </p>
+
+    <!-- CPA TICKER — the signature element -->
+    <div class="cpa-ticker">
+      <div class="ticker-item">
+        <div class="ticker-val strike" id="t1">$53.31</div>
+        <div class="ticker-label s">Cycle 2 CPA</div>
+      </div>
+      <div class="ticker-arrow">→</div>
+      <div class="ticker-item">
+        <div class="ticker-val mid" id="t2">$8.33</div>
+        <div class="ticker-label m">Cycle 1 CPA</div>
+      </div>
+      <div class="ticker-arrow">→</div>
+      <div class="ticker-item">
+        <div class="ticker-val win" id="t3">$6.82</div>
+        <div class="ticker-label w">Cycle 3 CPA (9 days)</div>
+      </div>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-badge">
+        <div class="stat-num teal">−87%</div>
+        <div class="stat-lbl">CPA Reduction</div>
+      </div>
+      <div class="stat-badge">
+        <div class="stat-num green">11,423+</div>
+        <div class="stat-lbl">Total Conversions</div>
+      </div>
+      <div class="stat-badge">
+        <div class="stat-num gold">$141,429</div>
+        <div class="stat-lbl">Combined Spend</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- OBJECTIVE -->
+<div class="content">
+
+  <section class="block reveal">
+    <div class="section-label">The Objective</div>
+    <h2>Build a scalable creative engine — not just a campaign</h2>
+    <p>
+      Ocean Finance, one of the UK's leading personal finance brands, had a clear goal: generate high-quality leads on TikTok at a cost that made media investment defensible. The challenge wasn't reach — it was conversion efficiency.
+    </p>
+    <p>
+      Rather than optimising a single campaign, Ocean Finance partnered with Shook to design a <strong>Test &amp; Learn programme</strong> built on a structured hypothesis framework. Each cycle would isolate one variable — creative concept, hook message, or creator profile — and use the data to directly brief the next.
+    </p>
+    <p>
+      The ambition was to move from guessing what works to <strong>knowing</strong> what works, and to build a growing library of insight that compounds over time.
+    </p>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="block reveal">
+    <div class="section-label">The Solution</div>
+    <h2>Three cycles. One question each time.</h2>
+    <p>
+      The programme was structured so that every cycle answered a specific hypothesis before passing its findings to the next. No assumptions were carried forward unchallenged.
+    </p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">Cycle 2 — Jul 2025</div>
+        <h3>Concept test: Life Hacks vs Pain Points</h3>
+        <p>
+          16 assets across male and female creators, testing eight hooks built around financial pain points — no credit card, no credit history, difficulty getting approved. The aim was to understand whether emotional problem-framing could drive conversions. It revealed a $53.31 blended CPA, but critically surfaced one standout: <strong>Female Hook 2 ($7.98 CPA, 425 conversions)</strong> using a lead-gen objective — pointing directly to what to test next.
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="step-num">Cycle 1 v2 — Oct 2025</div>
+        <h3>Concept pivot: Testimonial over Life Hacks</h3>
+        <p>
+          Acting on Cycle 2 learnings, the creative concept shifted entirely. Out went the high-energy Life Hacks format; in came a quieter, more direct testimonial style — a creator speaking plainly about Ocean Finance's product benefits. Eight hooks now led with USPs: eligibility in 60 seconds, contactless payments up to £100, credit limits between £200–£8,000. The result was a <strong>$8.33 blended CPA</strong> — a 84% improvement — with Hooks 5 and 7 alone accounting for 87% of all 8,958 conversions.
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="step-num">Cycle 3 — May 2026</div>
+        <h3>Creator and message refinement: two female creators, proven hooks</h3>
+        <p>
+          With the concept validated, the variable shifted to creator profile. Two female creators from different age groups (20s and 30s) were set against the same eight hooks — now chosen from the strongest performers in Cycle 1. Within nine days, the programme delivered a <strong>$6.82 blended CPA</strong>, 1,390 conversions, and a 27.5% average conversion rate. Crucially, both creators performed at near-identical CPAs, confirming that the <em>message</em>, not the creator age group, is the key differentiator.
+        </p>
+      </div>
+    </div>
+
+    <p>
+      The structure meant that nothing was wasted. Even Cycle 2's high CPA was data — it eliminated an entire creative direction and freed budget to be deployed more precisely in the cycles that followed.
+    </p>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="block reveal">
+    <div class="section-label">The Results</div>
+    <h2>What the data says</h2>
+    <p>
+      Across three cycles, the programme generated <strong>11,423 conversions from £141,429 in spend</strong> — but the headline number isn't the story. The story is the trajectory.
+    </p>
+
+    <div class="results-grid">
+      <div class="result-card teal">
+        <div class="result-figure teal">−84%</div>
+        <h4>CPA improvement C2 → C1</h4>
+        <p>Moving from Life Hacks to Testimonial format cut the cost per acquisition from $53.31 to $8.33 — the single biggest performance lever in the programme.</p>
+      </div>
+      <div class="result-card green">
+        <div class="result-figure green">$6.82</div>
+        <h4>Cycle 3 CPA — after 9 days</h4>
+        <p>An early read still improving as the TikTok algorithm optimises. Already below the Cycle 1 blended CPA and with 27.5% average CVR across creatives.</p>
+      </div>
+      <div class="result-card gold">
+        <div class="result-figure gold">8,958</div>
+        <h4>Conversions from Cycle 1 alone</h4>
+        <p>Of which 87% came from just two hooks — Male Hook 7 and Female/Male Hook 5 — both centred on specific product benefits rather than pain points.</p>
+      </div>
+      <div class="result-card navy">
+        <div class="result-figure navy">37.7%</div>
+        <h4>Highest single-creative CVR</h4>
+        <p>Creator 30s × Hook 8 (credit limit variant) in Cycle 3 — the strongest signal yet that age-specific messaging can unlock even lower CPAs in future cycles.</p>
+      </div>
+    </div>
+
+    <p>
+      The hook-level data from Cycle 3 also produced the programme's clearest creative kill: Hook 7, testing Ocean Finance's "Instant card access" feature, returned <strong>zero conversions across both creators</strong>. That finding — worth as much as any winner — will directly shape the briefs for Tests 3 and 4.
+    </p>
+
+    <h3 style="font-family:'DM Serif Display',serif; font-size:1.4rem; color:var(--navy); margin: 2.5rem 0 1rem; font-weight:400;">Cycle 3 hook performance at a glance</h3>
+
+    <table class="hook-table">
+      <thead>
+        <tr>
+          <th>Hook</th>
+          <th>Message</th>
+          <th>Conversions</th>
+          <th>CPA</th>
+          <th>Verdict</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="winner">
+          <td class="td-hook">Hook 1</td>
+          <td>Eligibility check in 60 seconds</td>
+          <td>360</td>
+          <td class="td-cpa-good">$5.82</td>
+          <td><span class="badge win">Winner</span></td>
+        </tr>
+        <tr class="winner">
+          <td class="td-hook">Hook 8</td>
+          <td>Credit limit £200–£8,000 (variant)</td>
+          <td>183</td>
+          <td class="td-cpa-good">$5.84</td>
+          <td><span class="badge win">Winner</span></td>
+        </tr>
+        <tr>
+          <td class="td-hook">Hook 4</td>
+          <td>Credit limit £200–£8,000</td>
+          <td>690</td>
+          <td class="td-cpa-good">$7.08</td>
+          <td><span class="badge scale">Scale</span></td>
+        </tr>
+        <tr>
+          <td class="td-hook">Hook 3</td>
+          <td>No way to prove financial responsibility</td>
+          <td>87</td>
+          <td>$7.54</td>
+          <td><span class="badge scale">Test more</span></td>
+        </tr>
+        <tr>
+          <td class="td-hook">Hook 5</td>
+          <td>Contactless payments up to £100</td>
+          <td>48</td>
+          <td class="td-cpa-bad">$11.11</td>
+          <td><span class="badge pause">Pause</span></td>
+        </tr>
+        <tr>
+          <td class="td-hook">Hook 2</td>
+          <td>No access to card-only spaces</td>
+          <td>15</td>
+          <td class="td-cpa-bad">$10.02</td>
+          <td><span class="badge pause">Pause</span></td>
+        </tr>
+        <tr>
+          <td class="td-hook">Hook 7</td>
+          <td>New feature: Instant card access</td>
+          <td>0</td>
+          <td class="td-cpa-bad">—</td>
+          <td><span class="badge kill">Kill</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- LEARNING LOOP -->
+  <section class="block reveal">
+    <div class="section-label">What's Next</div>
+    <h2>The learning loop: Tests 3 &amp; 4</h2>
+    <p>
+      The programme's design means Cycle 3's Tests 1 and 2 feed directly into Tests 3 and 4 — each creator getting a new brief built from their own performance data.
+    </p>
+
+    <div class="loop-grid">
+      <div class="loop-track">
+        <div class="loop-track-label">Track A — Creator 20s</div>
+        <div class="loop-row">
+          <div class="loop-box">
+            <div class="loop-box-title">Test 1 — Learned</div>
+            <p>Hook 1 ($5.67) and Hook 4 ($7.17) are her strongest. Hook 5 underperforms vs Cycle 1. Hook 7 is zero.</p>
+          </div>
+          <div class="loop-arrow">→</div>
+          <div class="loop-box">
+            <div class="loop-box-title">Test 3 — Applying</div>
+            <p>Scale Hooks 1 &amp; 4 with visually enhanced executions. Drop Hooks 5 &amp; 7 entirely.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="loop-track">
+        <div class="loop-track-label">Track B — Creator 30s</div>
+        <div class="loop-row">
+          <div class="loop-box">
+            <div class="loop-box-title">Test 2 — Learned</div>
+            <p>Hook 8 ($5.77, 37.7% CVR) and Hook 3 ($7.29) are uniquely strong. Financial responsibility messaging resonates with older audiences.</p>
+          </div>
+          <div class="loop-arrow">→</div>
+          <div class="loop-box">
+            <div class="loop-box-title">Test 4 — Applying</div>
+            <p>Scale Hooks 8 &amp; 4. Keep Hook 3 as a differentiated angle. Drop Hooks 5, 6 &amp; 7.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      The most significant finding from Cycle 3 is also the most actionable: <strong>Hook 3 performs almost exclusively with the older creator</strong>. "No way to prove financial responsibility" drove 84 conversions at $7.29 CPA for Creator 30s — versus just 3 conversions for Creator 20s. That kind of audience-message specificity is only visible when creators and hooks are tested in parallel at scale.
+    </p>
+  </section>
+
+  <!-- PULL QUOTE -->
+  <div class="pull-quote reveal">
+    <blockquote>
+      "The Test &amp; Learn programme didn't just improve our CPA — it gave us something more valuable: a repeatable process for understanding what Ocean Finance's audience actually wants to hear, and from whom."
+    </blockquote>
+    <div class="quote-attr">Shook — Creative Performance Team</div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Shook × Ocean Finance</div>
+  <p>TikTok Test &amp; Learn Programme — Cycles 1, 2 &amp; 3 &nbsp;|&nbsp; May 2026</p>
+</footer>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  reveals.forEach(r => observer.observe(r));
+
+  // CPA ticker: animate the winning number counting down on load
+  function animateCount(el, start, end, duration, prefix='$', decimals=2) {
+    const startTime = performance.now();
+    function step(now) {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      const val = start + (end - start) * ease;
+      el.textContent = prefix + val.toFixed(decimals);
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  window.addEventListener('load', () => {
+    setTimeout(() => animateCount(document.getElementById('t3'), 53.31, 6.82, 1800), 600);
+  });
+</script>
+</body>
+</html>

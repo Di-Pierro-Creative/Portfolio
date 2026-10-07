@@ -1,0 +1,35 @@
+# Di Pierro Creative
+
+> Di Pierro Creative is a growth studio working with brands worldwide (EN · ES · PT). We help growing businesses turn scattered marketing into a system that compounds results — through the Di Pierro Loop: Analyze → Create → Test → Prove → Scale — without hiring a full in-house team or juggling five agencies. Based in São Paulo, Brazil; remote worldwide. Founded by Virginia Di Pierro, systems orchestrator.
+
+Methodology: The Di Pierro Loop is grounded in systems thinking (leverage points, feedback loops, accumulation). The loop closes when the system compounds: what customers say and what the data shows feed the next cycle — better ads, faster flows, a sharper system.
+
+Contact: dipierrocreative@gmail.com · WhatsApp +55 11 98838-1991
+
+## Services (EN)
+- [AI Workflows & Systems](https://dipierrocreative.io/ai-workflows-and-systems.html): systems design and AI-powered workflows across marketing, sales and customer support — managed service. Platforms: n8n, Make, Zapier, HubSpot and more.
+- [Websites & Landing Pages](https://dipierrocreative.io/websites-and-landing-pages.html): design, build, analytics and continuous CRO care plans.
+- [SEO & Google Ads](https://dipierrocreative.io/seo-and-google-ads.html): technical and content SEO plus Google Ads, run together.
+- [Social Media & Performance Creative](https://dipierrocreative.io/social-media-and-performance-creative.html): paid and organic social, creative testing roadmaps.
+- [Dashboards & Reporting](https://dipierrocreative.io/dashboards-and-reporting.html): live dashboards unifying marketing, sales and support data (Looker Studio, GA4, Sheets, BigQuery).
+- [App Growth & Monetization](https://dipierrocreative.io/app-growth-and-monetization.html): user acquisition, ASO, ads monetization and yield strategy.
+
+## Serviços (PT-BR)
+- [Workflows de IA e Sistemas](https://dipierrocreative.io/workflows-de-ia-e-sistemas.html)
+- [Criação de Sites e Landing Pages](https://dipierrocreative.io/criacao-de-sites-e-landing-pages.html)
+- [SEO e Google Ads](https://dipierrocreative.io/seo-e-google-ads.html)
+- [Social Media e Criativo de Performance](https://dipierrocreative.io/social-media-e-criativo-de-performance.html)
+- [Dashboards e Relatórios](https://dipierrocreative.io/dashboards-e-relatorios.html)
+- [App Growth e Monetização](https://dipierrocreative.io/app-growth-e-monetizacao.html)
+
+## Case studies
+- [Ocean Finance](https://dipierrocreative.io/case-ocean.html): 87% CPA reduction on TikTok ($53 → $6.82), 11,423 conversions, three test-and-learn cycles.
+- [FlixBus](https://dipierrocreative.io/case-flixbus.html): 67% CPA cut in 90 days (€24.76 → €8.14) across four markets on a ninth of the incumbent spend.
+- [Bolt](https://dipierrocreative.io/case-bolt.html): creative systems at continental scale — 29 markets, 7 continents, 160+ productions.
+- [Elas na Urna](https://dipierrocreative.io/case-elasnaurna.html): studio original — search-first growth engine, zero to 2,598 visitors in six weeks with under R$20 in paid media; 907 organic search clicks; GEO from day one.
+
+## Key pages
+- [Home (EN)](https://dipierrocreative.io/)
+- [Home (PT-BR)](https://dipierrocreative.io/pt.html)
+- [Work & Case Studies](https://dipierrocreative.io/work.html)
+- [Trabalhos (PT-BR)](https://dipierrocreative.io/trabalhos.html)
