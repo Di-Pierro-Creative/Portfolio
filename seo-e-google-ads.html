@@ -150,6 +150,23 @@ details p{margin-top:12px;color:var(--ink-soft);max-width:68ch}
 footer{margin-top:54px;border-top:1px solid var(--line);padding:26px 0 40px;display:flex;justify-content:space-between;font-size:.85rem;color:var(--ink-soft);flex-wrap:wrap;gap:10px}
 @media(max-width:820px){.inc{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.proof{grid-template-columns:1fr;gap:18px}}
 @media(max-width:520px){.steps{grid-template-columns:1fr}}
+
+.svc-hero{display:grid;grid-template-columns:1.12fr .88fr;gap:54px;align-items:center;margin-top:10px}
+.svc-hero .define{margin:0}
+@media(max-width:900px){.svc-hero{grid-template-columns:1fr;gap:26px}}
+@keyframes sweep{from{background-size:0% 100%}to{background-size:100% 100%}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+h1 .hl{background:linear-gradient(var(--yellow),var(--yellow)) left center/100% 100% no-repeat;animation:sweep .7s ease-out .7s both}
+.kicker,h1,.lede,.svc-hero .define{animation:rise .7s cubic-bezier(.22,1,.36,1) both}
+.kicker{animation-delay:.05s}h1{animation-delay:.15s}.lede{animation-delay:.28s}.svc-hero .define{animation-delay:.42s}
+@media (prefers-reduced-motion: reduce){.kicker,h1,.lede,.svc-hero .define,h1 .hl{animation:none!important}}
+
+.thesis{background:var(--navy);color:#fff;border-radius:14px;padding:38px 36px;margin:10px 0}
+.thesis .tk{font-family:var(--disp);font-weight:700;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--yellow);margin-bottom:10px}
+.thesis h2{font-family:var(--disp);font-weight:800;font-size:clamp(1.25rem,2.5vw,1.7rem);letter-spacing:-.01em;margin-bottom:12px;max-width:30ch}
+.thesis p{max-width:74ch;color:rgba(255,255,255,.88);font-size:.97rem}
+.thesis strong{color:var(--yellow)}
+.thesis a{color:var(--yellow);font-weight:700}
 </style>
 </head>
 <body>
@@ -163,16 +180,17 @@ footer{margin-top:54px;border-top:1px solid var(--line);padding:26px 0 40px;disp
     </div>
   </nav>
 
-  <div class="kicker">Di Pierro Creative — Growth Studio</div>
-  <h1>Domine o momento <span class="hl">da intenção.</span></h1>
-  <p class="lede">SEO técnico e de conteúdo mais gestão de Google Ads, operados juntos — para que orgânico e pago se alimentem em vez de brigar pelos mesmos cliques.</p>
-
-  <div class="rule"></div>
-
-  <section class="define">
+  <div class="svc-hero">
+    <div>
+      <div class="kicker">Di Pierro Creative — Growth Studio</div>
+      <h1>Domine o momento <span class="hl">da intenção.</span></h1>
+      <p class="lede">SEO técnico e de conteúdo mais gestão de Google Ads, operados juntos — para que orgânico e pago se alimentem em vez de brigar pelos mesmos cliques.</p>
+    </div>
+    <section class="define">
     <h2>O que são SEO, Google Ads e GEO?</h2>
     <p>SEO (otimização para buscadores) conquista seu lugar nos resultados orgânicos. Google Ads compra seu lugar no momento exato da intenção. GEO (generative engine optimization) torna sua marca legível para assistentes de IA como ChatGPT, Claude e Perplexity, que cada vez mais respondem diretamente às perguntas de quem compra. Operamos os três como um sistema só porque servem ao mesmo momento: alguém pedindo exatamente o que você vende.</p>
   </section>
+  </div>
 
   <div class="rule"></div>
 
@@ -203,6 +221,14 @@ footer{margin-top:54px;border-top:1px solid var(--line);padding:26px 0 40px;disp
   <div class="proof">
     <div><div class="stat">1 system</div><div class="lbl">busca orgânica + paga, rodando num ciclo só</div></div>
     <p>A mesma disciplina de teste que cortou o CPA de paid social em 87% roda nosso trabalho de busca: um framework estruturado de hipóteses, vencedores provados com investimento, aprendizados de volta para páginas e anúncios.</p>
+  </div>
+
+  <div class="rule"></div>
+
+  <div class="thesis">
+    <div class="tk">Por que sistema, não peças</div>
+    <h2>SEO e Google Ads devem rodar separados?</h2>
+    <p>Separados, os dois estagnam. Juntos, um reduz o risco do outro: a busca paga revela em dias quais termos convertem — e eles viram prioridade de SEO; o ranking orgânico barateia a mesma demanda que os anúncios compravam. Fornecedores separados nunca cruzam esse dado. Um sistema, um loop de feedback — no Google e no Bing.</p>
   </div>
 
   <div class="rule"></div>

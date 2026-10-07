@@ -150,6 +150,23 @@ details p{margin-top:12px;color:var(--ink-soft);max-width:68ch}
 footer{margin-top:54px;border-top:1px solid var(--line);padding:26px 0 40px;display:flex;justify-content:space-between;font-size:.85rem;color:var(--ink-soft);flex-wrap:wrap;gap:10px}
 @media(max-width:820px){.inc{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.proof{grid-template-columns:1fr;gap:18px}}
 @media(max-width:520px){.steps{grid-template-columns:1fr}}
+
+.svc-hero{display:grid;grid-template-columns:1.12fr .88fr;gap:54px;align-items:center;margin-top:10px}
+.svc-hero .define{margin:0}
+@media(max-width:900px){.svc-hero{grid-template-columns:1fr;gap:26px}}
+@keyframes sweep{from{background-size:0% 100%}to{background-size:100% 100%}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+h1 .hl{background:linear-gradient(var(--yellow),var(--yellow)) left center/100% 100% no-repeat;animation:sweep .7s ease-out .7s both}
+.kicker,h1,.lede,.svc-hero .define{animation:rise .7s cubic-bezier(.22,1,.36,1) both}
+.kicker{animation-delay:.05s}h1{animation-delay:.15s}.lede{animation-delay:.28s}.svc-hero .define{animation-delay:.42s}
+@media (prefers-reduced-motion: reduce){.kicker,h1,.lede,.svc-hero .define,h1 .hl{animation:none!important}}
+
+.thesis{background:var(--navy);color:#fff;border-radius:14px;padding:38px 36px;margin:10px 0}
+.thesis .tk{font-family:var(--disp);font-weight:700;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--yellow);margin-bottom:10px}
+.thesis h2{font-family:var(--disp);font-weight:800;font-size:clamp(1.25rem,2.5vw,1.7rem);letter-spacing:-.01em;margin-bottom:12px;max-width:30ch}
+.thesis p{max-width:74ch;color:rgba(255,255,255,.88);font-size:.97rem}
+.thesis strong{color:var(--yellow)}
+.thesis a{color:var(--yellow);font-weight:700}
 </style>
 </head>
 <body>
@@ -163,16 +180,17 @@ footer{margin-top:54px;border-top:1px solid var(--line);padding:26px 0 40px;disp
     </div>
   </nav>
 
-  <div class="kicker">Di Pierro Creative — Growth Studio</div>
-  <h1>Seus números, <span class="hl">numa visão só.</span></h1>
-  <p class="lede">Dashboards que reúnem dados de marketing, vendas e atendimento em uma visão só, ao vivo — os números que importam, atualizados sozinhos, sem arqueologia de planilha toda segunda-feira.</p>
-
-  <div class="rule"></div>
-
-  <section class="define">
+  <div class="svc-hero">
+    <div>
+      <div class="kicker">Di Pierro Creative — Growth Studio</div>
+      <h1>Seus números, <span class="hl">numa visão só.</span></h1>
+      <p class="lede">Dashboards que reúnem dados de marketing, vendas e atendimento em uma visão só, ao vivo — os números que importam, atualizados sozinhos, sem arqueologia de planilha toda segunda-feira.</p>
+    </div>
+    <section class="define">
     <h2>O que é uma fonte única da verdade?</h2>
     <p>Fonte única da verdade é um dashboard ao vivo onde os números de marketing, vendas e atendimento concordam — mesmas definições, mesmos períodos, atualização automática. Ele substitui o ritual de segunda-feira de exportar planilhas e discutir qual número está certo. Construímos dashboards em torno de decisões: se um gráfico não muda uma decisão semanal de alguém, ele não entra.</p>
   </section>
+  </div>
 
   <div class="rule"></div>
 
@@ -229,6 +247,14 @@ footer{margin-top:54px;border-top:1px solid var(--line);padding:26px 0 40px;disp
   <div class="proof">
     <div><div class="stat">10+</div><div class="lbl">marcas acompanhadas em ferramentas que nós mesmos construímos</div></div>
     <p>Construímos nossas próprias ferramentas quando a prateleira não dá conta — incluindo um calendário de produção próprio usado para programar e acompanhar criativos de 10+ marcas. Dashboard é como a gente toca o próprio trabalho.</p>
+  </div>
+
+  <div class="rule"></div>
+
+  <div class="thesis">
+    <div class="tk">Por que sistema, não peças</div>
+    <h2>O que torna um dashboard útil (e não decoração)?</h2>
+    <p>Dashboard não é relatório para admirar — é o <strong>loop de feedback</strong> do sistema inteiro. Útil significa: marketing, vendas e suporte numa tela só, cada número ligado a uma decisão, e a leitura de cada ciclo alimentando o próximo teste. Métrica que ninguém usa para decidir é decoração, por mais bonito que o gráfico seja.</p>
   </div>
 
   <div class="rule"></div>

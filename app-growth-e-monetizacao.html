@@ -150,6 +150,23 @@ details p{margin-top:12px;color:var(--ink-soft);max-width:68ch}
 footer{margin-top:54px;border-top:1px solid var(--line);padding:26px 0 40px;display:flex;justify-content:space-between;font-size:.85rem;color:var(--ink-soft);flex-wrap:wrap;gap:10px}
 @media(max-width:820px){.inc{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.proof{grid-template-columns:1fr;gap:18px}}
 @media(max-width:520px){.steps{grid-template-columns:1fr}}
+
+.svc-hero{display:grid;grid-template-columns:1.12fr .88fr;gap:54px;align-items:center;margin-top:10px}
+.svc-hero .define{margin:0}
+@media(max-width:900px){.svc-hero{grid-template-columns:1fr;gap:26px}}
+@keyframes sweep{from{background-size:0% 100%}to{background-size:100% 100%}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+h1 .hl{background:linear-gradient(var(--yellow),var(--yellow)) left center/100% 100% no-repeat;animation:sweep .7s ease-out .7s both}
+.kicker,h1,.lede,.svc-hero .define{animation:rise .7s cubic-bezier(.22,1,.36,1) both}
+.kicker{animation-delay:.05s}h1{animation-delay:.15s}.lede{animation-delay:.28s}.svc-hero .define{animation-delay:.42s}
+@media (prefers-reduced-motion: reduce){.kicker,h1,.lede,.svc-hero .define,h1 .hl{animation:none!important}}
+
+.thesis{background:var(--navy);color:#fff;border-radius:14px;padding:38px 36px;margin:10px 0}
+.thesis .tk{font-family:var(--disp);font-weight:700;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--yellow);margin-bottom:10px}
+.thesis h2{font-family:var(--disp);font-weight:800;font-size:clamp(1.25rem,2.5vw,1.7rem);letter-spacing:-.01em;margin-bottom:12px;max-width:30ch}
+.thesis p{max-width:74ch;color:rgba(255,255,255,.88);font-size:.97rem}
+.thesis strong{color:var(--yellow)}
+.thesis a{color:var(--yellow);font-weight:700}
 </style>
 </head>
 <body>
@@ -163,16 +180,17 @@ footer{margin-top:54px;border-top:1px solid var(--line);padding:26px 0 40px;disp
     </div>
   </nav>
 
-  <div class="kicker">Di Pierro Creative — Growth Studio</div>
-  <h1>Os dois lados do <span class="hl">P&amp;L do seu app.</span></h1>
-  <p class="lede">A maioria dos parceiros ajuda a comprar usuários ou a vender anúncios. Nós trabalhamos os dois lados da equação: aquisição de usuários e ASO de um lado, monetização de ads e estratégia de yield do outro. CAC para baixo, receita por usuário para cima.</p>
-
-  <div class="rule"></div>
-
-  <section class="define">
+  <div class="svc-hero">
+    <div>
+      <div class="kicker">Di Pierro Creative — Growth Studio</div>
+      <h1>Os dois lados do <span class="hl">P&amp;L do seu app.</span></h1>
+      <p class="lede">A maioria dos parceiros ajuda a comprar usuários ou a vender anúncios. Nós trabalhamos os dois lados da equação: aquisição de usuários e ASO de um lado, monetização de ads e estratégia de yield do outro. CAC para baixo, receita por usuário para cima.</p>
+    </div>
+    <section class="define">
     <h2>O que é monetização de ads?</h2>
     <p>Monetização de ads é o lado de receita do P&L de um app: mostrar os formatos certos, para os segmentos certos, na frequência certa — para a receita por usuário crescer sem machucar a retenção. Yield é a eficiência com que seu inventário transforma atenção em receita. Trabalhamos junto com aquisição porque um lado decide o outro: conhecer seu yield muda quanto você pode pagar por install.</p>
   </section>
+  </div>
 
   <div class="rule"></div>
 
@@ -203,6 +221,14 @@ footer{margin-top:54px;border-top:1px solid var(--line);padding:26px 0 40px;disp
   <div class="proof">
     <div><div class="stat">29</div><div class="lbl">mercados escalados pelo nosso motor criativo</div></div>
     <p>Nosso motor criativo já escalou campanhas por 29 mercados e todos os 7 continentes (Bolt — case completo neste site), e nossa prática de monetização traz profundidade técnica e estratégica de ads com expertise em app growth na LATAM.</p>
+  </div>
+
+  <div class="rule"></div>
+
+  <div class="thesis">
+    <div class="tk">Por que sistema, não peças</div>
+    <h2>Por que instalar usuários não basta para crescer um app?</h2>
+    <p>Porque aquisição e monetização são um sistema só, não dois departamentos. O UA decide quem entra; a monetização decide quanto cada usuário vale; o LTV decide quanto você pode pagar pela próxima instalação. Separados, um otimiza contra o outro. Como loop, o dado de yield deixa a aquisição mais inteligente a cada ciclo.</p>
   </div>
 
   <div class="rule"></div>

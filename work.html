@@ -103,6 +103,10 @@
   .card--lilac .card-stat,.card--lilac .card-tag{color:#9e8bd1}.card--lilac .card-tag{opacity:1}
   @media(max-width:900px){.wrap{padding:0 22px}.navlinks{gap:20px}.work{grid-template-columns:1fr}.work--products{grid-template-columns:1fr}.services{grid-template-columns:1fr 1fr}.samples{grid-template-columns:repeat(3,1fr)}.systems{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr;gap:28px}.about img{max-width:280px}.contact .wrap{flex-direction:column;align-items:flex-start}.contact-right{text-align:left}}
   @media(max-width:560px){.samples{grid-template-columns:1fr 1fr}.stats{gap:22px}.hero-row{flex-direction:column;align-items:flex-start}}
+
+  @keyframes sweep{from{background-size:0% 100%}to{background-size:100% 100%}}
+  h1 .hl{background:linear-gradient(var(--yellow),var(--yellow)) left center/100% 100% no-repeat;animation:sweep .7s ease-out .6s both}
+  @media (prefers-reduced-motion: reduce){h1 .hl{animation:none!important}}
 </style>
 </head>
 <body>

@@ -150,6 +150,23 @@ details p{margin-top:12px;color:var(--ink-soft);max-width:68ch}
 footer{margin-top:54px;border-top:1px solid var(--line);padding:26px 0 40px;display:flex;justify-content:space-between;font-size:.85rem;color:var(--ink-soft);flex-wrap:wrap;gap:10px}
 @media(max-width:820px){.inc{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.proof{grid-template-columns:1fr;gap:18px}}
 @media(max-width:520px){.steps{grid-template-columns:1fr}}
+
+.svc-hero{display:grid;grid-template-columns:1.12fr .88fr;gap:54px;align-items:center;margin-top:10px}
+.svc-hero .define{margin:0}
+@media(max-width:900px){.svc-hero{grid-template-columns:1fr;gap:26px}}
+@keyframes sweep{from{background-size:0% 100%}to{background-size:100% 100%}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+h1 .hl{background:linear-gradient(var(--yellow),var(--yellow)) left center/100% 100% no-repeat;animation:sweep .7s ease-out .7s both}
+.kicker,h1,.lede,.svc-hero .define{animation:rise .7s cubic-bezier(.22,1,.36,1) both}
+.kicker{animation-delay:.05s}h1{animation-delay:.15s}.lede{animation-delay:.28s}.svc-hero .define{animation-delay:.42s}
+@media (prefers-reduced-motion: reduce){.kicker,h1,.lede,.svc-hero .define,h1 .hl{animation:none!important}}
+
+.thesis{background:var(--navy);color:#fff;border-radius:14px;padding:38px 36px;margin:10px 0}
+.thesis .tk{font-family:var(--disp);font-weight:700;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--yellow);margin-bottom:10px}
+.thesis h2{font-family:var(--disp);font-weight:800;font-size:clamp(1.25rem,2.5vw,1.7rem);letter-spacing:-.01em;margin-bottom:12px;max-width:30ch}
+.thesis p{max-width:74ch;color:rgba(255,255,255,.88);font-size:.97rem}
+.thesis strong{color:var(--yellow)}
+.thesis a{color:var(--yellow);font-weight:700}
 </style>
 </head>
 <body>
@@ -163,16 +180,17 @@ footer{margin-top:54px;border-top:1px solid var(--line);padding:26px 0 40px;disp
     </div>
   </nav>
 
-  <div class="kicker">Di Pierro Creative — Growth Studio</div>
-  <h1>Criativo que mexe <span class="hl">no número.</span></h1>
-  <p class="lede">Social paga e orgânica, tocada pelo motor criativo por trás de um corte de 87% no CPA: conceitos, hooks, roadmaps estruturados de teste, conteúdo com creators e comunidade — no TikTok, na Meta e onde seu público estiver.</p>
-
-  <div class="rule"></div>
-
-  <section class="define">
+  <div class="svc-hero">
+    <div>
+      <div class="kicker">Di Pierro Creative — Growth Studio</div>
+      <h1>Criativo que mexe <span class="hl">no número.</span></h1>
+      <p class="lede">Social paga e orgânica, tocada pelo motor criativo por trás de um corte de 87% no CPA: conceitos, hooks, roadmaps estruturados de teste, conteúdo com creators e comunidade — no TikTok, na Meta e onde seu público estiver.</p>
+    </div>
+    <section class="define">
     <h2>O que é criativo de performance?</h2>
     <p>Criativo de performance é publicidade feita para mover uma métrica — CPA, CVR, ROAS — não para ganhar prêmio. Cada conceito nasce como hipótese, é testado com investimento real e só ganha escala quando os números provam. É a diferença entre fazer conteúdo e fazer conteúdo que presta contas.</p>
   </section>
+  </div>
 
   <div class="rule"></div>
 
@@ -203,6 +221,14 @@ footer{margin-top:54px;border-top:1px solid var(--line);padding:26px 0 40px;disp
   <div class="proof">
     <div><div class="stat">-87%</div><div class="lbl">de CPA no TikTok para a Ocean Finance — case completo na home</div></div>
     <p>Ocean Finance: CPA de $53 para $6.82 num programa de três ciclos. FlixBus: CPA cortado em 67% em 90 dias. Bolt: 29 mercados, 160+ produções. Os cases completos estão neste site.</p>
+  </div>
+
+  <div class="rule"></div>
+
+  <div class="thesis">
+    <div class="tk">Por que sistema, não peças</div>
+    <h2>Calendário de conteúdo é estratégia de social media?</h2>
+    <p>Não. Calendário responde quando e o que postar — não por quê, que hipótese cada post testa, nem o que acontece com o resultado. Como sistema, cada post é um teste: vencedores do orgânico ganham a verba de ads, linguagem de comentário vira copy de landing page, pergunta de suporte vira conteúdo. É aí que você enxerga o que está funcionando. <a href="calendario-de-conteudo-vs-sistema.html">Leia a análise completa: calendário vs. sistema →</a></p>
   </div>
 
   <div class="rule"></div>

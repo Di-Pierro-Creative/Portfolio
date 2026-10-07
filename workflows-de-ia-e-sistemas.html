@@ -150,6 +150,23 @@ details p{margin-top:12px;color:var(--ink-soft);max-width:68ch}
 footer{margin-top:54px;border-top:1px solid var(--line);padding:26px 0 40px;display:flex;justify-content:space-between;font-size:.85rem;color:var(--ink-soft);flex-wrap:wrap;gap:10px}
 @media(max-width:820px){.inc{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.proof{grid-template-columns:1fr;gap:18px}}
 @media(max-width:520px){.steps{grid-template-columns:1fr}}
+
+.svc-hero{display:grid;grid-template-columns:1.12fr .88fr;gap:54px;align-items:center;margin-top:10px}
+.svc-hero .define{margin:0}
+@media(max-width:900px){.svc-hero{grid-template-columns:1fr;gap:26px}}
+@keyframes sweep{from{background-size:0% 100%}to{background-size:100% 100%}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+h1 .hl{background:linear-gradient(var(--yellow),var(--yellow)) left center/100% 100% no-repeat;animation:sweep .7s ease-out .7s both}
+.kicker,h1,.lede,.svc-hero .define{animation:rise .7s cubic-bezier(.22,1,.36,1) both}
+.kicker{animation-delay:.05s}h1{animation-delay:.15s}.lede{animation-delay:.28s}.svc-hero .define{animation-delay:.42s}
+@media (prefers-reduced-motion: reduce){.kicker,h1,.lede,.svc-hero .define,h1 .hl{animation:none!important}}
+
+.thesis{background:var(--navy);color:#fff;border-radius:14px;padding:38px 36px;margin:10px 0}
+.thesis .tk{font-family:var(--disp);font-weight:700;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--yellow);margin-bottom:10px}
+.thesis h2{font-family:var(--disp);font-weight:800;font-size:clamp(1.25rem,2.5vw,1.7rem);letter-spacing:-.01em;margin-bottom:12px;max-width:30ch}
+.thesis p{max-width:74ch;color:rgba(255,255,255,.88);font-size:.97rem}
+.thesis strong{color:var(--yellow)}
+.thesis a{color:var(--yellow);font-weight:700}
 </style>
 </head>
 <body>
@@ -163,16 +180,17 @@ footer{margin-top:54px;border-top:1px solid var(--line);padding:26px 0 40px;disp
     </div>
   </nav>
 
-  <div class="kicker">Di Pierro Creative — Growth Studio</div>
-  <h1>Workflows que conectam <span class="hl">a operação inteira.</span></h1>
-  <p class="lede">Pensamento sistêmico entre marketing, vendas e customer support — mais o motor criativo que os alimenta. Mapeamos como o trabalho realmente flui, desenhamos workflows com IA e conectamos as ferramentas, para leads, tickets, briefings e conteúdo pararem de cair entre os times.</p>
-
-  <div class="rule"></div>
-
-  <section class="define">
+  <div class="svc-hero">
+    <div>
+      <div class="kicker">Di Pierro Creative — Growth Studio</div>
+      <h1>Workflows que conectam <span class="hl">a operação inteira.</span></h1>
+      <p class="lede">Pensamento sistêmico entre marketing, vendas e customer support — mais o motor criativo que os alimenta. Mapeamos como o trabalho realmente flui, desenhamos workflows com IA e conectamos as ferramentas, para leads, tickets, briefings e conteúdo pararem de cair entre os times.</p>
+    </div>
+    <section class="define">
     <h2>O que é um workflow de IA?</h2>
     <p>Um workflow de IA é um processo repetível em que a IA executa etapas definidas — ler, classificar, rascunhar, rotear — dentro de regras desenhadas por uma pessoa, com passagens claras para o seu time. Não é um chatbot pendurado no site: é o seu processo atual, redesenhado para que a carga repetitiva rode sozinha. Construímos com systems thinking porque a maioria dos problemas de crescimento não mora dentro de um time — mora nas passagens entre marketing, vendas e suporte.</p>
   </section>
+  </div>
 
   <div class="rule"></div>
 
@@ -232,6 +250,14 @@ footer{margin-top:54px;border-top:1px solid var(--line);padding:26px 0 40px;disp
   <div class="proof">
     <div><div class="stat">70%</div><div class="lbl">menos tempo de resolução na operação que nosso time rodou</div></div>
     <p>Nosso time já rodou uma operação de suporte com mais de 80 pessoas — escrevendo os playbooks, cortando o tempo de resolução de tickets em 70% e elevando a eficiência em 20% — e construiu os sistemas de creative ops (bibliotecas, roadmaps de teste, calendários de produção) usados em 10+ marcas. Desenhamos workflows como quem opera: de dentro.</p>
+  </div>
+
+  <div class="rule"></div>
+
+  <div class="thesis">
+    <div class="tk">Por que sistema, não peças</div>
+    <h2>Dá para montar workflows de IA sozinho?</h2>
+    <p>Dá — até a manutenção te engolir. ChatGPT, n8n e ferramentas no-code constroem as peças; o que elas não te dão é um <strong>sistema</strong>: prioridade guiada por hipótese, alguém lendo os resultados e manutenção quando APIs e políticas mudam. Automações soltas quebram em silêncio; um sistema orquestrado compõe. <a href="fazer-com-ia-vs-growth-studio.html">Leia a comparação completa: fazer sozinho com IA vs. growth studio →</a></p>
   </div>
 
   <div class="rule"></div>

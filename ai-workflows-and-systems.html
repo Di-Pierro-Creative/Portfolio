@@ -150,6 +150,23 @@ details p{margin-top:12px;color:var(--ink-soft);max-width:68ch}
 footer{margin-top:54px;border-top:1px solid var(--line);padding:26px 0 40px;display:flex;justify-content:space-between;font-size:.85rem;color:var(--ink-soft);flex-wrap:wrap;gap:10px}
 @media(max-width:820px){.inc{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.proof{grid-template-columns:1fr;gap:18px}}
 @media(max-width:520px){.steps{grid-template-columns:1fr}}
+
+.svc-hero{display:grid;grid-template-columns:1.12fr .88fr;gap:54px;align-items:center;margin-top:10px}
+.svc-hero .define{margin:0}
+@media(max-width:900px){.svc-hero{grid-template-columns:1fr;gap:26px}}
+@keyframes sweep{from{background-size:0% 100%}to{background-size:100% 100%}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+h1 .hl{background:linear-gradient(var(--yellow),var(--yellow)) left center/100% 100% no-repeat;animation:sweep .7s ease-out .7s both}
+.kicker,h1,.lede,.svc-hero .define{animation:rise .7s cubic-bezier(.22,1,.36,1) both}
+.kicker{animation-delay:.05s}h1{animation-delay:.15s}.lede{animation-delay:.28s}.svc-hero .define{animation-delay:.42s}
+@media (prefers-reduced-motion: reduce){.kicker,h1,.lede,.svc-hero .define,h1 .hl{animation:none!important}}
+
+.thesis{background:var(--navy);color:#fff;border-radius:14px;padding:38px 36px;margin:10px 0}
+.thesis .tk{font-family:var(--disp);font-weight:700;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--yellow);margin-bottom:10px}
+.thesis h2{font-family:var(--disp);font-weight:800;font-size:clamp(1.25rem,2.5vw,1.7rem);letter-spacing:-.01em;margin-bottom:12px;max-width:30ch}
+.thesis p{max-width:74ch;color:rgba(255,255,255,.88);font-size:.97rem}
+.thesis strong{color:var(--yellow)}
+.thesis a{color:var(--yellow);font-weight:700}
 </style>
 </head>
 <body>
@@ -163,16 +180,17 @@ footer{margin-top:54px;border-top:1px solid var(--line);padding:26px 0 40px;disp
     </div>
   </nav>
 
-  <div class="kicker">Di Pierro Creative — Growth Studio</div>
-  <h1>Workflows that connect <span class="hl">the whole operation.</span></h1>
-  <p class="lede">Systems thinking across marketing, sales, and customer support — plus the creative engine that feeds them. We map how work actually flows, design AI-powered workflows, and connect the tools, so leads, tickets, briefs, and content stop falling between teams.</p>
-
-  <div class="rule"></div>
-
-  <section class="define">
+  <div class="svc-hero">
+    <div>
+      <div class="kicker">Di Pierro Creative — Growth Studio</div>
+      <h1>Workflows that connect <span class="hl">the whole operation.</span></h1>
+      <p class="lede">Systems thinking across marketing, sales, and customer support — plus the creative engine that feeds them. We map how work actually flows, design AI-powered workflows, and connect the tools, so leads, tickets, briefs, and content stop falling between teams.</p>
+    </div>
+    <section class="define">
     <h2>What is an AI workflow?</h2>
     <p>An AI workflow is a repeatable process in which AI handles defined steps — reading, tagging, drafting, routing — inside rules designed by a person, with clear handoffs to your team. It is not a chatbot bolted onto a website: it is your existing process, redesigned so the repetitive load runs itself. We build them with systems thinking because most growth problems do not live inside one team — they live in the handoffs between marketing, sales, and support.</p>
   </section>
+  </div>
 
   <div class="rule"></div>
 
@@ -232,6 +250,14 @@ footer{margin-top:54px;border-top:1px solid var(--line);padding:26px 0 40px;disp
   <div class="proof">
     <div><div class="stat">70%</div><div class="lbl">faster ticket resolution in the operation our team ran</div></div>
     <p>Our team has run an 80+ person support operation — writing the playbooks, cutting ticket resolution time 70%, and lifting efficiency 20% — and built the creative-ops systems (libraries, testing roadmaps, production calendars) used across 10+ brands. We design workflows the way operators do: from the inside.</p>
+  </div>
+
+  <div class="rule"></div>
+
+  <div class="thesis">
+    <div class="tk">Why a system, not pieces</div>
+    <h2>Can you build AI workflows yourself?</h2>
+    <p>Yes — until maintenance eats you. ChatGPT, n8n and no-code tools build the pieces; what they don’t give you is a <strong>system</strong>: hypothesis-driven priorities, someone reading results, and upkeep when APIs and policies change. Loose automations break silently; an orchestrated system compounds. <a href="diy-ai-vs-growth-studio.html">Read the full comparison: DIY with AI vs. a growth studio →</a></p>
   </div>
 
   <div class="rule"></div>
