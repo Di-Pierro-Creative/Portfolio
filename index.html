@@ -247,7 +247,12 @@
   .samples video{width:100%;aspect-ratio:9/16;object-fit:cover;display:block;background:#000;border-radius:2px}
   .systems{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
   .sys{padding-top:18px;border-top:2px solid var(--yellow)}.sys p{font-size:.92rem;line-height:1.55}
-  .about{max-width:74ch;padding:20px 0}
+  .about{display:grid;grid-template-columns:1.22fr .78fr;gap:56px;align-items:start;padding:20px 0}
+  .about-facts{background:var(--navy);color:#fff;border-radius:12px;padding:26px 28px}
+  .about-facts .f{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.14);font-size:.88rem}
+  .about-facts .f:last-child{border-bottom:none}
+  .about-facts .k{font-family:var(--disp);font-weight:700;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow);padding-top:3px;white-space:nowrap}
+  .about-facts .v{text-align:right}
   .about img{width:100%;border-radius:2px;display:block}
   .about h2{font-family:var(--disp);font-weight:800;font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1.08;margin-bottom:22px;letter-spacing:-.01em}
   .about p{font-size:1.05rem;color:var(--ink-soft);max-width:52ch}.about .lang{margin-top:20px;font-size:.9rem;color:var(--ink-soft)}
@@ -273,7 +278,7 @@
   .svc{padding-top:18px;border-top:2px solid var(--yellow)}
   .svc h3{font-family:var(--disp);font-weight:800;font-size:1.02rem;letter-spacing:-.01em;margin-bottom:8px}
   .svc p{font-size:.9rem;line-height:1.55;color:var(--ink-soft)}
-  .method-line{margin-top:30px;font-size:1rem;color:var(--ink-soft);max-width:62ch}
+  .method-line{margin:46px auto 0;font-size:1.05rem;line-height:1.65;color:var(--ink-soft);max-width:62ch;text-align:center;padding-top:24px;border-top:3px solid var(--yellow)}
   .method-line strong{color:var(--ink)}
   .svc-link{display:inline-block;margin-top:12px;font-family:var(--disp);font-weight:700;font-size:.86rem;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--yellow)}
   .svc-link:hover{border-color:var(--ink)}
@@ -401,6 +406,7 @@
     .ring-close{opacity:1!important}
     .lnode circle{fill:var(--navy)!important;animation:none!important}.lnode .num{fill:var(--yellow)!important}
   }
+@media(max-width:640px){nav{flex-wrap:wrap;gap:10px 0}.navlinks{flex-wrap:wrap;justify-content:flex-end;gap:10px 16px}.navlinks a{font-size:10.5px;letter-spacing:.1em}}
 </style>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
@@ -528,6 +534,7 @@
         <p style="margin-top:14px">Creativity here takes many shapes — ad concepts, civic platforms, AI products — because exploring ideas is the job, not a side effect. And none of it happens alone: the studio runs on a strong network of creative partners — designers, editors, creators, and specialists — brought in per project and orchestrated by our founder, so every brief gets the right minds around it and one person accountable for the whole system.</p>
         <div class="lang">English (fluent) · Portuguese (native) · Spanish (professional)</div>
       </div>
+      <aside class="about-facts"><div class="f"><div class="k">Founded</div><div class="v">2019</div></div><div class="f"><div class="k">Base</div><div class="v">São Paulo — remote worldwide</div></div><div class="f"><div class="k">Languages</div><div class="v">EN · ES · PT</div></div><div class="f"><div class="k">Markets shipped</div><div class="v">29, all 7 continents</div></div><div class="f"><div class="k">Own products</div><div class="v">Elas na Urna · AlimentaProva</div></div><div class="f"><div class="k">Method</div><div class="v">The Di Pierro Loop</div></div></aside>
     </div>
   </section>
 
