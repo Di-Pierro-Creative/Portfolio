@@ -407,7 +407,70 @@
     .lnode circle{fill:var(--navy)!important;animation:none!important}.lnode .num{fill:var(--yellow)!important}
   }
 @media(max-width:640px){nav{flex-wrap:wrap;gap:10px 0}.navlinks{flex-wrap:wrap;justify-content:flex-end;gap:10px 16px}.navlinks a{font-size:10.5px;letter-spacing:.1em}}
+
+  /* ===== serviços: seletor problema -> serviço ===== */
+  .sx{background:var(--navy);color:var(--paper);padding:88px 0 84px;margin:72px 0}
+  .sx .sec-label{color:rgba(244,239,227,.6)}
+  .sx-head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:24px 56px;align-items:end;margin-bottom:44px}
+  .sx-head h2{font-family:var(--disp);font-weight:900;font-size:clamp(2.3rem,5.2vw,4rem);line-height:1.02;letter-spacing:-.025em;max-width:13ch}
+  .sx-head p{font-size:1.05rem;line-height:1.6;color:rgba(244,239,227,.78);max-width:40ch}
+  .sx-q{appearance:none;-webkit-appearance:none;background:none;border:0;border-top:1px solid rgba(244,239,227,.16);color:inherit;font:inherit;text-align:left;width:100%;cursor:pointer;display:block;padding:19px 8px 19px 24px;position:relative}
+  .sx-item:last-child .sx-q{border-bottom:1px solid rgba(244,239,227,.16)}
+  .sx-q::before{content:"";position:absolute;left:0;top:17px;bottom:17px;width:5px;background:var(--yellow);transform:scaleY(0);transform-origin:top;transition:transform .28s cubic-bezier(.22,1,.36,1)}
+  .sx-q[aria-expanded="true"]::before{transform:scaleY(1)}
+  .sx-problem{display:block;font-family:var(--disp);font-weight:800;font-size:clamp(1.08rem,1.55vw,1.3rem);line-height:1.25;letter-spacing:-.01em;color:rgba(244,239,227,.62);transition:color .2s}
+  .sx-q:hover .sx-problem,.sx-q[aria-expanded="true"] .sx-problem{color:var(--paper)}
+  .sx-svc{display:block;margin-top:5px;font-size:.84rem;color:rgba(244,239,227,.5);transition:color .2s}
+  .sx-q[aria-expanded="true"] .sx-svc{color:var(--yellow)}
+  .sx-q:focus-visible{outline:3px solid var(--yellow);outline-offset:-3px}
+  .sx-a{background:var(--paper);color:var(--navy);border-radius:6px;padding:38px 40px 36px}
+  .sx-a h3{font-family:var(--disp);font-weight:900;font-size:clamp(1.7rem,2.7vw,2.3rem);line-height:1.04;letter-spacing:-.02em;margin-bottom:14px}
+  .sx-a>p{font-size:1rem;line-height:1.6;color:var(--ink-soft);max-width:56ch}
+  .sx-get{margin-top:24px}
+  .sx-get h4{font-family:var(--disp);font-weight:800;font-size:.95rem;margin-bottom:10px}
+  .sx-get ul{list-style:none;padding:0;margin:0;display:grid;gap:9px}
+  .sx-get li{position:relative;padding-left:24px;font-size:.95rem;line-height:1.5}
+  .sx-get li::before{content:"";position:absolute;left:0;top:.6em;width:13px;height:5px;background:var(--navy)}
+  .sx-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;margin-top:30px}
+  .sx-wa{display:inline-flex;align-items:center;gap:10px;background:var(--navy);color:var(--paper);font-family:var(--disp);font-weight:800;font-size:1rem;padding:14px 24px;border-radius:999px;text-decoration:none;transition:background .18s,color .18s}
+  .sx-wa:hover{background:var(--yellow);color:var(--navy)}
+  .sx-wa svg{width:20px;height:20px;flex:none}
+  .sx-more{font-family:var(--disp);font-weight:700;font-size:.95rem;color:var(--navy);text-decoration:none;border-bottom:2px solid var(--yellow);padding-bottom:2px}
+  .sx-more:hover{border-color:var(--navy)}
+  .sx-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 40px;margin-top:52px}
+  .sx-foot p{font-size:1.08rem;line-height:1.55;color:rgba(244,239,227,.8);max-width:56ch}
+  .sx-foot strong{color:var(--paper)}
+  .sx-btn{display:inline-block;background:var(--yellow);color:var(--navy);font-family:var(--disp);font-weight:800;font-size:1rem;padding:15px 28px;border-radius:999px;text-decoration:none;transition:background .18s,color .18s}
+  .sx-btn:hover{background:var(--paper)}
+  .sx-wa:focus-visible,.sx-more:focus-visible,.sx-btn:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+  .sx-a .sx-wa:focus-visible,.sx-a .sx-more:focus-visible{outline-color:var(--navy)}
+  .sx-foot-act{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px}
+  .sx-pk{font-family:var(--disp);font-weight:700;font-size:.98rem;color:var(--paper);text-decoration:none;border-bottom:2px solid var(--yellow);padding-bottom:2px}
+  .sx-pk:hover{color:var(--yellow)}
+  .sx-pk:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+  /* com JS: lista à esquerda, painel do problema escolhido à direita */
+  .sx-js .sx-list{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-rows:repeat(7,auto) 1fr;column-gap:56px;align-items:start}
+  .sx-js .sx-item{display:contents}
+  .sx-js .sx-q{grid-column:1}
+  .sx-js .sx-a{grid-column:2;grid-row:1 / span 8;position:sticky;top:110px}
+  .sx-js .sx-a[hidden]{display:none}
+  .sx-a.in{animation:sxin .34s cubic-bezier(.22,1,.36,1) both}
+  @keyframes sxin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  @media(max-width:900px){
+    .sx{padding:64px 0 60px;margin:56px 0}
+    .sx-head{grid-template-columns:1fr;margin-bottom:28px}
+    .sx-js .sx-list{display:block}
+    .sx-js .sx-item{display:block}
+    .sx-js .sx-a{position:static}
+    .sx-q{padding-right:44px}
+    .sx-q::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-family:var(--disp);font-weight:900;font-size:1.5rem;color:var(--yellow)}
+    .sx-q[aria-expanded="true"]::after{content:"\2013"}
+    .sx-a{padding:28px 24px 26px;margin:0 0 18px}
+    .sx-foot{margin-top:36px}
+  }
+  @media(prefers-reduced-motion:reduce){.sx-q::before,.sx-problem,.sx-svc{transition:none}.sx-a.in{animation:none}}
 </style>
+<script src="/ga.js" async></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
@@ -420,6 +483,7 @@
       <div class="navlinks">
         <a href="trabalhos.html">Trabalhos</a>
         <a href="#services">Serviços</a>
+        <a href="pacotes.html">Pacotes</a>
         <a href="#about">Sobre</a>
         <a href="#contact">Contato</a>
         <a href="index.html" title="English version">EN</a>
@@ -454,22 +518,78 @@
     <p style="margin-top:22px"><a class="svc-link" href="trabalhos.html">Ver os cases completos →</a></p>
   </section>
 
-  <div class="wrap"><div class="rule"></div></div>
-
-  <section id="services" class="wrap">
+  <section id="services" class="sx" aria-labelledby="sx-title">
+    <div class="wrap">
     <div class="sec-label">O Que Fazemos</div>
-    <div class="services">
-      <div class="svc"><h3>Workflows de IA &amp; Sistemas</h3><p>Pensamento sistêmico entre marketing, vendas e customer support: mapeamos o processo, desenhamos o workflow com IA e conectamos as ferramentas — para leads, tickets e briefings pararem de cair entre os times. Revisado e melhorado todo mês.</p><a class="svc-link" href="workflows-de-ia-e-sistemas.html">Saiba mais →</a></div>
-      <div class="svc"><h3>Sites</h3><p>Sites e landing pages feitos para converter: design, construção, analytics e planos de manutenção — atualizações, velocidade, segurança e CRO contínuo.</p><a class="svc-link" href="criacao-de-sites-e-landing-pages.html">Saiba mais →</a></div>
-      <div class="svc"><h3>SEO &amp; Google Ads</h3><p>Domine o momento da intenção. SEO técnico e de conteúdo + Google Ads, operados juntos para que orgânico e pago se alimentem.</p><a class="svc-link" href="seo-e-google-ads.html">Saiba mais →</a></div>
-      <div class="svc"><h3>Social Media &amp; Criativo de Performance</h3><p>Social paga e orgânica: conceitos, hooks, roadmaps de teste, conteúdo com creators, comunidade — criativo que mexe no CPA, não só nos likes.</p><a class="svc-link" href="social-media-e-criativo-de-performance.html">Saiba mais →</a></div>
-      <div class="svc"><h3>Dashboards &amp; Relatórios</h3><p>Dashboards que reúnem dados de marketing, vendas e suporte em uma visão só, ao vivo — os números que importam, sem arqueologia de planilha.</p><a class="svc-link" href="dashboards-e-relatorios.html">Saiba mais →</a></div>
-      <div class="svc"><h3>App Growth &amp; Monetização</h3><p>Os dois lados do P&amp;L de um app: aquisição de usuários e ASO de um lado, monetização de ads e estratégia de yield do outro.</p><a class="svc-link" href="app-growth-e-monetizacao.html">Saiba mais →</a></div>
+    <div class="sx-head"><h2 id="sx-title">Onde o seu crescimento está travando?</h2><p>Escolha o problema que mais pesa hoje. Encontramos o ponto de alavanca e montamos o sistema em volta dele, para o resultado se sustentar em vez de subir e cair com a verba.</p></div>
+    <div class="sx-list">
+      <div class="sx-item">
+        <button class="sx-q" type="button" id="sxq-workflows" aria-expanded="false" aria-controls="sxa-workflows" data-service="workflows"><span class="sx-problem">Leads e pedidos se perdem entre marketing, vendas e atendimento</span><span class="sx-svc">Workflows de IA &amp; Sistemas</span></button>
+        <div class="sx-a" id="sxa-workflows" role="region" aria-labelledby="sxq-workflows">
+          <h3>Workflows de IA &amp; Sistemas</h3>
+          <p>Pensamento sistêmico entre marketing, vendas e customer support: mapeamos o processo, desenhamos o workflow com IA e conectamos as ferramentas — para leads, tickets e briefings pararem de cair entre os times. Revisado e melhorado todo mês.</p>
+          <div class="sx-get"><h4>O que você recebe</h4><ul><li>Mapeamento de processos entre marketing, vendas e suporte — onde o trabalho trava e o lead vaza</li><li>Fluxos de qualificação e roteamento de leads entre marketing e vendas</li><li>Revisão mensal: métricas conferidas, fluxos refinados, playbooks atualizados</li></ul></div>
+          <div class="sx-ctas"><a class="sx-wa" href="https://wa.me/5511988381991?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Di%20Pierro%20Creative.%20Meu%20desafio%20hoje%3A%20leads%20e%20pedidos%20se%20perdem%20entre%20marketing%2C%20vendas%20e%20atendimento.%20Quero%20conversar%20sobre%20Workflows%20de%20IA%20%26%20Sistemas." target="_blank" rel="noopener" data-lead="whatsapp" data-service="workflows"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8.5 8.5h7M8.5 11.5h4.5"/></svg>Conversar no WhatsApp</a><a class="sx-more" href="workflows-de-ia-e-sistemas.html">Ver como funciona</a></div>
+        </div>
+      </div>
+      <div class="sx-item">
+        <button class="sx-q" type="button" id="sxq-suporte" aria-expanded="false" aria-controls="sxa-suporte" data-service="suporte"><span class="sx-problem">O atendimento não dá conta e o cliente fica esperando resposta</span><span class="sx-svc">Suporte ao Cliente</span></button>
+        <div class="sx-a" id="sxa-suporte" role="region" aria-labelledby="sxq-suporte">
+          <h3>Suporte ao Cliente</h3>
+          <p>Nosso time já rodou uma operação de suporte com mais de 80 pessoas e cortou em 70% o tempo de resolução de tickets. Desenhamos a sua do mesmo jeito: triagem, macros, escalonamento e playbooks — IA onde ela acelera, gente onde o cliente precisa de gente.</p>
+          <div class="sx-get"><h4>O que você recebe</h4><ul><li>Workflows de suporte: triagem, macros, caminhos de escalonamento, playbooks</li><li>Support Triage Kit: triagem de inbox e WhatsApp por categoria e urgência, com resumo semanal de qualidade</li><li>Métricas de suporte — volume, resolução, CSAT — ao lado dos números de crescimento</li></ul></div>
+          <div class="sx-ctas"><a class="sx-wa" href="https://wa.me/5511988381991?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Di%20Pierro%20Creative.%20Meu%20desafio%20hoje%3A%20o%20atendimento%20n%C3%A3o%20d%C3%A1%20conta%20e%20o%20cliente%20fica%20esperando%20resposta.%20Quero%20conversar%20sobre%20Suporte%20ao%20Cliente." target="_blank" rel="noopener" data-lead="whatsapp" data-service="suporte"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8.5 8.5h7M8.5 11.5h4.5"/></svg>Conversar no WhatsApp</a><a class="sx-more" href="workflows-de-ia-e-sistemas.html">Ver como funciona</a></div>
+        </div>
+      </div>
+      <div class="sx-item">
+        <button class="sx-q" type="button" id="sxq-sites" aria-expanded="false" aria-controls="sxa-sites" data-service="sites"><span class="sx-problem">O site recebe visitas, mas quase ninguém entra em contato</span><span class="sx-svc">Sites &amp; Landing Pages</span></button>
+        <div class="sx-a" id="sxa-sites" role="region" aria-labelledby="sxq-sites">
+          <h3>Sites &amp; Landing Pages</h3>
+          <p>Sites e landing pages feitos para converter: design, construção, analytics e planos de manutenção — atualizações, velocidade, segurança e CRO contínuo.</p>
+          <div class="sx-get"><h4>O que você recebe</h4><ul><li>Design e construção de sites e landing pages</li><li>Analytics e rastreamento configurados — saiba o que cada página produz</li><li>Otimização de conversão (CRO) como prática contínua</li></ul></div>
+          <div class="sx-ctas"><a class="sx-wa" href="https://wa.me/5511988381991?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Di%20Pierro%20Creative.%20Meu%20desafio%20hoje%3A%20o%20site%20recebe%20visitas%2C%20mas%20quase%20ningu%C3%A9m%20entra%20em%20contato.%20Quero%20conversar%20sobre%20Sites%20%26%20Landing%20Pages." target="_blank" rel="noopener" data-lead="whatsapp" data-service="sites"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8.5 8.5h7M8.5 11.5h4.5"/></svg>Conversar no WhatsApp</a><a class="sx-more" href="criacao-de-sites-e-landing-pages.html">Ver como funciona</a></div>
+        </div>
+      </div>
+      <div class="sx-item">
+        <button class="sx-q" type="button" id="sxq-seo-google-ads" aria-expanded="false" aria-controls="sxa-seo-google-ads" data-service="seo-google-ads"><span class="sx-problem">Quem procura o que eu vendo no Google não me encontra</span><span class="sx-svc">SEO &amp; Google Ads</span></button>
+        <div class="sx-a" id="sxa-seo-google-ads" role="region" aria-labelledby="sxq-seo-google-ads">
+          <h3>SEO &amp; Google Ads</h3>
+          <p>Domine o momento da intenção. SEO técnico e de conteúdo + Google Ads, operados juntos para que orgânico e pago se alimentem.</p>
+          <div class="sx-get"><h4>O que você recebe</h4><ul><li>SEO técnico e de conteúdo: páginas feitas para rankear</li><li>Google Ads: Pesquisa, Performance Max, Shopping</li><li>Um relatório de busca só — orgânico e pago, lado a lado</li></ul></div>
+          <div class="sx-ctas"><a class="sx-wa" href="https://wa.me/5511988381991?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Di%20Pierro%20Creative.%20Meu%20desafio%20hoje%3A%20quem%20procura%20o%20que%20eu%20vendo%20no%20Google%20n%C3%A3o%20me%20encontra.%20Quero%20conversar%20sobre%20SEO%20%26%20Google%20Ads." target="_blank" rel="noopener" data-lead="whatsapp" data-service="seo-google-ads"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8.5 8.5h7M8.5 11.5h4.5"/></svg>Conversar no WhatsApp</a><a class="sx-more" href="seo-e-google-ads.html">Ver como funciona</a></div>
+        </div>
+      </div>
+      <div class="sx-item">
+        <button class="sx-q" type="button" id="sxq-social" aria-expanded="false" aria-controls="sxa-social" data-service="social"><span class="sx-problem">Posto toda semana e não sei o que traz cliente</span><span class="sx-svc">Social Media &amp; Criativo de Performance</span></button>
+        <div class="sx-a" id="sxa-social" role="region" aria-labelledby="sxq-social">
+          <h3>Social Media &amp; Criativo de Performance</h3>
+          <p>Social paga e orgânica: conceitos, hooks, roadmaps de teste, conteúdo com creators, comunidade — criativo que mexe no CPA, não só nos likes.</p>
+          <div class="sx-get"><h4>O que você recebe</h4><ul><li>Estratégia e gestão de social paga (TikTok, Meta)</li><li>Criativo de performance: conceitos, hooks, roadmaps de iteração</li><li>Social orgânica: calendários, comunidade, voz de marca</li></ul></div>
+          <div class="sx-ctas"><a class="sx-wa" href="https://wa.me/5511988381991?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Di%20Pierro%20Creative.%20Meu%20desafio%20hoje%3A%20posto%20toda%20semana%20e%20n%C3%A3o%20sei%20o%20que%20traz%20cliente.%20Quero%20conversar%20sobre%20Social%20Media%20%26%20Criativo%20de%20Performance." target="_blank" rel="noopener" data-lead="whatsapp" data-service="social"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8.5 8.5h7M8.5 11.5h4.5"/></svg>Conversar no WhatsApp</a><a class="sx-more" href="social-media-e-criativo-de-performance.html">Ver como funciona</a></div>
+        </div>
+      </div>
+      <div class="sx-item">
+        <button class="sx-q" type="button" id="sxq-dashboards" aria-expanded="false" aria-controls="sxa-dashboards" data-service="dashboards"><span class="sx-problem">Os números estão espalhados em planilhas e ninguém confia neles</span><span class="sx-svc">Dashboards &amp; Relatórios</span></button>
+        <div class="sx-a" id="sxa-dashboards" role="region" aria-labelledby="sxq-dashboards">
+          <h3>Dashboards &amp; Relatórios</h3>
+          <p>Dashboards que reúnem dados de marketing, vendas e suporte em uma visão só, ao vivo — os números que importam, sem arqueologia de planilha.</p>
+          <div class="sx-get"><h4>O que você recebe</h4><ul><li>Dashboards de marketing: investimento, CPA, ROAS, canal a canal</li><li>Relatórios automáticos que substituem decks manuais</li><li>Definições de métrica em que todo mundo finalmente concorda</li></ul></div>
+          <div class="sx-ctas"><a class="sx-wa" href="https://wa.me/5511988381991?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Di%20Pierro%20Creative.%20Meu%20desafio%20hoje%3A%20os%20n%C3%BAmeros%20est%C3%A3o%20espalhados%20em%20planilhas%20e%20ningu%C3%A9m%20confia%20neles.%20Quero%20conversar%20sobre%20Dashboards%20%26%20Relat%C3%B3rios." target="_blank" rel="noopener" data-lead="whatsapp" data-service="dashboards"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8.5 8.5h7M8.5 11.5h4.5"/></svg>Conversar no WhatsApp</a><a class="sx-more" href="dashboards-e-relatorios.html">Ver como funciona</a></div>
+        </div>
+      </div>
+      <div class="sx-item">
+        <button class="sx-q" type="button" id="sxq-app-growth" aria-expanded="false" aria-controls="sxa-app-growth" data-service="app-growth"><span class="sx-problem">Meu app ganha downloads, mas a conta não fecha</span><span class="sx-svc">App Growth &amp; Monetização</span></button>
+        <div class="sx-a" id="sxa-app-growth" role="region" aria-labelledby="sxq-app-growth">
+          <h3>App Growth &amp; Monetização</h3>
+          <p>Os dois lados do P&amp;L de um app: aquisição de usuários e ASO de um lado, monetização de ads e estratégia de yield do outro.</p>
+          <div class="sx-get"><h4>O que você recebe</h4><ul><li>Campanhas de aquisição de usuários e teste de criativo de UA</li><li>Otimização de loja (ASO)</li><li>Receita nova de ads para apps que ainda não monetizam</li></ul></div>
+          <div class="sx-ctas"><a class="sx-wa" href="https://wa.me/5511988381991?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Di%20Pierro%20Creative.%20Meu%20desafio%20hoje%3A%20meu%20app%20ganha%20downloads%2C%20mas%20a%20conta%20n%C3%A3o%20fecha.%20Quero%20conversar%20sobre%20App%20Growth%20%26%20Monetiza%C3%A7%C3%A3o." target="_blank" rel="noopener" data-lead="whatsapp" data-service="app-growth"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8.5 8.5h7M8.5 11.5h4.5"/></svg>Conversar no WhatsApp</a><a class="sx-more" href="app-growth-e-monetizacao.html">Ver como funciona</a></div>
+        </div>
+      </div>
     </div>
-    <p class="method-line">Todos os serviços rodam no mesmo ciclo — <strong>Analyze → Create → Test → Prove → Scale</strong> — e cada ciclo alimenta o próximo: o que aprendemos vira fluxos mais rápidos, páginas mais afiadas, anúncios melhores.</p>
+    <div class="sx-foot"><p><strong>Não sabe qual é o seu?</strong> Todo trabalho começa pelo Analyze: um diagnóstico gratuito mostra onde está o gargalo.</p><div class="sx-foot-act"><a class="sx-btn" href="https://wa.me/5511988381991?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Di%20Pierro%20Creative%20e%20quero%20pedir%20o%20diagn%C3%B3stico%20gratuito." target="_blank" rel="noopener" data-lead="whatsapp" data-service="diagnostico">Pedir diagnóstico gratuito</a><a class="sx-pk" href="pacotes.html">Ver pacotes e preços</a></div></div>
+    </div>
   </section>
-
-  <div class="wrap"><div class="rule"></div></div>
 
   <section class="wrap">
     <div class="sec-label">The Di Pierro Loop — Nossa Metodologia</div>
@@ -593,6 +713,40 @@
       }, {threshold:.35}).observe(loop);
     }
   }
+})();
+</script>
+
+<script>
+/* Serviços: um problema aberto por vez; no celular vira acordeão. */
+(function(){
+  var root = document.querySelector('.sx'); if(!root) return;
+  root.classList.add('sx-js');
+  var qs = [].slice.call(root.querySelectorAll('.sx-q'));
+  var mq = matchMedia('(max-width:900px)');
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function panel(q){ return document.getElementById(q.getAttribute('aria-controls')); }
+  function open(q, byUser){
+    qs.forEach(function(o){
+      var p = panel(o), on = (o === q);
+      o.setAttribute('aria-expanded', on ? 'true' : 'false');
+      p.hidden = !on;
+      p.classList.remove('in');
+      if(on && byUser && !reduce){ void p.offsetWidth; p.classList.add('in'); }
+    });
+    if(byUser && window.gtag){ gtag('event', 'select_content', {content_type: 'servico', item_id: q.getAttribute('data-service')}); }
+  }
+  qs.forEach(function(q){
+    q.addEventListener('click', function(){
+      if(mq.matches && q.getAttribute('aria-expanded') === 'true'){
+        q.setAttribute('aria-expanded', 'false'); panel(q).hidden = true; return;
+      }
+      open(q, true);
+      if(mq.matches){ q.scrollIntoView({block: 'nearest', behavior: reduce ? 'auto' : 'smooth'}); }
+    });
+  });
+  function ensureOne(){ if(!mq.matches && !qs.some(function(q){ return q.getAttribute('aria-expanded') === 'true'; })){ open(qs[0], false); } }
+  if(mq.addEventListener){ mq.addEventListener('change', ensureOne); }
+  open(qs[0], false);
 })();
 </script>
 </body>
