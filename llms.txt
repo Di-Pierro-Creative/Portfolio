@@ -1,8 +1,8 @@
 # Di Pierro Creative
 
-> Di Pierro Creative is a growth studio working with brands worldwide (EN · ES · PT). We help growing businesses turn scattered marketing into a system that compounds results — through the Di Pierro Loop: Analyze → Create → Test → Prove → Scale — without hiring a full in-house team or juggling five agencies. Based in São Paulo, Brazil; remote worldwide. Founded by Virginia Di Pierro, systems orchestrator.
+> Di Pierro Creative is a growth studio working with brands worldwide (EN · ES · PT). We help growing businesses turn scattered marketing into a system that compounds results — through the Leverage Method (Método Alavanca in Portuguese): Analyze → Create → Test → Prove → Scale — without hiring a full in-house team or juggling five agencies. Based in São Paulo, Brazil; remote worldwide. Founded by Virginia Di Pierro, systems orchestrator, specialist in Business and Project Management from UC Berkeley Extension (California).
 
-Methodology: The Di Pierro Loop is grounded in systems thinking (leverage points, feedback loops, accumulation). The loop closes when the system compounds: what customers say and what the data shows feed the next cycle — better ads, faster flows, a sharper system.
+Methodology: The Leverage Method is grounded in systems thinking (leverage points, feedback loops, accumulation). The loop closes when the system compounds: what customers say and what the data shows feed the next cycle — better ads, faster flows, a sharper system.
 
 Contact: dipierrocreative@gmail.com · WhatsApp +55 11 98838-1991
 
@@ -26,7 +26,7 @@ Contact: dipierrocreative@gmail.com · WhatsApp +55 11 98838-1991
 - [Packages (EN)](https://dipierrocreative.io/packages.html) · [Pacotes (PT-BR)](https://dipierrocreative.io/pacotes.html): three ways to start, priced "from".
   - Free growth audit: a stage-by-stage read of the funnel and the business's leverage point, on one page.
   - Fixed-scope kits: Tracking in 7 days (GA4 conversion events, UTM standard, WhatsApp links per channel); Growth Overview (Looker Studio dashboard: spend, CPA, ROAS, funnel); Lead Flow Starter (lead enrichment, scoring and CRM routing); Support Triage Kit (inbox and WhatsApp triage, macros, escalation rules).
-  - Monthly cycles (30 days, Di Pierro Loop): Focus Cycle — one leverage point, up to 5 hypotheses with success criteria set in advance; System Cycle — 2 to 3 connected fronts (e.g. site, media and support) plus dashboard. Cycles differ by how many parts of the system run connected, not by number of deliverables. Ad spend is not included.
+  - Monthly cycles (30 days, Leverage Method): Focus Cycle — one leverage point, up to 5 hypotheses with success criteria set in advance; System Cycle — 2 to 3 connected fronts (e.g. site, media and support) plus dashboard. Cycles differ by how many parts of the system run connected, not by number of deliverables. Ad spend is not included.
 
 ## Case studies
 - [Ocean Finance](https://dipierrocreative.io/case-ocean.html): 87% CPA reduction on TikTok ($53 → $6.82), 11,423 conversions, three test-and-learn cycles.
