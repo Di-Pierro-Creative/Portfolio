@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to track where your WhatsApp leads come from (GA4 + UTMs) | Di Pierro Creative</title>
+<meta name="description" content="WhatsApp doesn&#x27;t tell you where a contact came from. Here&#x27;s how to measure it at the click (GA4 + UTMs) and in the conversation (a pre-filled message per channel), and how to see which channel actually sells.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://dipierrocreative.io/how-to-track-whatsapp-leads.html">
+<link rel="alternate" hreflang="en" href="https://dipierrocreative.io/how-to-track-whatsapp-leads.html">
+<link rel="alternate" hreflang="pt-BR" href="https://dipierrocreative.io/como-rastrear-leads-do-whatsapp.html">
+<link rel="alternate" hreflang="x-default" href="https://dipierrocreative.io/how-to-track-whatsapp-leads.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Di Pierro Creative">
+<meta property="og:title" content="How to track where your WhatsApp leads come from (GA4 + UTMs) | Di Pierro Creative">
+<meta property="og:description" content="WhatsApp doesn&#x27;t tell you where a contact came from. Here&#x27;s how to measure it at the click (GA4 + UTMs) and in the conversation (a pre-filled message per channel), and how to see which channel actually sells.">
+<meta property="og:url" content="https://dipierrocreative.io/how-to-track-whatsapp-leads.html">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "headline": "How do you know where your WhatsApp leads come from?",
+   "description": "WhatsApp doesn't tell you where a contact came from. Here's how to measure it at the click (GA4 + UTMs) and in the conversation (a pre-filled message per channel), and how to see which channel actually sells.",
+   "datePublished": "2026-10-14",
+   "dateModified": "2026-10-14",
+   "inLanguage": "en",
+   "mainEntityOfPage": "https://dipierrocreative.io/how-to-track-whatsapp-leads.html",
+   "url": "https://dipierrocreative.io/how-to-track-whatsapp-leads.html",
+   "author": {
+    "@type": "Organization",
+    "@id": "https://dipierrocreative.io/#org",
+    "name": "Di Pierro Creative",
+    "url": "https://dipierrocreative.io/"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://dipierrocreative.io/#org",
+    "name": "Di Pierro Creative",
+    "url": "https://dipierrocreative.io/"
+   },
+   "isPartOf": {
+    "@type": "Blog",
+    "@id": "https://dipierrocreative.io/insights.html",
+    "name": "Di Pierro Creative Insights"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Can GA4 see the WhatsApp conversation?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. GA4 sees up to the click on the button. What happens inside WhatsApp stays outside it, which is why a pre-filled message per channel and a sales log complete the picture."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do I need the official WhatsApp API for this?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Not to start. Links with pre-filled messages, WhatsApp Business labels and a spreadsheet are enough. The API, through a CRM, becomes worth it when there are too many conversations to log by hand."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What if someone deletes the pre-filled message before sending?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It happens, but most people send it as is. For conversations with no source, ask in your first reply how they found you, and write it down."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I do this myself, or do I need a specialist?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "You can do the basics yourself: UTMs, one GA4 event and a pre-filled message per channel. A specialist makes the difference once several channels, ads and a CRM are involved, and when someone needs to keep everything working and read the numbers to make decisions. Tracking is a system, and what usually fails is the connection between the pieces, not the pieces themselves."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How long does it take to set up?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The foundation (UTMs, GA4 event, per-channel messages and the log) is ready in a week. It's Di Pierro Creative's Tracking in 7 days kit."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Di Pierro Creative",
+     "item": "https://dipierrocreative.io/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Insights",
+     "item": "https://dipierrocreative.io/insights.html"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "How do you know where your WhatsApp leads come from?",
+     "item": "https://dipierrocreative.io/how-to-track-whatsapp-leads.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<style>
+:root{--paper:#F4EFE3;--navy:#12314B;--ink:#12314B;--ink-soft:#5A6572;--yellow:#F5E000;--line:#D8D2C4;--disp:'Archivo',sans-serif;--sans:'Inter',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:26px 0;font-family:var(--disp);font-weight:600;font-size:14px;gap:16px;flex-wrap:wrap}
+nav .links{display:flex;gap:24px;flex-wrap:wrap}
+nav a{color:var(--ink);text-decoration:none}
+nav a:hover,nav a[aria-current="page"]{border-bottom:2px solid var(--yellow)}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+.kicker{font-family:var(--disp);font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin:44px 0 22px}
+h1{font-family:var(--disp);font-weight:900;font-size:clamp(2.1rem,5vw,3.8rem);line-height:1.12;letter-spacing:-.02em;max-width:20ch}
+.hl{background:var(--yellow);padding:.04em .14em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.lede{max-width:60ch;font-size:1.12rem;color:var(--ink-soft);margin:24px 0 8px}
+.meta{font-size:.9rem;color:var(--ink-soft);margin-top:18px}
+.rule{border-top:1px solid var(--line);margin:52px 0}
+.btn-wa{white-space:nowrap;display:inline-flex;align-items:center;gap:10px;background:var(--navy);color:var(--paper);font-family:var(--disp);font-weight:800;font-size:.98rem;padding:13px 22px;border-radius:999px;text-decoration:none;transition:background .18s,color .18s}
+.btn-wa svg{width:19px;height:19px;flex:none}
+/* lista do blog */
+.posts{list-style:none;border-top:1px solid var(--line)}
+.posts li{border-bottom:1px solid var(--line)}
+.posts a.p{display:grid;grid-template-columns:200px 1fr;gap:10px 40px;padding:30px 0;text-decoration:none}
+.posts .pm{font-size:.86rem;color:var(--ink-soft);padding-top:6px}
+.posts .pm b{display:block;font-family:var(--disp);font-weight:800;color:var(--ink);font-size:.92rem;margin-bottom:2px}
+.posts h2{font-family:var(--disp);font-weight:900;font-size:clamp(1.35rem,2.6vw,1.9rem);line-height:1.15;letter-spacing:-.015em;margin-bottom:8px}
+.posts a.p:hover h2{text-decoration:underline;text-decoration-color:var(--yellow);text-decoration-thickness:4px;text-underline-offset:4px}
+.posts p{color:var(--ink-soft);max-width:62ch}
+.posts .read{display:inline-block;margin-top:12px;font-family:var(--disp);font-weight:700;font-size:.92rem;border-bottom:2px solid var(--yellow)}
+/* artigo */
+.post{max-width:720px}
+.answer{background:#fff;border-left:6px solid var(--yellow);border-radius:0 12px 12px 0;padding:26px 30px;margin:34px 0 8px}
+.answer h2{font-family:var(--disp);font-weight:800;font-size:1.15rem;margin-bottom:10px}
+.answer p{font-size:1.04rem;line-height:1.7}
+.post>h2{font-family:var(--disp);font-weight:900;font-size:clamp(1.4rem,2.6vw,1.9rem);letter-spacing:-.015em;line-height:1.15;margin:52px 0 16px}
+.post>p{font-size:1.06rem;line-height:1.75;margin-bottom:16px;color:#26394C}
+.post a{text-decoration-color:var(--yellow);text-decoration-thickness:3px;text-underline-offset:3px}
+code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88em;background:#EAE4D6;padding:.1em .35em;border-radius:4px;word-break:break-word}
+ol.steps{list-style:none;counter-reset:s;margin:8px 0 0}
+ol.steps>li{counter-increment:s;position:relative;padding:0 0 30px 64px}
+ol.steps>li::before{content:counter(s);position:absolute;left:0;top:0;width:42px;height:42px;border-radius:50%;background:var(--navy);color:var(--yellow);font-family:var(--disp);font-weight:900;display:flex;align-items:center;justify-content:center}
+ol.steps>li::after{content:"";position:absolute;left:20px;top:48px;bottom:8px;width:2px;background:var(--line)}
+ol.steps>li:last-child::after{display:none}
+ol.steps h3{font-family:var(--disp);font-weight:800;font-size:1.2rem;margin:8px 0 8px}
+ol.steps p{font-size:1.02rem;line-height:1.7;color:#26394C}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:.94rem;margin-top:14px}
+th{font-family:var(--disp);font-weight:800;font-size:.86rem;text-align:left;padding:12px 16px;background:var(--navy);color:#fff}
+td{padding:11px 16px;border-top:1px solid #ECE7DA;vertical-align:top}
+.post>table{margin:6px 0 22px}
+.callout{background:var(--navy);color:var(--paper);border-radius:14px;padding:32px 34px;margin:30px 0 0}
+.callout h2{font-family:var(--disp);font-weight:900;font-size:1.35rem;letter-spacing:-.01em;margin-bottom:10px;color:var(--paper)}
+.callout p{color:rgba(244,239,227,.88);line-height:1.7}
+details{border-top:1px solid var(--line);padding:18px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{font-family:var(--disp);font-weight:700;font-size:1.02rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';font-weight:900;color:var(--ink-soft)}
+details[open] summary::after{content:'−'}
+details p{margin-top:12px;color:var(--ink-soft);max-width:68ch}
+.cta{background:var(--yellow);border-radius:14px;padding:40px 36px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:22px}
+.cta h2{font-family:var(--disp);font-weight:900;font-size:clamp(1.4rem,3vw,2rem);letter-spacing:-.01em}
+.cta p{max-width:52ch;margin-top:8px}
+.cta .actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.cta a.alt{color:var(--ink);font-weight:600;text-decoration:none;border-bottom:2px solid var(--ink)}
+.cta .btn-wa:hover{background:#fff;color:var(--navy)}
+.author{border-top:1px solid var(--line);margin-top:40px;padding-top:24px}
+.author h2{font-family:var(--disp);font-weight:800;font-size:1rem;margin-bottom:8px}
+.author p{color:var(--ink-soft);font-size:.95rem;line-height:1.65}
+.related h2{font-family:var(--disp);font-weight:800;font-size:1.1rem;margin-bottom:12px}
+.related ul{list-style:none;display:grid;gap:10px}
+.related a{font-family:var(--disp);font-weight:700;text-decoration:none;border-bottom:2px solid var(--yellow)}
+footer{margin-top:54px;border-top:1px solid var(--line);padding:26px 0 40px;display:flex;justify-content:space-between;font-size:.85rem;color:var(--ink-soft);flex-wrap:wrap;gap:10px}
+@keyframes sweep{from{background-size:0% 100%}to{background-size:100% 100%}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+h1 .hl{background:linear-gradient(var(--yellow),var(--yellow)) left center/100% 100% no-repeat;animation:sweep .7s ease-out .7s both}
+.kicker,h1,.lede{animation:rise .7s cubic-bezier(.22,1,.36,1) both}
+.kicker{animation-delay:.05s}h1{animation-delay:.15s}.lede{animation-delay:.28s}
+@media(max-width:760px){
+  .posts a.p{grid-template-columns:1fr;gap:6px;padding:24px 0}
+  .posts .pm{padding-top:0}
+  ol.steps>li{padding-left:56px}
+  .answer,.callout{padding:24px 22px}
+  .cta{padding:32px 24px}
+  .btn-wa{white-space:normal}
+}
+@media (prefers-reduced-motion: reduce){.kicker,h1,.lede,h1 .hl{animation:none!important}}
+</style>
+<script src="/ga.js" async></script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a href="./" style="font-weight:800">← Di Pierro Creative</a>
+    <div class="links"><a href="./#services">Services</a><a href="packages.html">Packages</a><a href="insights.html">Insights</a><a href="mailto:dipierrocreative@gmail.com">Contact</a><a href="como-rastrear-leads-do-whatsapp.html" title="Versão em português">PT</a></div>
+  </nav>
+  <header>
+    <div class="kicker">Insights · Tracking</div>
+    <h1>How do you know where your <span class="hl">WhatsApp leads come from?</span></h1>
+    <p class="meta">October 14, 2026 · 5 min read · Di Pierro Creative</p>
+  </header>
+  <article class="post">
+    <section class="answer"><h2>The direct answer</h2><p>WhatsApp doesn't tell you where a contact came from. To find out, you measure in two places: <strong>at the click and in the conversation</strong>. At the click, every WhatsApp button on your site fires a GA4 event, and every link you share carries UTMs, so GA4 knows the channel. In the conversation, each channel uses a different pre-filled message, so you can tell the source as soon as it arrives. Add a simple log of who became a customer, and you'll know which channels bring customers, not just clicks.</p></section>
+
+<h2>Why WhatsApp is a blind spot</h2>
+<p>Most businesses that sell over WhatsApp measure well up to the click and poorly after it. GA4 sees the visit, the ad platform sees the click, but the conversation happens in an app that reports back to neither. The result is familiar: plenty of spend on channels that drive clicks, and little certainty about which ones drive sales.</p>
+<p>The fix isn't a magic tool. It's building measurement as a system: every step leaves a mark the next step can read.</p>
+
+<h2>Step by step</h2>
+<ol class="steps">
+<li><h3>Standardize your UTMs</h3><p>Every link you share that points to your site gets three parameters: where it comes from, through which medium, and for which campaign. For example: <code>?utm_source=instagram&amp;utm_medium=bio&amp;utm_campaign=october</code>. The rule: always lowercase, and always the same name for the same channel. "Instagram", "insta" and "IG" become three different channels in your reports.</p></li>
+<li><h3>Turn the click into a GA4 event</h3><p>Every WhatsApp button on your site should fire an event when clicked. Google recommends the name <code>generate_lead</code> for this. Mark that event as a <strong>key event</strong> in GA4: that's what makes it count as a conversion, including in Google Ads. If your site has several buttons, send along which service or page produced the click.</p></li>
+<li><h3>Use one pre-filled message per channel</h3><p>A WhatsApp link can carry pre-filled text (<code>wa.me/COUNTRYCODENUMBER?text=...</code>). Use different text for each place the link appears. When the conversation arrives, the first line already tells you the source.</p>
+<table><thead><tr><th>Where the link is</th><th>Pre-filled message</th></tr></thead><tbody>
+<tr><td>Website button</td><td>Hi! I found you through the website and wanted to ask about…</td></tr>
+<tr><td>Instagram bio</td><td>Hi! I came from Instagram.</td></tr>
+<tr><td>Google Business Profile</td><td>Hi! I found you on Google.</td></tr>
+<tr><td>Ad</td><td>Hi! I saw your October ad.</td></tr>
+</tbody></table></li>
+<li><h3>Tag the source in the conversation</h3><p>In WhatsApp Business, create labels for each source (Website, Instagram, Google, Referral) and apply them as soon as a conversation comes in. When the sale closes, add a "Customer" label. At higher volume, a CRM connected to WhatsApp does this automatically.</p></li>
+<li><h3>Log who became a customer, and review weekly</h3><p>A spreadsheet is enough to start: date, source, got a quote, became a sale, value. Every week, look at three numbers per channel: leads, close rate and revenue. That's where the decision that matters shows up, because the channel with the most clicks is rarely the one that sells the most.</p></li>
+</ol>
+
+<aside class="callout"><h2>The most common mistake: WhatsApp straight from the bio</h2><p>If your Instagram bio links straight to WhatsApp, GA4 never sees that person: they never touched your site. Only the pre-filled message and the label say they came from Instagram. That's why step 3 isn't optional, and it's what separates "we think Instagram works" from "Instagram brought in 12 customers this month".</p></aside>
+
+<h2>Can you do it yourself? Up to a point</h2>
+<p>Yes, and it's worth trying. Steps 1 to 3 fit into an afternoon if you have one channel and a simple site. Each piece, on its own, is easy.</p>
+<p>The hard part is the <strong>system</strong>: the pieces have to keep talking to each other. The UTM has to match the name in your reports. The GA4 event has to survive the next change to your site. The WhatsApp label has to be applied by everyone who answers. And someone has to read the numbers every week and change what isn't working. That's where do-it-yourself tracking usually stalls: not on day one, but in month three.</p>
+<p>Complexity grows fast once you add several channels, paid ads and a CRM. That's when the next step appears: sending back to Google Ads and Meta which conversations became sales (offline conversion import), so the algorithm looks for people like your buyers, not just your clickers.</p>
+<table><thead><tr><th></th><th>Doing it yourself</th><th>With Di Pierro Creative</th></tr></thead><tbody>
+<tr><td><strong>Setup</strong></td><td>An afternoon for the basics; weeks of trial and error to connect ads and CRM</td><td>Foundation ready in 7 days, adapted to the tools you already use</td></tr>
+<tr><td><strong>When something changes</strong></td><td>The event breaks silently and you find out months later</td><td>Maintenance and checks are part of the service</td></tr>
+<tr><td><strong>Reading the data</strong></td><td>The numbers exist, but nobody has time to read them</td><td>A read-out every cycle: what worked, what it taught us, what changes</td></tr>
+<tr><td><strong>The big picture</strong></td><td>Each tool solved in isolation</td><td>Tracking, media, site and support treated as one system</td></tr>
+</tbody></table>
+<p>That's the logic behind <a href="./#about">the Leverage Method</a>: instead of optimizing each piece, find the point where the system gets stuck and let each cycle's results feed the next.</p>
+
+    <h2>Frequently asked questions</h2>
+    <details><summary>Can GA4 see the WhatsApp conversation?</summary><p>No. GA4 sees up to the click on the button. What happens inside WhatsApp stays outside it, which is why a pre-filled message per channel and a sales log complete the picture.</p></details><details><summary>Do I need the official WhatsApp API for this?</summary><p>Not to start. Links with pre-filled messages, WhatsApp Business labels and a spreadsheet are enough. The API, through a CRM, becomes worth it when there are too many conversations to log by hand.</p></details><details><summary>What if someone deletes the pre-filled message before sending?</summary><p>It happens, but most people send it as is. For conversations with no source, ask in your first reply how they found you, and write it down.</p></details><details><summary>Can I do this myself, or do I need a specialist?</summary><p>You can do the basics yourself: UTMs, one GA4 event and a pre-filled message per channel. A specialist makes the difference once several channels, ads and a CRM are involved, and when someone needs to keep everything working and read the numbers to make decisions. Tracking is a system, and what usually fails is the connection between the pieces, not the pieces themselves.</p></details><details><summary>How long does it take to set up?</summary><p>The foundation (UTMs, GA4 event, per-channel messages and the log) is ready in a week. It&#x27;s Di Pierro Creative&#x27;s Tracking in 7 days kit.</p></details>
+    <aside class="author"><h2>Who writes this</h2><p><strong>Di Pierro Creative</strong> is a São Paulo-based studio that combines creativity and analysis for sustainable growth, applying systems thinking to marketing, sales and customer support (the Leverage Method). It was founded by Virginia Di Pierro, a specialist in Business and Project Management from UC Berkeley Extension. We work in English, Spanish and Portuguese.</p></aside>
+  </article>
+
+  <div class="rule"></div>
+  <div class="cta">
+    <div><h2>Want this set up in 7 days?</h2><p>The Tracking in 7 days kit installs GA4 with conversion events, a UTM standard and per-channel WhatsApp links, adapted to your site.</p></div>
+    <div class="actions"><a class="btn-wa" href="https://wa.me/5511988381991?text=Hi%21%20I%20read%20the%20post%20about%20WhatsApp%20leads%20on%20the%20Di%20Pierro%20Creative%20website%20and%20I%27d%20like%20to%20know%20about%20the%20Tracking%20in%207%20days%20kit." target="_blank" rel="noopener" data-service="blog-whatsapp-leads-en"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8.5 8.5h7M8.5 11.5h4.5"/></svg>I want the tracking kit</a><a class="alt" href="packages.html">See packages and pricing</a></div>
+  </div>
+
+  <div class="rule"></div>
+  <section class="related"><h2>Read next</h2><ul><li><a href="diy-ai-vs-growth-studio.html">Can AI alone build your growth system?</a></li><li><a href="content-calendar-vs-social-system.html">Is a content calendar a social media strategy?</a></li></ul></section>
+
+  <footer><div>© 2026 Di Pierro Creative</div><div>São Paulo, remote worldwide</div></footer>
+</div>
+</body>
+</html>

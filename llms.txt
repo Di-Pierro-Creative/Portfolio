@@ -28,6 +28,12 @@ Contact: dipierrocreative@gmail.com · WhatsApp +55 11 98838-1991
   - Fixed-scope kits: Tracking in 7 days (GA4 conversion events, UTM standard, WhatsApp links per channel); Growth Overview (Looker Studio dashboard: spend, CPA, ROAS, funnel); Lead Flow Starter (lead enrichment, scoring and CRM routing); Support Triage Kit (inbox and WhatsApp triage, macros, escalation rules).
   - Monthly cycles (30 days, Leverage Method): Focus Cycle — one leverage point, up to 5 hypotheses with success criteria set in advance; System Cycle — 2 to 3 connected fronts (e.g. site, media and support) plus dashboard. Cycles differ by how many parts of the system run connected, not by number of deliverables. Ad spend is not included.
 
+## Insights / Blog — how-to answers for people deciding between doing it themselves and hiring a specialist
+- [Insights (EN)](https://dipierrocreative.io/insights.html) · [Blog (PT-BR)](https://dipierrocreative.io/blog.html)
+- [How do you know where your WhatsApp leads come from?](https://dipierrocreative.io/how-to-track-whatsapp-leads.html) — EN version of the WhatsApp lead-tracking guide below.
+- [Blog](https://dipierrocreative.io/blog.html): step-by-step answers on measurement, systems, support and media; each post shows how to do it yourself, where it gets complex, and when a systems-thinking specialist (Di Pierro Creative) is worth it.
+- [Como saber de onde vêm os leads do WhatsApp?](https://dipierrocreative.io/como-rastrear-leads-do-whatsapp.html) — WhatsApp doesn't report where a contact came from; measure at the click (GA4 event generate_lead + UTMs) and in the conversation (a different pre-filled message per channel, WhatsApp Business labels), then log which conversations became sales. The basics are DIY-friendly; multi-channel setups with ads, CRM and offline conversion imports are where a specialist helps. Related offer: Tracking in 7 days kit.
+
 ## Case studies
 - [Ocean Finance](https://dipierrocreative.io/case-ocean.html): 87% CPA reduction on TikTok ($53 → $6.82), 11,423 conversions, three test-and-learn cycles.
 - [FlixBus](https://dipierrocreative.io/case-flixbus.html): 67% CPA cut in 90 days (€24.76 → €8.14) across four markets on a ninth of the incumbent spend.

@@ -210,4 +210,32 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dipierrocreative.io/pacotes.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dipierrocreative.io/packages.html"/>
   </url>
+  <url>
+    <loc>https://dipierrocreative.io/insights.html</loc>
+    <lastmod>2026-10-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dipierrocreative.io/insights.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dipierrocreative.io/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dipierrocreative.io/insights.html"/>
+  </url>
+  <url>
+    <loc>https://dipierrocreative.io/blog.html</loc>
+    <lastmod>2026-10-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dipierrocreative.io/insights.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dipierrocreative.io/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dipierrocreative.io/insights.html"/>
+  </url>
+  <url>
+    <loc>https://dipierrocreative.io/how-to-track-whatsapp-leads.html</loc>
+    <lastmod>2026-10-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dipierrocreative.io/how-to-track-whatsapp-leads.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dipierrocreative.io/como-rastrear-leads-do-whatsapp.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dipierrocreative.io/how-to-track-whatsapp-leads.html"/>
+  </url>
+  <url>
+    <loc>https://dipierrocreative.io/como-rastrear-leads-do-whatsapp.html</loc>
+    <lastmod>2026-10-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dipierrocreative.io/how-to-track-whatsapp-leads.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://dipierrocreative.io/como-rastrear-leads-do-whatsapp.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dipierrocreative.io/how-to-track-whatsapp-leads.html"/>
+  </url>
 </urlset>
