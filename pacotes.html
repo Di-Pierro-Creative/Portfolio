@@ -63,6 +63,11 @@
       "@type": "Service",
       "name": "Growth Overview",
       "description": "Para quando os números estão em vários lugares e ninguém confia neles. Investimento, CPA, ROAS e conversões por canal; O funil ao lado, atualizado diariamente; Um link para o time inteiro, no Looker Studio"
+     },
+     "priceSpecification": {
+      "@type": "PriceSpecification",
+      "minPrice": 3500,
+      "priceCurrency": "BRL"
      }
     },
     {
@@ -90,6 +95,12 @@
       "@type": "Service",
       "name": "Ciclo Foco",
       "description": "Uma frente por vez, atacando o ponto de alavanca. 1 ponto de alavanca por ciclo; Até 5 hipóteses, cada uma com teste, métrica e critério de sucesso definidos antes; Medição instalada antes do primeiro teste; Leitura escrita no fim do ciclo: o que funcionou, o que ensinou, o que vem a seguir"
+     },
+     "priceSpecification": {
+      "@type": "UnitPriceSpecification",
+      "minPrice": 5000,
+      "priceCurrency": "BRL",
+      "unitText": "MONTH"
      }
     },
     {
@@ -99,6 +110,12 @@
       "@type": "Service",
       "name": "Ciclo Sistema",
       "description": "Duas ou três frentes rodando conectadas, uma alimentando a outra. Tudo do Ciclo Foco; 2 a 3 frentes conectadas — por exemplo site, mídia e atendimento; Dashboard Growth Overview incluso; Reunião quinzenal de acompanhamento"
+     },
+     "priceSpecification": {
+      "@type": "UnitPriceSpecification",
+      "minPrice": 8000,
+      "priceCurrency": "BRL",
+      "unitText": "MONTH"
      }
     }
    ]
@@ -173,6 +190,7 @@ h2.lh{font-family:var(--disp);font-weight:900;font-size:clamp(1.7rem,3.4vw,2.4re
 .price{font-family:var(--disp);font-weight:900;font-size:1.5rem;letter-spacing:-.01em;line-height:1.1}
 .price small{display:block;font-family:var(--sans);font-weight:500;font-size:.78rem;letter-spacing:0;color:var(--ink-soft);margin-bottom:2px}
 .price .per{font-size:.95rem;font-weight:800}
+.price--ask{font-size:1.15rem}
 .ticks{list-style:none;display:grid;gap:9px}
 .ticks li{position:relative;padding-left:24px;font-size:.95rem;line-height:1.5}
 .ticks li::before{content:"";position:absolute;left:0;top:.6em;width:13px;height:5px;background:var(--navy)}
@@ -288,25 +306,25 @@ h1 .hl{background:linear-gradient(var(--yellow),var(--yellow)) left center/100% 
       <h3 id="kit-medicao-h">Medição em 7 dias</h3>
       <p class="when">Para quando você investe em marketing e não sabe o que gera contato.</p>
       <ul class="ticks"><li>GA4 instalado com eventos de conversão: WhatsApp, formulário, e-mail</li><li>Padrão de UTMs documentado para cada canal</li><li>Links de WhatsApp por canal, para saber de onde vem cada conversa</li></ul>
-      <div class="kit-foot"><div class="kit-meta"><div class="price"><small>a partir de</small>R$ —</div><div class="deadline"><small>Prazo</small>7 dias</div></div><a class="btn-wa" href="https://wa.me/5511988381991?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Di%20Pierro%20Creative%20e%20tenho%20interesse%20no%20pacote%20Medi%C3%A7%C3%A3o%20em%207%20dias." target="_blank" rel="noopener" data-service="kit-medicao"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8.5 8.5h7M8.5 11.5h4.5"/></svg>Quero este kit</a></div>
+      <div class="kit-foot"><div class="kit-meta"><div class="price price--ask">Sob consulta</div><div class="deadline"><small>Prazo</small>7 dias</div></div><a class="btn-wa" href="https://wa.me/5511988381991?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Di%20Pierro%20Creative%20e%20tenho%20interesse%20no%20pacote%20Medi%C3%A7%C3%A3o%20em%207%20dias." target="_blank" rel="noopener" data-service="kit-medicao"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8.5 8.5h7M8.5 11.5h4.5"/></svg>Quero este kit</a></div>
     </article>
     <article class="kit" aria-labelledby="kit-growth-overview-h">
       <h3 id="kit-growth-overview-h">Growth Overview</h3>
       <p class="when">Para quando os números estão em vários lugares e ninguém confia neles.</p>
       <ul class="ticks"><li>Investimento, CPA, ROAS e conversões por canal</li><li>O funil ao lado, atualizado diariamente</li><li>Um link para o time inteiro, no Looker Studio</li></ul>
-      <div class="kit-foot"><div class="kit-meta"><div class="price"><small>a partir de</small>R$ —</div></div><a class="btn-wa" href="https://wa.me/5511988381991?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Di%20Pierro%20Creative%20e%20tenho%20interesse%20no%20pacote%20Growth%20Overview." target="_blank" rel="noopener" data-service="kit-growth-overview"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8.5 8.5h7M8.5 11.5h4.5"/></svg>Quero este kit</a></div>
+      <div class="kit-foot"><div class="kit-meta"><div class="price"><small>a partir de</small>R$ 3.500</div></div><a class="btn-wa" href="https://wa.me/5511988381991?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Di%20Pierro%20Creative%20e%20tenho%20interesse%20no%20pacote%20Growth%20Overview." target="_blank" rel="noopener" data-service="kit-growth-overview"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8.5 8.5h7M8.5 11.5h4.5"/></svg>Quero este kit</a></div>
     </article>
     <article class="kit" aria-labelledby="kit-lead-flow-h">
       <h3 id="kit-lead-flow-h">Lead Flow Starter</h3>
       <p class="when">Para quando o lead chega e demora para ser respondido — ou se perde.</p>
       <ul class="ticks"><li>Lead novo enriquecido e pontuado automaticamente</li><li>Roteado para o CRM com alerta para o time</li><li>Rascunho de primeiro contato pronto para revisão</li></ul>
-      <div class="kit-foot"><div class="kit-meta"><div class="price"><small>a partir de</small>R$ —</div></div><a class="btn-wa" href="https://wa.me/5511988381991?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Di%20Pierro%20Creative%20e%20tenho%20interesse%20no%20pacote%20Lead%20Flow%20Starter." target="_blank" rel="noopener" data-service="kit-lead-flow"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8.5 8.5h7M8.5 11.5h4.5"/></svg>Quero este kit</a></div>
+      <div class="kit-foot"><div class="kit-meta"><div class="price price--ask">Sob consulta</div></div><a class="btn-wa" href="https://wa.me/5511988381991?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Di%20Pierro%20Creative%20e%20tenho%20interesse%20no%20pacote%20Lead%20Flow%20Starter." target="_blank" rel="noopener" data-service="kit-lead-flow"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8.5 8.5h7M8.5 11.5h4.5"/></svg>Quero este kit</a></div>
     </article>
     <article class="kit" aria-labelledby="kit-support-triage-h">
       <h3 id="kit-support-triage-h">Support Triage Kit</h3>
       <p class="when">Para quando o atendimento não dá conta e o cliente fica esperando.</p>
       <ul class="ticks"><li>Triagem de inbox e WhatsApp por categoria e urgência</li><li>Macros sugeridas e regras de escalonamento</li><li>Resumo semanal de qualidade do atendimento</li></ul>
-      <div class="kit-foot"><div class="kit-meta"><div class="price"><small>a partir de</small>R$ —</div></div><a class="btn-wa" href="https://wa.me/5511988381991?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Di%20Pierro%20Creative%20e%20tenho%20interesse%20no%20pacote%20Support%20Triage%20Kit." target="_blank" rel="noopener" data-service="kit-support-triage"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8.5 8.5h7M8.5 11.5h4.5"/></svg>Quero este kit</a></div>
+      <div class="kit-foot"><div class="kit-meta"><div class="price price--ask">Sob consulta</div></div><a class="btn-wa" href="https://wa.me/5511988381991?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Di%20Pierro%20Creative%20e%20tenho%20interesse%20no%20pacote%20Support%20Triage%20Kit." target="_blank" rel="noopener" data-service="kit-support-triage"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8.5 8.5h7M8.5 11.5h4.5"/></svg>Quero este kit</a></div>
     </article>
     </div>
   </section>
@@ -323,14 +341,14 @@ h1 .hl{background:linear-gradient(var(--yellow),var(--yellow)) left center/100% 
         <p class="sub">Uma frente por vez, atacando o ponto de alavanca.</p>
         <svg class="fronts" viewBox="0 0 300 64" aria-hidden="true" focusable="false"><line class="ln" x1="30" y1="20" x2="110" y2="20"/><line class="ln" x1="110" y1="20" x2="190" y2="20"/><line class="ln" x1="190" y1="20" x2="270" y2="20"/><circle class="nd" cx="30" cy="20" r="11"/><text class="" x="30" y="54">Site</text><circle class="nd on" cx="110" cy="20" r="11"/><text class="on" x="110" y="54">Mídia</text><circle class="nd" cx="190" cy="20" r="11"/><text class="" x="190" y="54">Atendimento</text><circle class="nd" cx="270" cy="20" r="11"/><text class="" x="270" y="54">Dados</text></svg>
         <ul class="ticks"><li>1 ponto de alavanca por ciclo</li><li>Até 5 hipóteses, cada uma com teste, métrica e critério de sucesso definidos antes</li><li>Medição instalada antes do primeiro teste</li><li>Leitura escrita no fim do ciclo: o que funcionou, o que ensinou, o que vem a seguir</li></ul>
-        <div class="cycle-foot"><div class="price"><small>a partir de</small>R$ —<span class="per">/mês</span></div><a class="btn-wa" href="https://wa.me/5511988381991?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Di%20Pierro%20Creative%20e%20quero%20saber%20mais%20sobre%20o%20Ciclo%20Foco." target="_blank" rel="noopener" data-service="ciclo-foco"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8.5 8.5h7M8.5 11.5h4.5"/></svg>Conversar sobre o ciclo</a></div>
+        <div class="cycle-foot"><div class="price"><small>a partir de</small>R$ 5.000<span class="per">/mês</span></div><a class="btn-wa" href="https://wa.me/5511988381991?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Di%20Pierro%20Creative%20e%20quero%20saber%20mais%20sobre%20o%20Ciclo%20Foco." target="_blank" rel="noopener" data-service="ciclo-foco"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8.5 8.5h7M8.5 11.5h4.5"/></svg>Conversar sobre o ciclo</a></div>
       </article>
       <article class="cycle" aria-labelledby="ciclo-sistema-h">
         <h3 id="ciclo-sistema-h">Ciclo Sistema</h3>
         <p class="sub">Duas ou três frentes rodando conectadas, uma alimentando a outra.</p>
         <svg class="fronts" viewBox="0 0 300 64" aria-hidden="true" focusable="false"><line class="ln on" x1="30" y1="20" x2="110" y2="20"/><line class="ln on" x1="110" y1="20" x2="190" y2="20"/><line class="ln" x1="190" y1="20" x2="270" y2="20"/><circle class="nd on" cx="30" cy="20" r="11"/><text class="on" x="30" y="54">Site</text><circle class="nd on" cx="110" cy="20" r="11"/><text class="on" x="110" y="54">Mídia</text><circle class="nd on" cx="190" cy="20" r="11"/><text class="on" x="190" y="54">Atendimento</text><circle class="nd" cx="270" cy="20" r="11"/><text class="" x="270" y="54">Dados</text></svg>
         <ul class="ticks"><li>Tudo do Ciclo Foco</li><li>2 a 3 frentes conectadas — por exemplo site, mídia e atendimento</li><li>Dashboard Growth Overview incluso</li><li>Reunião quinzenal de acompanhamento</li></ul>
-        <div class="cycle-foot"><div class="price"><small>a partir de</small>R$ —<span class="per">/mês</span></div><a class="btn-wa" href="https://wa.me/5511988381991?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Di%20Pierro%20Creative%20e%20quero%20saber%20mais%20sobre%20o%20Ciclo%20Sistema." target="_blank" rel="noopener" data-service="ciclo-sistema"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8.5 8.5h7M8.5 11.5h4.5"/></svg>Conversar sobre o ciclo</a></div>
+        <div class="cycle-foot"><div class="price"><small>a partir de</small>R$ 8.000<span class="per">/mês</span></div><a class="btn-wa" href="https://wa.me/5511988381991?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Di%20Pierro%20Creative%20e%20quero%20saber%20mais%20sobre%20o%20Ciclo%20Sistema." target="_blank" rel="noopener" data-service="ciclo-sistema"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8.5 8.5h7M8.5 11.5h4.5"/></svg>Conversar sobre o ciclo</a></div>
       </article>
     </div>
   </div>
