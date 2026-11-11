@@ -97,34 +97,34 @@
 }
 </script>
 <style>
-:root{--paper:#F4EFE3;--navy:#12314B;--ink:#12314B;--ink-soft:#5A6572;--yellow:#F5E000;--line:#D8D2C4;--disp:'Archivo',sans-serif;--sans:'Inter',sans-serif}
+:root{--paper:#F4F6F8;--navy:#1A1D21;--ink:#1A1D21;--ink-soft:#5A6572;--lilac:#C9B6FF;--cyan:#00C2D1;--line:#DDE1E7;--disp:'Archivo',sans-serif;--sans:'Inter',sans-serif}
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
 .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
 nav{display:flex;justify-content:space-between;align-items:center;padding:26px 0;font-family:var(--disp);font-weight:600;font-size:14px}
 nav .links{display:flex;gap:24px}
 nav a{color:var(--ink);text-decoration:none}
-nav a:hover{border-bottom:2px solid var(--yellow)}
+nav a:hover{border-bottom:2px solid var(--lilac)}
 .kicker{font-family:var(--disp);font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin:44px 0 22px}
 h1{font-family:var(--disp);font-weight:900;font-size:clamp(2.2rem,5.5vw,4.2rem);line-height:1.16;letter-spacing:-.02em;max-width:18ch}
-.hl{background:var(--yellow);padding:.04em .14em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hl{background:var(--lilac);padding:.04em .14em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 .lede{max-width:58ch;font-size:1.12rem;color:var(--ink-soft);margin:26px 0 10px}
 .rule{border-top:1px solid var(--line);margin:46px 0}
 .sec-label{font-family:var(--disp);font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:24px}
 .inc{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 34px;max-width:900px}
-.inc div{padding:14px 0 0;border-top:2px solid var(--yellow);font-size:.98rem}
+.inc div{padding:14px 0 0;border-top:2px solid var(--lilac);font-size:.98rem}
 .steps{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:20px;padding-top:6px}
 .steps::before{content:'';position:absolute;top:24px;left:4%;right:4%;height:2px;background:var(--line)}
-.steps::after{content:'';position:absolute;top:24px;left:4%;width:0%;height:2px;background:var(--yellow);transition:width 1.8s cubic-bezier(.4,0,.2,1) .25s}
+.steps::after{content:'';position:absolute;top:24px;left:4%;width:0%;height:2px;background:var(--cyan);transition:width 1.8s cubic-bezier(.4,0,.2,1) .25s}
 .steps.go::after{width:92%}
 .step{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s cubic-bezier(.22,1,.36,1)}
 .steps.go .step{opacity:1;transform:none}
 .steps.go .step:nth-child(1){transition-delay:.15s}.steps.go .step:nth-child(2){transition-delay:.5s}.steps.go .step:nth-child(3){transition-delay:.85s}.steps.go .step:nth-child(4){transition-delay:1.2s}.steps.go .step:nth-child(5){transition-delay:1.55s}
-.step .n{position:relative;z-index:1;width:38px;height:38px;border-radius:50%;background:var(--navy);color:var(--yellow);font-family:var(--disp);font-weight:900;font-size:.78rem;display:flex;align-items:center;justify-content:center;transition:transform .2s,background .2s,color .2s;box-shadow:0 0 0 5px var(--paper)}
-.step:hover .n{background:var(--yellow);color:var(--navy);transform:scale(1.15)}
+.step .n{position:relative;z-index:1;width:38px;height:38px;border-radius:50%;background:var(--navy);color:var(--lilac);font-family:var(--disp);font-weight:900;font-size:.78rem;display:flex;align-items:center;justify-content:center;transition:transform .2s,background .2s,color .2s;box-shadow:0 0 0 5px var(--paper)}
+.step:hover .n{background:var(--lilac);color:var(--navy);transform:scale(1.15)}
 .steps-loopback{display:flex;align-items:center;gap:10px;margin-top:18px;font-family:var(--disp);font-weight:700;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
 .steps-loopback svg{width:30px;height:30px}
-.steps-loopback .arr-path{stroke:var(--yellow);stroke-width:2.5;fill:none}
+.steps-loopback .arr-path{stroke:var(--lilac);stroke-width:2.5;fill:none}
 .steps-loopback svg{animation:loopspin 6s linear infinite}
 @keyframes loopspin{to{transform:rotate(360deg)}}
 @media (prefers-reduced-motion: reduce){.step{opacity:1!important;transform:none!important}.steps::after{width:92%!important;transition:none}.steps-loopback svg{animation:none}}
@@ -133,7 +133,7 @@ h1{font-family:var(--disp);font-weight:900;font-size:clamp(2.2rem,5.5vw,4.2rem);
 .method{margin-top:30px;font-size:1rem;color:var(--ink-soft);max-width:62ch}
 .method strong{color:var(--ink)}
 .proof{background:var(--navy);color:var(--paper);border-radius:14px;padding:38px 36px;display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center}
-.proof .stat{font-family:var(--disp);font-weight:900;font-size:clamp(2.4rem,6vw,4rem);color:var(--yellow);line-height:1}
+.proof .stat{font-family:var(--disp);font-weight:900;font-size:clamp(2.4rem,6vw,4rem);color:var(--lilac);line-height:1}
 .proof .lbl{font-family:var(--disp);font-weight:600;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;opacity:.75;margin-top:8px}
 .proof p{font-size:1rem;line-height:1.6}
 details{border-top:1px solid var(--line);padding:18px 0}
@@ -142,10 +142,10 @@ summary{font-family:var(--disp);font-weight:700;font-size:1.02rem;cursor:pointer
 summary::after{content:'+';font-weight:900;color:var(--ink-soft)}
 details[open] summary::after{content:'−'}
 details p{margin-top:12px;color:var(--ink-soft);max-width:68ch}
-.cta{background:var(--yellow);border-radius:14px;padding:44px 36px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:22px}
+.cta{background:var(--lilac);border-radius:14px;padding:44px 36px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:22px}
 .cta h2{font-family:var(--disp);font-weight:900;font-size:clamp(1.5rem,3.4vw,2.2rem);letter-spacing:-.01em}
 .cta .actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
-.define{background:#fff;border-left:4px solid var(--yellow);border-radius:0 12px 12px 0;padding:26px 30px;max-width:70ch}
+.define{background:#fff;border-left:4px solid var(--lilac);border-radius:0 12px 12px 0;padding:26px 30px;max-width:70ch}
 .define h2{font-family:var(--disp);font-weight:800;font-size:1.3rem;letter-spacing:-.01em;margin-bottom:10px}
 .define p{font-size:1rem;line-height:1.65;color:var(--ink-soft)}
 .packs{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -169,17 +169,17 @@ footer{margin-top:54px;border-top:1px solid var(--line);padding:26px 0 40px;disp
 @media(max-width:900px){.svc-hero{grid-template-columns:1fr;gap:26px}}
 @keyframes sweep{from{background-size:0% 100%}to{background-size:100% 100%}}
 @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-h1 .hl{background:linear-gradient(var(--yellow),var(--yellow)) left center/100% 100% no-repeat;animation:sweep .7s ease-out .7s both}
+h1 .hl{background:linear-gradient(var(--lilac),var(--lilac)) left center/100% 100% no-repeat;animation:sweep .7s ease-out .7s both}
 .kicker,h1,.lede,.svc-hero .define{animation:rise .7s cubic-bezier(.22,1,.36,1) both}
 .kicker{animation-delay:.05s}h1{animation-delay:.15s}.lede{animation-delay:.28s}.svc-hero .define{animation-delay:.42s}
 @media (prefers-reduced-motion: reduce){.kicker,h1,.lede,.svc-hero .define,h1 .hl{animation:none!important}}
 
 .thesis{background:var(--navy);color:#fff;border-radius:14px;padding:38px 36px;margin:10px 0}
-.thesis .tk{font-family:var(--disp);font-weight:700;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--yellow);margin-bottom:10px}
+.thesis .tk{font-family:var(--disp);font-weight:700;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--lilac);margin-bottom:10px}
 .thesis h2{font-family:var(--disp);font-weight:800;font-size:clamp(1.25rem,2.5vw,1.7rem);letter-spacing:-.01em;margin-bottom:12px;max-width:30ch}
 .thesis p{max-width:74ch;color:rgba(255,255,255,.88);font-size:.97rem}
-.thesis strong{color:var(--yellow)}
-.thesis a{color:var(--yellow);font-weight:700}
+.thesis strong{color:var(--lilac)}
+.thesis a{color:var(--lilac);font-weight:700}
 </style>
 <script src="/ga.js" async></script>
 <script defer src="/_vercel/insights/script.js"></script>

@@ -170,7 +170,7 @@
 }
 </script>
 <style>
-:root{--paper:#F4EFE3;--navy:#12314B;--ink:#12314B;--ink-soft:#5A6572;--yellow:#F5E000;--line:#D8D2C4;--disp:'Archivo',sans-serif;--sans:'Inter',sans-serif}
+:root{--paper:#F4F6F8;--navy:#1A1D21;--ink:#1A1D21;--ink-soft:#5A6572;--lilac:#C9B6FF;--cyan:#00C2D1;--line:#DDE1E7;--disp:'Archivo',sans-serif;--sans:'Inter',sans-serif}
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit}
@@ -178,10 +178,10 @@ a{color:inherit}
 nav{display:flex;justify-content:space-between;align-items:center;padding:26px 0;font-family:var(--disp);font-weight:600;font-size:14px;gap:16px;flex-wrap:wrap}
 nav .links{display:flex;gap:24px;flex-wrap:wrap}
 nav a{color:var(--ink);text-decoration:none}
-nav a:hover,nav a[aria-current="page"]{border-bottom:2px solid var(--yellow)}
+nav a:hover,nav a[aria-current="page"]{border-bottom:2px solid var(--lilac)}
 .kicker{font-family:var(--disp);font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin:44px 0 22px}
 h1{font-family:var(--disp);font-weight:900;font-size:clamp(2.2rem,5.5vw,4.2rem);line-height:1.16;letter-spacing:-.02em;max-width:18ch}
-.hl{background:var(--yellow);padding:.04em .14em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hl{background:var(--lilac);padding:.04em .14em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 .lede{max-width:62ch;font-size:1.12rem;color:var(--ink-soft);margin:26px 0 10px}
 .rule{border-top:1px solid var(--line);margin:56px 0}
 .sec-label{font-family:var(--disp);font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:24px}
@@ -195,11 +195,11 @@ h2.lh{font-family:var(--disp);font-weight:900;font-size:clamp(1.7rem,3.4vw,2.4re
 .ticks li{position:relative;padding-left:24px;font-size:.95rem;line-height:1.5}
 .ticks li::before{content:"";position:absolute;left:0;top:.6em;width:13px;height:5px;background:var(--navy)}
 .btn-wa{white-space:nowrap;display:inline-flex;align-items:center;gap:10px;background:var(--navy);color:var(--paper);font-family:var(--disp);font-weight:800;font-size:.98rem;padding:13px 22px;border-radius:999px;text-decoration:none;transition:background .18s,color .18s}
-.btn-wa:hover{background:var(--yellow);color:var(--navy)}
+.btn-wa:hover{background:var(--lilac);color:var(--navy)}
 .btn-wa svg{width:19px;height:19px;flex:none}
 a:focus-visible,summary:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
 /* diagnóstico */
-.diag{display:grid;grid-template-columns:1.3fr .7fr;gap:40px;background:#fff;border-left:6px solid var(--yellow);border-radius:0 14px 14px 0;padding:36px 38px}
+.diag{display:grid;grid-template-columns:1.3fr .7fr;gap:40px;background:#fff;border-left:6px solid var(--lilac);border-radius:0 14px 14px 0;padding:36px 38px}
 .diag h2.lh{margin-bottom:12px}
 .diag p.intro{color:var(--ink-soft);max-width:56ch;margin-bottom:20px}
 .diag h3{font-family:var(--disp);font-weight:800;font-size:.95rem;margin-bottom:10px}
@@ -220,17 +220,17 @@ a:focus-visible,summary:focus-visible{outline:3px solid var(--navy);outline-offs
 .cycles-band{background:var(--navy);color:var(--paper);margin:64px 0;padding:76px 0 72px}
 .cycles-band h2.lh{color:var(--paper)}
 .statement{font-family:var(--disp);font-weight:900;font-size:clamp(1.5rem,3.2vw,2.3rem);line-height:1.15;letter-spacing:-.02em;max-width:26ch;margin:18px 0 18px}
-.statement .no{color:rgba(244,239,227,.55)}
-.cycles-band .lh-intro{color:rgba(244,239,227,.78);margin-bottom:36px}
+.statement .no{color:rgba(244,246,248,.55)}
+.cycles-band .lh-intro{color:rgba(244,246,248,.78);margin-bottom:36px}
 .cycles{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .cycle{background:var(--paper);color:var(--navy);border-radius:12px;padding:32px 32px 28px;display:flex;flex-direction:column}
 .cycle h3{font-family:var(--disp);font-weight:900;font-size:1.7rem;letter-spacing:-.02em;margin-bottom:6px}
 .cycle .sub{color:var(--ink-soft);margin-bottom:18px}
 .fronts{width:100%;max-width:300px;height:auto;display:block;margin:0 0 22px}
 .fronts .ln{stroke:var(--line);stroke-width:2}
-.fronts .ln.on{stroke:var(--yellow);stroke-width:4}
+.fronts .ln.on{stroke:var(--lilac);stroke-width:4}
 .fronts .nd{fill:#fff;stroke:var(--line);stroke-width:2}
-.fronts .nd.on{fill:var(--navy);stroke:var(--yellow);stroke-width:3}
+.fronts .nd.on{fill:var(--navy);stroke:var(--lilac);stroke-width:3}
 .fronts text{font-family:var(--sans);font-size:11px;fill:var(--ink-soft);text-anchor:middle}
 .fronts text.on{fill:var(--navy);font-weight:600}
 .cycle .ticks{margin-bottom:24px}
@@ -243,7 +243,7 @@ summary::-webkit-details-marker{display:none}
 summary::after{content:'+';font-weight:900;color:var(--ink-soft)}
 details[open] summary::after{content:'−'}
 details p{margin-top:12px;color:var(--ink-soft);max-width:68ch}
-.cta{background:var(--yellow);border-radius:14px;padding:44px 36px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:22px}
+.cta{background:var(--lilac);border-radius:14px;padding:44px 36px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:22px}
 .cta h2{font-family:var(--disp);font-weight:900;font-size:clamp(1.4rem,3vw,2rem);letter-spacing:-.01em;max-width:24ch}
 .cta .actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
 .cta a.alt{color:var(--ink);font-weight:600;text-decoration:none;border-bottom:2px solid var(--ink)}
@@ -254,7 +254,7 @@ details p{margin-top:12px;color:var(--ink-soft);max-width:68ch}
 footer{margin-top:54px;border-top:1px solid var(--line);padding:26px 0 40px;display:flex;justify-content:space-between;font-size:.85rem;color:var(--ink-soft);flex-wrap:wrap;gap:10px}
 @keyframes sweep{from{background-size:0% 100%}to{background-size:100% 100%}}
 @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-h1 .hl{background:linear-gradient(var(--yellow),var(--yellow)) left center/100% 100% no-repeat;animation:sweep .7s ease-out .7s both}
+h1 .hl{background:linear-gradient(var(--lilac),var(--lilac)) left center/100% 100% no-repeat;animation:sweep .7s ease-out .7s both}
 .kicker,h1,.lede{animation:rise .7s cubic-bezier(.22,1,.36,1) both}
 .kicker{animation-delay:.05s}h1{animation-delay:.15s}.lede{animation-delay:.28s}
 @media(max-width:860px){

@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "O ChatGPT pode criar meus anúncios?", "acceptedAnswer": {"@type": "Answer", "text": "Pode — ChatGPT e Claude escrevem bons textos de anúncio. O que eles não fazem é decidir qual mensagem testar neste ciclo, ler o resultado contra uma hipótese e alimentar o aprendizado na próxima rodada. O texto é a parte mais barata do anúncio; o loop em volta dele é o que gera retorno."}}, {"@type": "Question", "name": "Ainda vale a pena contratar agência na era da IA?", "acceptedAnswer": {"@type": "Answer", "text": "Para entregas soltas (um logo, um post), menos do que nunca. Para um sistema que compõe — ads, site, SEO, dados e suporte funcionando juntos — mais do que nunca, porque a IA elevou o teto do que um time pequeno e orquestrado consegue operar. A pergunta certa não é “agência ou IA”, é “quem orquestra o sistema”."}}, {"@type": "Question", "name": "O que um growth studio faz que a IA sozinha não faz?", "acceptedAnswer": {"@type": "Answer", "text": "Seleção de hipóteses, priorização por alavancagem, interpretação de resultados, manutenção quando as plataformas mudam e responsabilidade pelo resultado. A IA executa; o studio decide, lê e sustenta."}}, {"@type": "Question", "name": "Já montei workflows com IA. Vocês assumem?", "acceptedAnswer": {"@type": "Answer", "text": "Sim — é um projeto comum: auditamos o que você construiu, mantemos o que funciona, reconstruímos as partes frágeis e cuidamos da manutenção para continuar rodando enquanto você volta para o seu produto."}}, {"@type": "Question", "name": "Como sei se estou pronto para um studio?", "acceptedAnswer": {"@type": "Answer", "text": "Quando as suas horas viraram o gargalo: o sistema só anda quando você empurra, o resultado não carrega de um mês para o outro, ou uma automação quebrada custa um fim de semana. Uma auditoria gratuita é o jeito mais rápido de descobrir."}}]}</script>
 <style>
-:root{--paper:#F4EFE3;--navy:#12314B;--yellow:#F5E000;--line:#D8D2C4;--ink:#1A1A18;--ink-soft:#5A564C;--disp:'Archivo',sans-serif;--body:'Inter',sans-serif}
+:root{--paper:#F4F6F8;--navy:#1A1D21;--lilac:#C9B6FF;--cyan:#00C2D1;--line:#DDE1E7;--ink:#1A1D21;--ink-soft:#5A6572;--disp:'Archivo',sans-serif;--body:'Inter',sans-serif}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.6}
 .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
@@ -20,14 +20,14 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0
 nav a{color:var(--ink);text-decoration:none;margin-left:22px} nav a:first-child{margin:0}
 .kicker{font-family:var(--disp);font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin:44px 0 22px}
 h1{font-family:var(--disp);font-weight:900;font-size:clamp(2rem,4.6vw,3.4rem);letter-spacing:-.02em;line-height:1.12;max-width:20ch}
-.hl{background:linear-gradient(var(--yellow),var(--yellow)) left center/100% 100% no-repeat;padding:.04em .14em;box-decoration-break:clone;-webkit-box-decoration-break:clone;animation:sweep .7s ease-out .7s both}
+.hl{background:linear-gradient(var(--lilac),var(--lilac)) left center/100% 100% no-repeat;padding:.04em .14em;box-decoration-break:clone;-webkit-box-decoration-break:clone;animation:sweep .7s ease-out .7s both}
 @keyframes sweep{from{background-size:0% 100%}to{background-size:100% 100%}}
 @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 .lede{max-width:56ch;font-size:1.12rem;color:var(--ink-soft);margin:26px 0 10px}
 .hero{display:grid;grid-template-columns:1.12fr .88fr;gap:54px;align-items:center;margin-top:10px}
 .kicker,h1,.lede,.define{animation:rise .7s cubic-bezier(.22,1,.36,1) both}
 .kicker{animation-delay:.05s}h1{animation-delay:.15s}.lede{animation-delay:.28s}.define{animation-delay:.42s}
-.define{background:#fff;border-left:4px solid var(--yellow);border-radius:0 12px 12px 0;padding:26px 30px}
+.define{background:#fff;border-left:4px solid var(--lilac);border-radius:0 12px 12px 0;padding:26px 30px}
 .define h2{font-family:var(--disp);font-weight:800;font-size:1.3rem;letter-spacing:-.01em;margin-bottom:10px}
 .define p{color:var(--ink-soft);font-size:.97rem}
 .rule{height:1px;background:var(--line);margin:44px 0}
@@ -35,30 +35,30 @@ h1{font-family:var(--disp);font-weight:900;font-size:clamp(2rem,4.6vw,3.4rem);le
 h2.big{font-family:var(--disp);font-weight:800;font-size:clamp(1.3rem,2.6vw,1.8rem);letter-spacing:-.01em;margin-bottom:18px}
 table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:.92rem}
 th{font-family:var(--disp);font-weight:800;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;text-align:left;padding:14px 18px;background:var(--navy);color:#fff}
-th:last-child{background:var(--yellow);color:var(--navy)}
-td{padding:13px 18px;border-top:1px solid #ECE7DA;vertical-align:top}
+th:last-child{background:var(--lilac);color:var(--navy)}
+td{padding:13px 18px;border-top:1px solid #E6E9EE;vertical-align:top}
 td.dim{font-family:var(--disp);font-weight:700;font-size:.8rem;color:var(--ink-soft);width:17%}
-td.us{background:#FDFAE6;font-weight:500}
+td.us{background:#F3EEFF;font-weight:500}
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .colcard{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px 28px}
-.colcard.y{border-top:4px solid var(--yellow)}
+.colcard.y{border-top:4px solid var(--lilac)}
 .colcard.n{border-top:4px solid var(--navy)}
 .colcard h3{font-family:var(--disp);font-weight:800;font-size:1.1rem;margin-bottom:12px}
 .colcard li{margin:9px 0 9px 18px;color:var(--ink-soft);font-size:.94rem}
 .hcs{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.hc{border-top:2px solid var(--yellow);padding-top:14px}
+.hc{border-top:2px solid var(--lilac);padding-top:14px}
 .hc h3{font-family:var(--disp);font-weight:800;font-size:1.02rem;margin-bottom:6px}
 .hc p{color:var(--ink-soft);font-size:.92rem}
 .tw{background:var(--navy);color:#fff;border-radius:14px;padding:40px 38px}
 .tw h2{font-family:var(--disp);font-weight:800;font-size:clamp(1.3rem,2.6vw,1.8rem);letter-spacing:-.01em;margin-bottom:12px}
 .tw p{max-width:72ch;color:rgba(255,255,255,.88)}
-.tw strong{color:var(--yellow)}
+.tw strong{color:var(--lilac)}
 details{border-bottom:1px solid var(--line);padding:16px 0}
 summary{font-family:var(--disp);font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:14px}
 summary::after{content:'+';font-weight:900;color:var(--ink-soft)}
 details[open] summary::after{content:'−'}
 details p{margin-top:12px;color:var(--ink-soft);max-width:70ch}
-.cta{background:var(--yellow);border-radius:14px;padding:44px 36px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:22px}
+.cta{background:var(--lilac);border-radius:14px;padding:44px 36px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:22px}
 .cta h2{font-family:var(--disp);font-weight:900;font-size:clamp(1.5rem,3.4vw,2.2rem);letter-spacing:-.01em}
 .cta p{max-width:48ch;margin-top:8px;font-size:.95rem}
 .actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
