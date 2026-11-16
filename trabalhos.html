@@ -111,6 +111,8 @@
 </style>
 <script src="/ga.js" async></script>
 <script defer src="/_vercel/insights/script.js"></script>
+<link rel="stylesheet" href="vivid.css">
+<script src="vivid.js" defer></script>
 </head>
 <body>
 
@@ -254,6 +256,7 @@
 
   // CPA ticker: animate the winning number counting down on load
   function animateCount(el, start, end, duration, prefix='$', decimals=2) {
+    if (!el) return;
     const startTime = performance.now();
     function step(now) {
       const progress = Math.min((now - startTime) / duration, 1);

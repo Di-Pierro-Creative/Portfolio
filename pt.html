@@ -479,6 +479,86 @@
   }
   @media(prefers-reduced-motion:reduce){.sx-q::before,.sx-problem,.sx-svc{transition:none}.sx-a.in{animation:none}}
 
+  /* ===== colour rhythm (home): charcoal, lilac, white cards, charcoal, cyan ===== */
+  .sx{margin-bottom:0}
+  .band{position:relative;overflow:hidden;isolation:isolate}
+  .band-art{position:absolute;pointer-events:none;z-index:-1;height:auto}
+  /* Method on lilac */
+  .band--lilac{background:var(--lilac);padding:88px 0 92px}
+  .band--lilac .sec-label,.band--lilac .lstep .n{color:#3B3550}
+  .band--lilac .sec-label.vv-g0::before{background:#fff}
+  .band--lilac .lstep p,.band--lilac .method-line{color:#2E2A3D}
+  .band--lilac .method-line{border-top-color:var(--navy)}
+  .band--lilac .method-line strong{color:var(--navy)}
+  .band--lilac .ring-base{stroke:rgba(26,29,33,.2)}
+  .band--lilac .ring-close{stroke:#fff}
+  .band--lilac #arrw path{fill:#fff}
+  .band--lilac .lnode circle{fill:#fff}
+  .band--lilac + .whyset{margin-top:84px}
+  /* Why it works: white cards, each with its own colour and shape */
+  .whyset .why{background:#fff;border-top:0;border-radius:6px;padding:26px 24px 24px;box-shadow:inset 0 5px 0 var(--lilac);position:relative;overflow:hidden;transition:transform .25s cubic-bezier(.22,1,.36,1)}
+  .whyset .why:nth-child(2){box-shadow:inset 0 5px 0 var(--cyan)}
+  .whyset .why:nth-child(3){box-shadow:inset 0 5px 0 var(--navy)}
+  .whyset .why::after{content:"";position:absolute;right:18px;top:22px;width:22px;height:22px;border-radius:50%;background:var(--lilac);transition:transform .45s cubic-bezier(.2,1.4,.4,1)}
+  .whyset .why:nth-child(2)::after{border-radius:0;background:var(--cyan);clip-path:polygon(50% 0,100% 100%,0 100%)}
+  .whyset .why:nth-child(3)::after{border-radius:0;background:var(--navy);transform:rotate(45deg) scale(.8)}
+  .whyset .why:hover{transform:translateY(-4px)}
+  .whyset .why:hover::after{transform:scale(1.25) rotate(-12deg)}
+  .whyset .why .w-tag{padding-right:36px}
+  /* Built in-house on charcoal, each product in its own brand colour */
+  .band--ink{background:var(--navy);color:var(--paper);padding:84px 0 88px;margin-top:84px}
+  .band--ink .sec-label{color:rgba(244,246,248,.62)}
+  .band--ink .tease--built{color:#fff}
+  .band--ink .tease--built:nth-child(1){background:#c0166e}
+  .band--ink .tease--built:nth-child(2){background:#24507a}
+  .band--ink .tease--built .t-client{color:#fff}
+  .band--ink .tease--built .t-tag{color:rgba(255,255,255,.78)}
+  .band--ink .tease--built p{color:rgba(255,255,255,.9)}
+  /* the why, on cyan */
+  .band--cyan{background:var(--cyan);color:var(--navy);padding:104px 0 108px}
+  .st{font-family:var(--disp);font-weight:900;font-size:clamp(2.5rem,6.4vw,5.6rem);line-height:1;letter-spacing:-.03em;max-width:14ch}
+  .st span{display:block}
+  .st .st-2{font-weight:600;font-size:.42em;line-height:1.15;letter-spacing:-.01em;margin-top:.7em;max-width:26ch}
+  .st-sub{margin-top:24px;font-size:1.05rem;max-width:52ch;color:#0D3439}
+  .st-art{right:-70px;top:50%;width:min(42vw,500px);transform:translateY(-50%)}
+  .band--cyan + #about{margin-top:84px}
+  @media(max-width:700px){.band--lilac,.band--ink{padding:64px 0}.band--cyan{padding:72px 0 150px}.st-art{width:240px;right:-70px;top:auto;bottom:-70px;transform:none}}
+  /* results: four cards, four colour pairs, a shape in each corner */
+  .teases .tease:nth-child(2) .t-stat{color:var(--cyan)}
+  .teases .tease:nth-child(3){background:var(--cyan);color:var(--navy)}
+  .teases .tease:nth-child(3) .t-stat,.teases .tease:nth-child(3) .t-client{color:var(--navy)}
+  .teases .tease:nth-child(3) p{opacity:1;color:#0D3439}
+  .teases .tease:nth-child(3) .card-link{color:var(--navy);border-bottom:2px solid var(--navy)}
+  .teases .tease{position:relative;overflow:hidden;isolation:isolate}
+  .teases .tease::after{content:"";position:absolute;right:-22px;bottom:-22px;width:84px;height:84px;z-index:-1;transition:transform .45s cubic-bezier(.2,1.3,.4,1)}
+  .teases .tease:nth-child(1)::after{border-radius:50%;background:var(--navy)}
+  .teases .tease:nth-child(2)::after{background:var(--cyan);clip-path:polygon(50% 0,100% 100%,0 100%)}
+  .teases .tease:nth-child(3)::after{border-radius:50%;background:var(--paper)}
+  .teases .tease:nth-child(4)::after{background:var(--lilac);clip-path:polygon(50% 0,100% 100%,0 100%)}
+  .teases .tease:hover::after{transform:scale(1.35) rotate(-10deg)}
+  /* ticker separators in the three colours */
+  .ticker .tk-s{font-style:normal;color:var(--lilac)}
+  .ticker .tk-s:nth-of-type(3n+2){color:var(--cyan)}
+  .ticker .tk-s:nth-of-type(3n){color:#fff}
+  .sx-get li::before{background:var(--cyan)}
+  /* FAQ: the open question gets a lilac edge */
+  details{padding-left:18px;padding-right:8px;box-shadow:inset 0 0 0 transparent;transition:box-shadow .25s,background-color .25s}
+  details[open]{box-shadow:inset 4px 0 0 var(--lilac);background:#fff}
+  summary::after{color:var(--cyan)}
+  /* contact: stripe on top, lilac button, a ring and a triangle */
+  #home .vv-stripe{margin-top:84px}
+  .vv-stripe + .contact{margin-top:0}
+  .contact{position:relative;overflow:hidden;isolation:isolate}
+  .contact::before{content:"";position:absolute;left:-90px;bottom:-150px;width:340px;height:340px;border-radius:50%;border:2px solid rgba(201,182,255,.4);z-index:-1}
+  .contact::after{content:"";position:absolute;right:8%;top:-26px;width:70px;height:62px;background:var(--cyan);clip-path:polygon(50% 0,100% 100%,0 100%);transform:rotate(180deg);z-index:-1}
+  .contact-email{display:inline-block!important;background:var(--lilac);color:var(--navy);border:0;padding:14px 24px;border-radius:999px;font-family:var(--disp);font-weight:800;margin-bottom:14px}
+  .contact-email:hover,.contact-email:active{background:var(--cyan);color:var(--navy)}
+  .hero .vv-art{top:-34px;width:clamp(120px,19vw,280px)}
+  @media(max-width:700px){.hero .vv-art{width:62px;top:-46px}}
+  .contact-right{text-align:left}
+  .contact-right a{display:table}
+  .contact::before{left:-150px;bottom:-210px}
+
   /* ===== Opening animation (home pages, once per session) ===== */
   #dpc-intro{position:fixed;inset:0;z-index:9999;overflow:hidden;cursor:pointer;--dpi-fs:min(clamp(3rem,12vw,8.5rem),17vh);animation:dpiDone 0s linear 2.85s forwards}
   .intro-off #dpc-intro,.intro-off .dpi-skip{display:none}
@@ -524,6 +604,8 @@
 </style>
 <script src="/ga.js" async></script>
 <script defer src="/_vercel/insights/script.js"></script>
+<link rel="stylesheet" href="vivid.css">
+<script src="vivid.js" defer></script>
 </head>
 <body>
 <!-- OPENING ANIMATION (decorative; the page below is fully in the DOM) -->
@@ -593,15 +675,15 @@
     </div>
   </div></header>
 
-  <div class="ticker" aria-hidden="true"><div class="ticker-inner"><span><b>−87% CPA</b> Ocean Finance ✦ <b>−67% CPA</b> FlixBus ✦ <b>29 mercados</b> Bolt ✦ 160+ produções ✦ EN · ES · PT ✦ Workflows de IA ✦ Sites ✦ SEO &amp; Google Ads ✦ Social &amp; criativo de performance ✦ Dashboards ✦ App growth ✦ <b>Analyze → Create → Test → Prove → Scale</b> ✦ </span><span><b>−87% CPA</b> Ocean Finance ✦ <b>−67% CPA</b> FlixBus ✦ <b>29 mercados</b> Bolt ✦ 160+ produções ✦ EN · ES · PT ✦ Workflows de IA ✦ Sites ✦ SEO &amp; Google Ads ✦ Social &amp; criativo de performance ✦ Dashboards ✦ App growth ✦ <b>Analyze → Create → Test → Prove → Scale</b> ✦ </span></div></div>
+  <div class="ticker" aria-hidden="true"><div class="ticker-inner"><span><b>−87% CPA</b> Ocean Finance <i class="tk-s">✦</i> <b>−67% CPA</b> FlixBus <i class="tk-s">✦</i> <b>29 mercados</b> Bolt <i class="tk-s">✦</i> 160+ produções <i class="tk-s">✦</i> EN · ES · PT <i class="tk-s">✦</i> Workflows de IA <i class="tk-s">✦</i> Sites <i class="tk-s">✦</i> SEO &amp; Google Ads <i class="tk-s">✦</i> Social &amp; criativo de performance <i class="tk-s">✦</i> Dashboards <i class="tk-s">✦</i> App growth <i class="tk-s">✦</i> <b>Analyze → Create → Test → Prove → Scale</b> <i class="tk-s">✦</i> </span><span><b>−87% CPA</b> Ocean Finance <i class="tk-s">✦</i> <b>−67% CPA</b> FlixBus <i class="tk-s">✦</i> <b>29 mercados</b> Bolt <i class="tk-s">✦</i> 160+ produções <i class="tk-s">✦</i> EN · ES · PT <i class="tk-s">✦</i> Workflows de IA <i class="tk-s">✦</i> Sites <i class="tk-s">✦</i> SEO &amp; Google Ads <i class="tk-s">✦</i> Social &amp; criativo de performance <i class="tk-s">✦</i> Dashboards <i class="tk-s">✦</i> App growth <i class="tk-s">✦</i> <b>Analyze → Create → Test → Prove → Scale</b> <i class="tk-s">✦</i> </span></div></div>
 
   <section id="results" style="margin-top:56px" class="wrap">
     <div class="sec-label">Resultados</div>
     <div class="teases">
-      <a class="tease tease--own" href="trabalhos.html#products"><div class="t-stat">2.598</div><div class="t-client">visitantes em 6 semanas · Elas na Urna</div><p>Do zero a 2.598 visitantes no nosso próprio produto cívico — motor search-first: 62+ páginas indexáveis, 907 cliques orgânicos, menos de R$20 de mídia paga.</p><span class="card-link">Original do estúdio — ler o case →</span></a>
-      <a class="tease" href="trabalhos.html"><div class="t-stat">87%</div><div class="t-client">CPA cortado · Ocean Finance</div><p>Fintech, TikTok. $53 → $6.82 em programa de test-and-learn de três ciclos liderado por nossa fundadora na Shook Digital.</p><span class="card-link">Ler o case →</span></a>
-      <a class="tease" href="trabalhos.html"><div class="t-stat">67%</div><div class="t-client">CPA cortado · FlixBus</div><p>Viagens, 4 mercados. €24.76 → €8.14 em 90 dias, com um nono do investimento do incumbente.</p><span class="card-link">Ler o case →</span></a>
-      <a class="tease" href="trabalhos.html"><div class="t-stat">29</div><div class="t-client">mercados · Bolt</div><p>Mobilidade, global. 5 verticais, 2 marcas, 160+ produções em todos os 7 continentes.</p><span class="card-link">Ler o case →</span></a>
+      <a class="tease tease--own" href="trabalhos.html#products"><div class="t-stat" data-count>2.598</div><div class="t-client">visitantes em 6 semanas · Elas na Urna</div><p>Do zero a 2.598 visitantes no nosso próprio produto cívico — motor search-first: 62+ páginas indexáveis, 907 cliques orgânicos, menos de R$20 de mídia paga.</p><span class="card-link">Original do estúdio — ler o case →</span></a>
+      <a class="tease" href="trabalhos.html"><div class="t-stat" data-count>87%</div><div class="t-client">CPA cortado · Ocean Finance</div><p>Fintech, TikTok. $53 → $6.82 em programa de test-and-learn de três ciclos liderado por nossa fundadora na Shook Digital.</p><span class="card-link">Ler o case →</span></a>
+      <a class="tease" href="trabalhos.html"><div class="t-stat" data-count>67%</div><div class="t-client">CPA cortado · FlixBus</div><p>Viagens, 4 mercados. €24.76 → €8.14 em 90 dias, com um nono do investimento do incumbente.</p><span class="card-link">Ler o case →</span></a>
+      <a class="tease" href="trabalhos.html"><div class="t-stat" data-count>29</div><div class="t-client">mercados · Bolt</div><p>Mobilidade, global. 5 verticais, 2 marcas, 160+ produções em todos os 7 continentes.</p><span class="card-link">Ler o case →</span></a>
     </div>
     <p style="margin-top:22px"><a class="svc-link" href="trabalhos.html">Ver os cases completos →</a></p>
   </section>
@@ -679,7 +761,7 @@
     </div>
   </section>
 
-  <section class="wrap">
+  <section class="band band--lilac" id="method"><div class="wrap">
     <div class="sec-label">Método Alavanca — Nossa Metodologia</div>
     <div class="loop-wrap"><div class="loop-flex">
       <div class="loop-circle"><svg class="loop-svg" viewBox="-36 -2 432 366" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Método Alavanca">
@@ -706,11 +788,9 @@
     </div>
     </div></div>
     <p class="method-line">O ciclo se fecha quando o sistema compõe: <strong>o que os clientes dizem e o que os dados mostram alimentam o próximo ciclo — anúncios melhores, fluxos mais rápidos, um sistema mais afiado.</strong></p>
-  </section>
+  </div><svg class="band-art" style="right:-46px;top:-48px;width:clamp(150px,18vw,230px)" viewBox="0 0 230 210" aria-hidden="true" focusable="false"><polygon points="115,0 230,210 0,210" fill="#00C2D1"/><circle cx="40" cy="60" r="16" fill="#1A1D21"/></svg><svg class="band-art" style="left:-30px;bottom:-30px;width:200px" viewBox="0 0 200 140" aria-hidden="true" focusable="false"><defs><pattern id="mDots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="7" cy="7" r="2.2" fill="#fff"/></pattern></defs><rect width="200" height="140" fill="url(#mDots)" opacity=".7"/></svg></section>
 
-  <div class="wrap"><div class="rule"></div></div>
-
-  <section class="wrap">
+  <section class="wrap whyset">
     <div class="sec-label">Por Que Funciona — Systems Thinking Aplicado</div>
     <p class="why-intro">Systems thinking (pensamento sistêmico) é a disciplina de enxergar o negócio como um sistema — partes conectadas por fluxos de informação — e não como peças isoladas. Usamos porque o crescimento raramente trava dentro de um canal; trava nas conexões entre eles. Três princípios comandam o método:</p>
     <div class="whys">
@@ -720,18 +800,21 @@
     </div>
   </section>
 
-
-  <div class="wrap"><div class="rule"></div></div>
-
-  <section class="wrap">
+  <section class="band band--ink" id="built"><div class="wrap">
     <div class="sec-label">Criados no Estúdio — Produtos Próprios</div>
     <div class="builts">
       <a class="tease tease--built" href="trabalhos.html#products"><div class="t-client">Elas na Urna</div><div class="t-tag">Plataforma cívica · Brasil</div><p>Mapa apartidário de 7.134 candidaturas femininas nas eleições de 2026, transformado em camada de descoberta buscável — estratégia, produto, dados, marca e conteúdo, orquestrados de ponta a ponta.</p></a>
       <a class="tease tease--built" href="trabalhos.html#products"><div class="t-client">AlimentaProva</div><div class="t-tag">Lawtech · Produto de IA</div><p>Despesas de pensão viram prova pronta para o processo. Produto, marca, UX e código — de ponta a ponta.</p></a>
     </div>
-  </section>
+  </div><svg class="band-art" style="right:-80px;top:-90px;width:300px" viewBox="0 0 300 300" aria-hidden="true" focusable="false"><circle cx="150" cy="150" r="130" fill="none" stroke="#C9B6FF" stroke-width="2" stroke-dasharray="6 9" opacity=".7"/></svg></section>
 
-  <div class="wrap"><div class="rule"></div></div>
+  <section class="band band--cyan" aria-labelledby="st-title">
+    <div class="wrap">
+      <h2 class="st" id="st-title"><span class="st-1">Mulheres movem o mundo.</span><span class="st-2">A gente constrói o sistema que move o negócio delas.</span></h2>
+      <p class="st-sub">Trabalhamos só com empresas que têm uma mulher como fundadora, cofundadora ou CEO.</p>
+    </div>
+    <svg class="band-art st-art" viewBox="0 0 500 460" aria-hidden="true" focusable="false"><circle cx="230" cy="230" r="190" fill="none" stroke="#1A1D21" stroke-width="3"/><polygon points="330,60 490,400 170,400" fill="#C9B6FF"/><circle cx="110" cy="110" r="22" fill="#1A1D21"/></svg>
+  </section>
 
   <section id="about" class="wrap">
     <div class="sec-label">Sobre</div>
