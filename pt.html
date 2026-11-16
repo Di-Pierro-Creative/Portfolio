@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<script>/* opening animation: once per session, never with reduced motion */(function(){var d=document.documentElement;try{var m=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;if(m||sessionStorage.getItem('dpc-intro')){d.classList.add('intro-off')}else{sessionStorage.setItem('dpc-intro','1');d.classList.add('intro-on')}}catch(e){d.classList.add('intro-off')}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Di Pierro Creative — Growth Studio | IA, Sites, SEO & Social</title>
 <meta name="description" content="A Di Pierro Creative é um growth studio com atuação global. Ajudamos empresas fundadas e lideradas por mulheres a transformar marketing disperso em um sistema que compõe resultados — através do Método Alavanca: Analyze → Create → Test → Prove → Scale — sem precisar montar um time interno.">
@@ -382,8 +383,8 @@
   .loop-wrap.go .ring-draw{transition:stroke-dashoffset 2.4s cubic-bezier(.4,0,.2,1);stroke-dashoffset:0!important}
   .ring-close{fill:none;stroke:var(--lilac);stroke-width:5;opacity:0}
   .ring-sweep{fill:none;stroke:var(--cyan);stroke-width:5;stroke-linecap:round;stroke-dasharray:150 654;stroke-dashoffset:150;opacity:0}
-  .loop-wrap.go .ring-sweep{transition:opacity .5s ease 2.5s;opacity:1;animation:sweep 14s linear 2.6s infinite}
-  @keyframes sweep{from{stroke-dashoffset:150}to{stroke-dashoffset:-654}}
+  .loop-wrap.go .ring-sweep{transition:opacity .5s ease 2.5s;opacity:1;animation:ringsweep 14s linear 2.6s infinite}
+  @keyframes ringsweep{from{stroke-dashoffset:150}to{stroke-dashoffset:-654}}
   .lnode circle{fill:#fff;stroke:var(--navy);stroke-width:2;transition:fill .4s}
   .lnode .num{font-family:var(--disp);font-weight:900;font-size:15px;fill:var(--navy);transition:fill .4s}
   .lnode .lbl{font-family:var(--disp);font-weight:800;font-size:14.5px;letter-spacing:.04em;fill:var(--ink)}
@@ -477,11 +478,89 @@
     .sx-foot{margin-top:36px}
   }
   @media(prefers-reduced-motion:reduce){.sx-q::before,.sx-problem,.sx-svc{transition:none}.sx-a.in{animation:none}}
+
+  /* ===== Opening animation (home pages, once per session) ===== */
+  #dpc-intro{position:fixed;inset:0;z-index:9999;overflow:hidden;cursor:pointer;--dpi-fs:min(clamp(3rem,12vw,8.5rem),17vh);animation:dpiDone 0s linear 2.85s forwards}
+  .intro-off #dpc-intro,.intro-off .dpi-skip{display:none}
+  .intro-on body{overflow:hidden}
+  .intro-on .hero *{animation-play-state:paused!important}
+  @keyframes dpiDone{to{visibility:hidden;pointer-events:none}}
+  /* three skewed panels leave one after another: charcoal, cyan, lilac */
+  .dpi-panel{position:absolute;top:-10vh;bottom:-10vh;left:-50vw;width:200vw;transform:skewX(-12deg);will-change:transform}
+  .dpi-ink{background:#1A1D21;animation:dpiOut .6s cubic-bezier(.7,0,.25,1) 2.05s forwards}
+  .dpi-ink::before{content:"";position:absolute;inset:0;background:radial-gradient(rgba(255,255,255,.09) 1.4px,transparent 1.6px) 0 0/22px 22px;opacity:0;animation:dpiFade .8s ease .1s forwards}
+  .dpi-cyan{background:#00C2D1;animation:dpiOut .6s cubic-bezier(.7,0,.25,1) 2.14s forwards}
+  .dpi-lilac{background:#C9B6FF;animation:dpiOut .6s cubic-bezier(.7,0,.25,1) 2.23s forwards}
+  @keyframes dpiOut{to{transform:translateX(210vw) skewX(-12deg)}}
+  .dpi-stage{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(14px,2.6vh,28px);padding:24px;color:#fff;text-align:center;animation:dpiStageOut .6s cubic-bezier(.7,0,.25,1) 2.05s forwards}
+  @keyframes dpiStageOut{to{transform:translateX(130vw)}}
+  /* the mark: circle (creative) meets triangle (results), the overlap turns to dots */
+  .dpi-mark{width:clamp(64px,9vw,104px);height:auto;overflow:visible;animation:dpiMark 1.05s cubic-bezier(.7,0,.2,1) both}
+  @keyframes dpiMark{0%,55%{transform:translateY(calc(var(--dpi-fs) + 24px)) scale(2.5)}100%{transform:none}}
+  .dpi-mark g{transform-box:fill-box;transform-origin:center}
+  .dpi-c{animation:dpiC .5s cubic-bezier(.2,1.5,.4,1) 0s both}
+  .dpi-t{animation:dpiT .5s cubic-bezier(.2,1.4,.4,1) .1s both}
+  .dpi-o{animation:dpiPop .32s cubic-bezier(.2,1.6,.4,1) .5s both}
+  .dpi-burst circle{opacity:0;animation:dpiBurst .5s cubic-bezier(.1,.8,.3,1) .52s forwards}
+  @keyframes dpiC{from{transform:translate(-150px,-30px) scale(.2);opacity:0}to{transform:none;opacity:1}}
+  @keyframes dpiT{from{transform:translate(160px,70px) rotate(160deg) scale(.3);opacity:0}to{transform:none;opacity:1}}
+  @keyframes dpiPop{from{transform:scale(.5);opacity:0}to{transform:none;opacity:1}}
+  @keyframes dpiBurst{0%{transform:none;opacity:1}100%{transform:translate(var(--dx),var(--dy)) scale(.4);opacity:0}}
+  /* wordmark: letters rise one by one */
+  .dpi-word{margin:0;font-family:var(--disp);font-weight:900;font-size:var(--dpi-fs);line-height:.9;letter-spacing:-.01em;text-transform:uppercase}
+  .dpi-line{display:block;overflow:hidden;padding:.02em .03em}
+  .dpi-ch{display:inline-block;transform:translateY(110%);animation:dpiRise .48s cubic-bezier(.2,.9,.25,1) both;animation-delay:calc(.88s + var(--i) * .03s)}
+  .dpi-sp{display:inline-block;width:.26em}
+  .dpi-line2 .dpi-ch{color:#C9B6FF;font-weight:500;animation-delay:calc(1s + var(--i) * .025s)}
+  @keyframes dpiRise{to{transform:none}}
+  /* the line: a cyan marker sweeps under it */
+  .dpi-tag{margin:0;font-family:var(--disp);font-weight:700;font-size:min(clamp(1.1rem,2.4vw,1.9rem),5vh);opacity:0;animation:dpiFade .25s ease 1.3s forwards}
+  .dpi-hl{padding:.08em .32em;color:#fff;background:linear-gradient(#00C2D1,#00C2D1) left center/0% 100% no-repeat;-webkit-box-decoration-break:clone;box-decoration-break:clone;animation:dpiSweep .42s ease-out 1.38s forwards}
+  @keyframes dpiSweep{to{background-size:100% 100%;color:#1A1D21}}
+  @keyframes dpiFade{to{opacity:1}}
+  .dpi-skip{position:fixed;right:20px;bottom:20px;z-index:10000;padding:10px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.28);background:rgba(26,29,33,.55);color:#fff;font:600 13px/1 var(--sans);cursor:pointer;animation:dpiDone 0s linear 2.85s forwards}
+  .dpi-skip:hover,.dpi-skip:focus-visible{border-color:#C9B6FF;outline:none}
+  @media (prefers-reduced-motion:reduce){#dpc-intro,.dpi-skip{display:none}}
 </style>
 <script src="/ga.js" async></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
+<!-- OPENING ANIMATION (decorative; the page below is fully in the DOM) -->
+<div id="dpc-intro" aria-hidden="true">
+  <div class="dpi-panel dpi-lilac"></div>
+  <div class="dpi-panel dpi-cyan"></div>
+  <div class="dpi-panel dpi-ink"></div>
+  <div class="dpi-stage">
+    <svg class="dpi-mark" viewBox="0 0 120 120" focusable="false">
+      <defs>
+        <clipPath id="dpiClip"><circle cx="50" cy="56" r="40"/></clipPath>
+        <pattern id="dpiDots" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1.35" fill="#1A1D21"/></pattern>
+      </defs>
+      <g class="dpi-c"><circle cx="50" cy="56" r="40" fill="#C9B6FF"/></g>
+      <g class="dpi-t"><polygon points="74,22 116,108 32,108" fill="#00C2D1"/></g>
+      <g class="dpi-o" clip-path="url(#dpiClip)"><polygon points="74,22 116,108 32,108" fill="#B6E9EE"/><polygon points="74,22 116,108 32,108" fill="url(#dpiDots)"/></g>
+      <g class="dpi-burst"><circle cx="64" cy="80" r="3.4" fill="#C9B6FF" style="--dx:-48px;--dy:-28px"/><circle cx="64" cy="80" r="3.4" fill="#FFFFFF" style="--dx:-17px;--dy:-53px"/><circle cx="64" cy="80" r="3.4" fill="#00C2D1" style="--dx:22px;--dy:-50px"/><circle cx="64" cy="80" r="3.4" fill="#C9B6FF" style="--dx:50px;--dy:-20px"/><circle cx="64" cy="80" r="3.4" fill="#FFFFFF" style="--dx:53px;--dy:22px"/><circle cx="64" cy="80" r="3.4" fill="#00C2D1" style="--dx:20px;--dy:50px"/><circle cx="64" cy="80" r="3.4" fill="#C9B6FF" style="--dx:-22px;--dy:48px"/><circle cx="64" cy="80" r="3.4" fill="#00C2D1" style="--dx:-53px;--dy:17px"/></g>
+    </svg>
+    <p class="dpi-word"><span class="dpi-line"><span class="dpi-ch" style="--i:0">D</span><span class="dpi-ch" style="--i:1">I</span><span class="dpi-sp"></span><span class="dpi-ch" style="--i:2">P</span><span class="dpi-ch" style="--i:3">I</span><span class="dpi-ch" style="--i:4">E</span><span class="dpi-ch" style="--i:5">R</span><span class="dpi-ch" style="--i:6">R</span><span class="dpi-ch" style="--i:7">O</span></span><span class="dpi-line dpi-line2"><span class="dpi-ch" style="--i:0">C</span><span class="dpi-ch" style="--i:1">R</span><span class="dpi-ch" style="--i:2">E</span><span class="dpi-ch" style="--i:3">A</span><span class="dpi-ch" style="--i:4">T</span><span class="dpi-ch" style="--i:5">I</span><span class="dpi-ch" style="--i:6">V</span><span class="dpi-ch" style="--i:7">E</span></span></p>
+    <p class="dpi-tag"><span class="dpi-hl">Mulheres movem o mundo.</span></p>
+  </div>
+</div>
+<button class="dpi-skip" type="button">Pular abertura</button>
+<script>
+/* opening animation: skip on click or key, clean up when done */
+(function(){
+  var d=document.documentElement,o=document.getElementById('dpc-intro'),b=document.querySelector('.dpi-skip'),done=false;
+  if(!o)return;
+  function end(){if(done)return;done=true;d.classList.remove('intro-on');o.remove();if(b)b.remove();document.removeEventListener('keydown',key);}
+  if(!d.classList.contains('intro-on')){end();return;}
+  function skip(){if(done)return;o.style.transition='opacity .25s ease';o.style.opacity='0';if(b)b.style.display='none';setTimeout(end,260);}
+  function key(e){if(e.key==='Escape'||e.key==='Enter'||e.key===' '){e.preventDefault();skip();}}
+  o.addEventListener('click',skip);if(b)b.addEventListener('click',skip);document.addEventListener('keydown',key);
+  setTimeout(end,2900);
+})();
+</script>
+
 
 <!-- HOME PANEL -->
 <div id="home" class="panel active">
