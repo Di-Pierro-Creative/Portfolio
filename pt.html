@@ -790,7 +790,7 @@
         el.textContent = Math.round(target * p) + suffix;
         if(p < 1) requestAnimationFrame(tick);
       }
-      setTimeout(function(){ requestAnimationFrame(tick); }, 650);
+      setTimeout(function(){ requestAnimationFrame(tick); }, document.documentElement.classList.contains('intro-on') ? 3500 : 650);
     });
   }
   var loop = document.querySelector('.loop-wrap');
